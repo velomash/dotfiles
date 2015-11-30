@@ -52,9 +52,9 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-status() { git status; }
-commit() { git commit -a; }
-push() { git push; }
+alias status='git status'
+alias commit='git commit -a'
+alias push='git push'
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
