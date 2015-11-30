@@ -54,6 +54,7 @@ ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in Ma
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 status() { git status; }
 commit() { git commit -a; }
+push() { git push; }
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
