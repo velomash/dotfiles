@@ -58,7 +58,7 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 status() { git status; }
-commit() { git commit -am '"$@"'; }
+commit() { git commit -a; }
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
