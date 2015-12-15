@@ -10,7 +10,7 @@ Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
 Plugin 'mileszs/ack.vim'                     " find files with ack
 Plugin 'scrooloose/nerdtree'                 " find files by dir tree
 Plugin 'scrooloose/nerdcommenter'            " easy commenting
-Plugin 'altercation/vim-colors-solarized'    " syntax highlighting
+Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
 Plugin 'ternjs/tern_for_vim'                 " js hinting
@@ -21,17 +21,19 @@ Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
 
 call vundle#end()
-filetype plugin indent on
 
-" color theme
+" theme
 syntax enable
 set t_Co=256 " 256 color mode
 set background=dark
-colorscheme base16-tomorrow
+colorscheme base16-ocean
+set guifont=Monaco:h14
+set guioptions-=r
 
 " search stuff
 set incsearch
 set gdefault
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " make ctrl-p ignore things in .gitignore
 
 " line Numbers / window chrome
 set number
@@ -40,14 +42,34 @@ set laststatus=2
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " characters and movement
+filetype plugin indent on
 set shiftwidth=4
 set tabstop=4
-set backspace=indent,eol,start
 set expandtab
+set backspace=indent,eol,start
 set title
-let mapleader = ','
+set pastetoggle=<F10>
 
-" map vim commands to convenient key bindings
-noremap <C-n> :NERDTreeToggle<CR>
-noremap <C-h> :Autoformat<CR>
+" Syntax checking
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:airline_theme = 'hybridline'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" KEY MAPPINGS
+let mapleader = ' '
+
+" plugins
+noremap <leader>t :NERDTreeToggle<CR>
+noremap <leader>f :Autoformat<CR>
+
+" split windows
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
 
