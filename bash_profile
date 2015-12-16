@@ -55,7 +55,7 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 alias status='git status'
 alias commit='git commit -a'
 alias push='git push'
-alias github="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
+alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
