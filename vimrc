@@ -29,17 +29,22 @@ set background=dark
 colorscheme base16-ocean
 set guifont=Monaco:h14
 set guioptions-=r
+highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
+highlight PmenuSel ctermfg=233 ctermbg=69 guifg=#4A4A4A guibg=#F3D480
 
 " search stuff
 set incsearch
 set gdefault
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " make ctrl-p ignore things in .gitignore
+set visualbell
 
 " line Numbers / window chrome
 set number
 set numberwidth=2
 set laststatus=2
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight VertSplit ctermbg=NONE
+highlight VertSplit ctermfg=blue
 
 " characters and movement
 filetype plugin indent on
@@ -59,6 +64,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_html_tidy_ignore_errors = [ 'proprietary attribute' ]
 
 " KEY MAPPINGS
 let mapleader = ' '
