@@ -22,6 +22,7 @@ Plugin 'tpope/vim-repeat'                    " repeat util
 Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
+Plugin 'flazz/vim-colorschemes'              " load all the colorschemes
 
 call vundle#end()
 
@@ -73,13 +74,12 @@ set statusline+=%*
 let g:airline_theme = 'hybridline'
 
 " Syntastic options
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_html_tidy_ignore_errors = [ 'empty' ]
-let g:syntastic_less_checkers = ['']
+"let g:syntastic_html_tidy_ignore_errors = [ 'empty' ]
+"let g:syntastic_less_checkers = ['']
 
 " Ctrl-P options
 let g:ctrlp_dotfiles = 0
