@@ -26,6 +26,10 @@ Plugin 'flazz/vim-colorschemes'              " load all the colorschemes
 
 call vundle#end()
 
+" map leader to spacebar
+" (best thing ever)
+let mapleader = ' '
+
 " theme
 syntax enable
 set t_Co=256 " 256 color mode
@@ -35,6 +39,14 @@ set guifont=Monaco:h14
 set guioptions-=r
 highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
 highlight PmenuSel ctermfg=233 ctermbg=69 guifg=#4A4A4A guibg=#F3D480
+" line Numbers
+set number
+set numberwidth=2
+set laststatus=2
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" window chrome
+highlight VertSplit ctermbg=NONE
+highlight VertSplit ctermfg=blue
 
 " search stuff
 set incsearch
@@ -47,14 +59,6 @@ augroup VimCSS3Syntax
     autocmd FileType css setlocal iskeyword+=-
 augroup END
 
-" line Numbers / window chrome
-set number
-set numberwidth=2
-set laststatus=2
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight VertSplit ctermbg=NONE
-highlight VertSplit ctermfg=blue
-
 " characters and movement
 filetype plugin indent on
 set shiftwidth=4
@@ -62,10 +66,7 @@ set tabstop=4
 set expandtab
 set backspace=indent,eol,start
 set title
-set pastetoggle=<leader>p
-
-" KEY MAPPINGS
-let mapleader = ' '
+nmap <leader>p :setlocal paste! paste?<cr>
 
 " Status line options
 set statusline+=%#warningmsg#
@@ -80,11 +81,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
+let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-']
 
 " vim-autoformat options
 noremap <leader>f :Autoformat<CR>
-"let g:formatdef_custom_js_beautify = '"js-beautify -nB"'
-"let g:formatters_javascript = ['custom_js_beautify']
 
 " Ctrl-P options
 let g:ctrlp_dotfiles = 0
@@ -98,7 +98,7 @@ noremap <leader>b :CtrlPBuffer<CR>
 " NERDCommenter options
 let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
-" plugins
+" NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
 
 " split windows
