@@ -79,9 +79,12 @@ let g:syntastic_auto_loc_list = 2 " 1 will open the loc when there are errors
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
 noremap <leader>e :Errors<CR>
+
+" vim-autoformat options
+noremap <leader>f :Autoformat<CR>
+"let g:formatdef_custom_js_beautify = '"js-beautify -nB"'
+"let g:formatters_javascript = ['custom_js_beautify']
 
 " Ctrl-P options
 let g:ctrlp_dotfiles = 0
@@ -97,7 +100,6 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 
 " plugins
 noremap <leader>t :NERDTreeToggle<CR>
-noremap <leader>f :Autoformat<CR>
 
 " split windows
 nnoremap <leader>j <C-W><C-J>
