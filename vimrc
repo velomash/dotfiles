@@ -62,7 +62,7 @@ set tabstop=4
 set expandtab
 set backspace=indent,eol,start
 set title
-set pastetoggle=<F10>
+set pastetoggle=<leader>p
 
 " KEY MAPPINGS
 let mapleader = ' '
@@ -74,12 +74,14 @@ set statusline+=%*
 let g:airline_theme = 'hybridline'
 
 " Syntastic options
-let g:syntastic_auto_loc_list = 2
+let g:syntastic_auto_loc_list = 2 " 1 will open the loc when there are errors
+"let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_html_tidy_exec = 'tidy5'
-"let g:syntastic_html_tidy_ignore_errors = [ 'empty' ]
-"let g:syntastic_less_checkers = ['']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+noremap <leader>e :Errors<CR>
 
 " Ctrl-P options
 let g:ctrlp_dotfiles = 0
@@ -89,6 +91,9 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " make ctrl-p ignore things in .gitignore
 noremap <leader>s :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
+
+" NERDCommenter options
+let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
 " plugins
 noremap <leader>t :NERDTreeToggle<CR>
