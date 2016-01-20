@@ -1,0 +1,6 @@
+{
+    "max_preserve_newlines": 3,
+    "break_chained_methods": true,
+    "end_with_newline": true
+}
+
