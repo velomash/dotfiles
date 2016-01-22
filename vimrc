@@ -23,6 +23,8 @@ Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
 Plugin 'flazz/vim-colorschemes'              " load all the colorschemes
+Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
+Plugin 'mattn/gist-vim'                      " quickly put code into a gist
 
 call vundle#end()
 
@@ -82,6 +84,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-']
+
+" YouCompleteMe options
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " vim-autoformat options
 noremap <leader>f :Autoformat<CR>
