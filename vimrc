@@ -25,6 +25,7 @@ Plugin 'chriskempson/base16-vim'             " color theme
 Plugin 'flazz/vim-colorschemes'              " load all the colorschemes
 Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
 Plugin 'mattn/gist-vim'                      " quickly put code into a gist
+Plugin 'ludovicchabant/vim-gutentags'        " tag management
 
 call vundle#end()
 
@@ -33,22 +34,27 @@ call vundle#end()
 let mapleader = ' '
 
 " theme
-syntax enable
-set t_Co=256 " 256 color mode
+syntax enable           " Enable code highlighting
+set t_Co=256            " in 256 color mode
 set background=dark
 colorscheme base16-ocean
 set guifont=Monaco:h14
 set guioptions-=r
+" Change the color of the divider bar between splits
 highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
 highlight PmenuSel ctermfg=233 ctermbg=69 guifg=#4A4A4A guibg=#F3D480
+highlight VertSplit ctermbg=NONE
+highlight VertSplit ctermfg=blue
+" customize vimdiff colors
+highlight DiffAdd cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
+highlight DiffDelete cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
+highlight DiffChange cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
+highlight DiffText cterm=none ctermfg=bg ctermbg=White gui=none guifg=bg guibg=White
 " line Numbers
 set number
 set numberwidth=2
 set laststatus=2
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-" window chrome
-highlight VertSplit ctermbg=NONE
-highlight VertSplit ctermfg=blue
 
 " search stuff
 set incsearch
@@ -70,6 +76,9 @@ set backspace=indent,eol,start
 set title
 nmap <leader>p :setlocal paste! paste?<cr>
 
+" encryption
+setlocal cm=blowfish2
+
 " Status line options
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -83,6 +92,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
+let g:syntastic_html_tidy_blocklevel_tags = ['responsive-table']
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-']
 
 " YouCompleteMe options
