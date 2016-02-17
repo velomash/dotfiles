@@ -16,9 +16,10 @@ Plugin 'hail2u/vim-css3-syntax'              " CSS highlighting
 Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
+Plugin 'SirVer/ultisnips'                    " code snippet engine
 Plugin 'ternjs/tern_for_vim'                 " js hinting
-Plugin 'bling/vim-airline'                   " status bar
-Plugin 'tpope/vim-repeat'                    " repeat util
+Plugin 'bling/vim-airline'                   " status bar plugin
+Plugin 'vim-airline/vim-airline-themes'      " status bar themes
 Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
@@ -76,6 +77,10 @@ set backspace=indent,eol,start
 set title
 nmap <leader>p :setlocal paste! paste?<cr>
 
+" clipboard
+noremap <leader>c :.w !pbcopy<CR>
+noremap <leader>v :r !pbpaste<CR>
+
 " encryption
 setlocal cm=blowfish2
 
@@ -93,11 +98,20 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
 let g:syntastic_html_tidy_blocklevel_tags = ['responsive-table']
-let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-']
+let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-', '<inject']
+" better colors for the sign column
+highlight clear SignColumn
+highlight SyntasticErrorSign term=bold cterm=none ctermfg=red ctermbg=none gui=none guifg=red guibg=none
+highlight SyntasticWarningSign term=bold cterm=none ctermfg=yellow ctermbg=none gui=none guifg=yellow guibg=none
 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" UltiSnips snippet options
+"let g:UltiSnipsExpandTrigger = '<CR>'
+"let g:UltiSnipsJumpForwardTrigger = '<leader>j'
+"let g:UltiSnipsJumpBackwardTrigger = '<leader>k'
 
 " vim-autoformat options
 noremap <leader>f :Autoformat<CR>
@@ -112,7 +126,7 @@ noremap <leader>s :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 
 " NERDCommenter options
-let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
+let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' }, 'javascript': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
 " NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
