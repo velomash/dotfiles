@@ -77,10 +77,6 @@ set backspace=indent,eol,start
 set title
 nmap <leader>p :setlocal paste! paste?<cr>
 
-" clipboard
-noremap <leader>c :.w !pbcopy<CR>
-noremap <leader>v :r !pbpaste<CR>
-
 " encryption
 setlocal cm=blowfish2
 
