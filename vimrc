@@ -16,14 +16,12 @@ Plugin 'hail2u/vim-css3-syntax'              " CSS highlighting
 Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
-Plugin 'SirVer/ultisnips'                    " code snippet engine
 Plugin 'ternjs/tern_for_vim'                 " js hinting
-Plugin 'bling/vim-airline'                   " status bar plugin
+Plugin 'vim-airline/vim-airline'             " status bar plugin
 Plugin 'vim-airline/vim-airline-themes'      " status bar themes
 Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
-Plugin 'flazz/vim-colorschemes'              " load all the colorschemes
 Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
 Plugin 'mattn/gist-vim'                      " quickly put code into a gist
 Plugin 'ludovicchabant/vim-gutentags'        " tag management
@@ -103,11 +101,6 @@ highlight SyntasticWarningSign term=bold cterm=none ctermfg=yellow ctermbg=none 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-
-" UltiSnips snippet options
-"let g:UltiSnipsExpandTrigger = '<CR>'
-"let g:UltiSnipsJumpForwardTrigger = '<leader>j'
-"let g:UltiSnipsJumpBackwardTrigger = '<leader>k'
 
 " vim-autoformat options
 noremap <leader>f :Autoformat<CR>
