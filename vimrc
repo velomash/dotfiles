@@ -1,8 +1,9 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+" vim settings for Adam Trimble
+"
 " Vundle manages all plugins. run :PluginInstall when you add a line
 " set the runtime path to include Vundle and initialize
+set nocompatible              " be iMproved, required
+filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -78,7 +79,7 @@ nmap <leader>p :setlocal paste! paste?<cr>
 " encryption
 setlocal cm=blowfish2
 
-" Status line options
+" Airline / Status line options
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
