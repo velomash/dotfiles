@@ -84,15 +84,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:airline_theme = 'hybridline'
+let g:airline_powerline_fonts = 1
 
 " Syntastic options
 let g:syntastic_auto_loc_list = 2 " 1 will open the loc when there are errors
-"let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
-let g:syntastic_html_tidy_blocklevel_tags = ['responsive-table']
+let g:syntastic_html_tidy_blocklevel_tags = ['responsive-table', 'pl-radio-button']
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-', '<inject']
 " better colors for the sign column
 highlight clear SignColumn
