@@ -25,7 +25,6 @@ Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'chriskempson/base16-vim'             " color theme
 Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
 Plugin 'mattn/gist-vim'                      " quickly put code into a gist
-Plugin 'ludovicchabant/vim-gutentags'        " tag management
 
 call vundle#end()
 
