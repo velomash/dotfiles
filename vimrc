@@ -9,11 +9,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'                " init vundle plugins
 Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plugin 'mileszs/ack.vim'                     " find files with ack
 Plugin 'scrooloose/nerdtree'                 " find files by dir tree
 Plugin 'scrooloose/nerdcommenter'            " easy commenting
-Plugin 'groenewege/vim-less'                 " LESS highlighting
-Plugin 'hail2u/vim-css3-syntax'              " CSS highlighting
 Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
@@ -78,6 +75,10 @@ nmap <leader>p :setlocal paste! paste?<cr>
 " encryption
 setlocal cm=blowfish2
 
+" set one directory for .swp files
+set backupdir=/var/tmp,/tmp
+set directory=/var/tmp,/tmp
+
 " Airline / Status line options
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -91,7 +92,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
-let g:syntastic_html_tidy_blocklevel_tags = ['responsive-table', 'pl-radio-button']
+let g:syntastic_html_tidy_blocklevel_tags = ['pl-responsive-table', 'pl-radio-button', 'pl-select-button', 'pl-stepper-nav', 'ng-transclude']
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-', '<inject']
 " better colors for the sign column
 highlight clear SignColumn
@@ -101,6 +102,9 @@ highlight SyntasticWarningSign term=bold cterm=none ctermfg=yellow ctermbg=none 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" JSX highlighting in regular .js files
+let g:jsx_ext_required = 0
 
 " vim-autoformat options
 noremap <leader>f :Autoformat<CR>

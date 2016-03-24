@@ -54,10 +54,14 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
-alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+
+# git shortcuts
 alias status='git status'
-alias commit='git commit -a'
+alias add='git add -A'
+alias commit='git commit'
+alias diff='git diff'
 alias push='git push'
+alias pull='git pull'
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
 #   lr:  Full Recursive Directory Listing
@@ -68,7 +72,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 #           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec
 #   --------------------------------------------------------------------
 mans () {
-man $1 | grep -iC2 --color=always $2 | less
+	man $1 | grep -iC2 --color=always $2 | less
 }
 
 #   -------------------------------
@@ -84,12 +88,12 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
 #   cdf:  'Cd's to frontmost window of MacOS Finder
 #   ------------------------------------------------------
 cdf () {
-currFolderPath=$( /usr/bin/osascript <<EOT
-tell application "Finder"
-try
-set currFolder to (folder of the front window as alias)
-on error
-set currFolder to (path to desktop folder as alias)
+	currFolderPath=$( /usr/bin/osascript <<EOT
+	tell application "Finder"
+	try
+	set currFolder to (folder of the front window as alias)
+	on error
+	set currFolder to (path to desktop folder as alias)
 end try
 POSIX path of currFolder
 end tell
@@ -102,24 +106,24 @@ cd "$currFolderPath"
 #   extract:  Extract most know archives with one command
 #   ---------------------------------------------------------
 extract () {
-if [ -f $1 ] ; then
-case $1 in
-*.tar.bz2)   tar xjf $1     ;;
-*.tar.gz)    tar xzf $1     ;;
-*.bz2)       bunzip2 $1     ;;
-*.rar)       unrar e $1     ;;
-*.gz)        gunzip $1      ;;
-*.tar)       tar xf $1      ;;
-*.tbz2)      tar xjf $1     ;;
-*.tgz)       tar xzf $1     ;;
-*.zip)       unzip $1       ;;
-*.Z)         uncompress $1  ;;
-*.7z)        7z x $1        ;;
-*)     echo "'$1' cannot be extracted via extract()" ;;
-esac
-else
-echo "'$1' is not a valid file"
-fi
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)   tar xjf $1     ;;
+			*.tar.gz)    tar xzf $1     ;;
+			*.bz2)       bunzip2 $1     ;;
+			*.rar)       unrar e $1     ;;
+			*.gz)        gunzip $1      ;;
+			*.tar)       tar xf $1      ;;
+			*.tbz2)      tar xjf $1     ;;
+			*.tgz)       tar xzf $1     ;;
+			*.zip)       unzip $1       ;;
+			*.Z)         uncompress $1  ;;
+			*.7z)        7z x $1        ;;
+			*)     echo "'$1' cannot be extracted via extract()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
 }
 
 
@@ -192,15 +196,15 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
 ii() {
-echo -e "\nYou are logged on ${RED}$HOST"
-echo -e "\nAdditionnal information:$NC " ; uname -a
-echo -e "\n${RED}Users logged on:$NC " ; w -h
-echo -e "\n${RED}Current date :$NC " ; date
-echo -e "\n${RED}Machine stats :$NC " ; uptime
-echo -e "\n${RED}Current network location :$NC " ; scselect
-echo -e "\n${RED}Public facing IP Address :$NC " ;myip
-#echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
-echo
+	echo -e "\nYou are logged on ${RED}$HOST"
+	echo -e "\nAdditionnal information:$NC " ; uname -a
+	echo -e "\n${RED}Users logged on:$NC " ; w -h
+	echo -e "\n${RED}Current date :$NC " ; date
+	echo -e "\n${RED}Machine stats :$NC " ; uptime
+	echo -e "\n${RED}Current network location :$NC " ; scselect
+	echo -e "\n${RED}Public facing IP Address :$NC " ;myip
+	#echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
+	echo
 }
 
 
@@ -238,10 +242,4 @@ alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit
 alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
 alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
-
-
-#
-# PresenceLearning commands
-#
-
 
