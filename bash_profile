@@ -62,6 +62,7 @@ alias commit='git commit'
 alias diff='git diff'
 alias push='git push'
 alias pull='git pull'
+alias branch='git branch -a'
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
 # npm shortcuts

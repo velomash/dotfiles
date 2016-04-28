@@ -70,7 +70,16 @@ set tabstop=4
 set expandtab
 set backspace=indent,eol,start
 set title
-nmap <leader>p :setlocal paste! paste?<cr>
+
+" map clipboard copy commands
+set pastetoggle=<F10>
+vnoremap <leader>c "+y
+nnoremap <leader>c "+yy
+vnoremap <leader>x "+d
+nnoremap <leader>x "+dd
+inoremap <leader>p <F10>"+p<F10>
+vnoremap <leader>p <F10>"+p<F10>
+nnoremap <leader>p <F10>"+p<F10>
 
 " encryption
 setlocal cm=blowfish2
