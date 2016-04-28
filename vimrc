@@ -77,7 +77,7 @@ vnoremap <leader>c "+y
 nnoremap <leader>c "+yy
 vnoremap <leader>x "+d
 nnoremap <leader>x "+dd
-inoremap <leader>p <F10>"+p<F10>
+inoremap <C-p> <F10>"+p<F10>
 vnoremap <leader>p <F10>"+p<F10>
 nnoremap <leader>p <F10>"+p<F10>
 
