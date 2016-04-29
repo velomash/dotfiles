@@ -9,7 +9,7 @@
 #username:currentPath
 export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\$ "
 
-#   Set Default Editor (change 'Nano' to the editor of your choice)
+#   Set Default Editor
 #   ------------------------------------------------------------
 export EDITOR=/usr/local/bin/vim
 
@@ -17,13 +17,6 @@ export EDITOR=/usr/local/bin/vim
 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
-
-#   Add color to terminal
-#   (this is all commented out as I use Mac Terminal Profiles)
-#   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
-#   ------------------------------------------------------------
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
 
 
 #   -----------------------------
@@ -46,7 +39,6 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
-alias c='clear'                             # c:            Clear terminal display
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
 alias show_options='shopt'                  # Show_options: display bash options settings
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
@@ -56,13 +48,19 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 
 # git shortcuts
-alias status='git status'
-alias add='git add -A'
-alias commit='git commit'
-alias diff='git diff'
+alias s='git status'
+alias a='git add -Av'
+alias ac='git commit -av'
+alias c='git commit -v'
+alias cm='git commit -mv'
+alias cam='git commit -amv'
+alias d='git diff'
 alias push='git push'
 alias pull='git pull'
-alias branch='git branch -a'
+alias b='git branch -a'
+alias db='git branch -D'
+alias co='git checkout'
+alias cob='git checkout -b'
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
 # npm shortcuts
