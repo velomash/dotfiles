@@ -53,7 +53,7 @@ alias a='git add -Av'
 alias ac='git commit -av'
 alias c='git commit -v'
 alias cm='git commit -mv'
-alias cam='git commit -amv'
+alias acm='git commit -amv'
 alias d='git diff'
 alias push='git push'
 alias pull='git pull'
@@ -61,6 +61,7 @@ alias b='git branch -a'
 alias db='git branch -D'
 alias co='git checkout'
 alias cob='git checkout -b'
+alias reset='git reset --hard'
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 
 # npm shortcuts
