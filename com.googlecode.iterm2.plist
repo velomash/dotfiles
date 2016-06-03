@@ -1157,11 +1157,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>2403 380 445 77 1440 -135 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1741 235 924 485 1440 -135 2560 1417 </string>
+	<string>95 163 924 485 0 0 1440 877 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>3029 864 384 129 1440 -135 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2646 -119 1306 1266 1440 -135 2560 1417 </string>
+	<string>1440 241 1434 501 1440 -135 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>183 68 650 523 0 0 1440 877 </string>
+	<string>456 12 978 865 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1895,7 +1897,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477616075.69196999</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>478591601.744937</real>
+	<real>486432020.02904302</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1960,7 +1962,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-02T06:06:26Z</date>
+	<date>2016-06-01T00:00:12Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1993,6 +1995,10 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
