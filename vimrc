@@ -43,10 +43,10 @@ highlight PmenuSel ctermfg=233 ctermbg=69 guifg=#4A4A4A guibg=#F3D480
 highlight VertSplit ctermbg=NONE
 highlight VertSplit ctermfg=blue
 " customize vimdiff colors
-highlight DiffAdd cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
-highlight DiffDelete cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
-highlight DiffChange cterm=none ctermfg=fg ctermbg=Blue gui=none guifg=fg guibg=Blue
-highlight DiffText cterm=none ctermfg=bg ctermbg=White gui=none guifg=bg guibg=White
+highlight DiffAdd cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
+highlight DiffDelete cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
+highlight DiffChange cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
+highlight DiffText cterm=NONE ctermfg=bg ctermbg=White gui=NONE guifg=bg guibg=White
 " line Numbers
 set number
 set numberwidth=2
@@ -83,7 +83,7 @@ vnoremap <leader>p <F10>"+p<F10>
 nnoremap <leader>p <F10>"+p<F10>
 
 " encryption
-setlocal cm=blowfish2
+"setlocal cm=blowfish2
 
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
@@ -106,8 +106,8 @@ let g:syntastic_html_tidy_blocklevel_tags = ['pl-responsive-table', 'pl-radio-bu
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-', '<inject']
 " better colors for the sign column
 highlight clear SignColumn
-highlight SyntasticErrorSign term=bold cterm=none ctermfg=red ctermbg=none gui=none guifg=red guibg=none
-highlight SyntasticWarningSign term=bold cterm=none ctermfg=yellow ctermbg=none gui=none guifg=yellow guibg=none
+highlight SyntasticErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
+highlight SyntasticWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
