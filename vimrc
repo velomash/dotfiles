@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
 Plugin 'ternjs/tern_for_vim'                 " js hinting
+Plugin 'mustache/vim-mustache-handlebars'    " syntax highlighting for templates
 Plugin 'vim-airline/vim-airline'             " status bar plugin
 Plugin 'vim-airline/vim-airline-themes'      " status bar themes
 Plugin 'tpope/vim-surround'                  " surround with tags
@@ -66,9 +67,11 @@ augroup END
 
 " characters and movement
 filetype plugin indent on
+set expandtab
 set shiftwidth=4
 set tabstop=4
-set expandtab
+set autoindent
+set smartindent
 set backspace=indent,eol,start
 set title
 
@@ -104,6 +107,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 noremap <leader>e :Errors<CR>
 let g:syntastic_html_tidy_blocklevel_tags = ['pl-responsive-table', 'pl-radio-button', 'pl-select-button', 'pl-stepper-nav', 'ng-transclude']
 let g:syntastic_html_tidy_ignore_errors = ['attribute "ui-', 'attribute "ng-', '<inject']
+let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars', 'hbs': 'handlebars' }
 " better colors for the sign column
 highlight clear SignColumn
 highlight SyntasticErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE

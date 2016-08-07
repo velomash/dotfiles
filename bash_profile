@@ -19,6 +19,15 @@ export EDITOR=/usr/local/bin/vim
 export BLOCKSIZE=1k
 
 
+export http_proxy='http://proxy-chain.intel.com:911/'
+export https_proxy='http://proxy-chain.intel.com:912/'
+export ftp_proxy='http://proxy-chain.intel.com:911/'
+export socks_proxy='http://proxy-chain.intel.com:1080/'
+export SSH_SOCKS_SERVER='http://proxy-chain.intel.com:1080/' 
+export GIT_PROXY_COMMAND='~/bin/socks_connect'
+export all_proxy='socks5://proxy-chain.intel.com/'
+export no_proxy=intel.com,.intel.com,localhost,127.0.0.1
+
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
@@ -247,3 +256,5 @@ alias herr='tail /var/log/httpd/error_log'              # herr:             Tail
 alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
 
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
