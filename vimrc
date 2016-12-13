@@ -24,6 +24,8 @@ Plugin 'chriskempson/base16-vim'             " color theme
 Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
 Plugin 'mattn/gist-vim'                      " quickly put code into a gist
 Plugin 'mileszs/ack.vim'                     " use ack to search a project
+Plugin 'pangloss/vim-javascript'             " do js stuff
+Plugin 'mxw/vim-jsx'                         " syntax highlighting for react
 
 call vundle#end()
 
@@ -68,8 +70,8 @@ augroup END
 " characters and movement
 filetype plugin indent on
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set autoindent
 set smartindent
 set backspace=indent,eol,start
@@ -112,6 +114,9 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars', 'hbs': 'handle
 highlight clear SignColumn
 highlight SyntasticErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
 highlight SyntasticWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
+
+" vim-jsx options
+let g:jsx_ext_required = 0
 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
