@@ -18,13 +18,13 @@ export EDITOR=/usr/local/bin/vim
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
 
-export http_proxy='atrimblx:C\@l1f0rn!\@@proxy-chain.intel.com:911'
-export https_proxy='atrimblx:C\@l1f0rn!\@@proxy-chain.intel.com:912'
-export ftp_proxy='atrimblx:C\@l1f0rn!\@@proxy-chain.intel.com:911'
-export socks_proxy='atrimblx:C\@l1f0rn!\@@proxy-chain.intel.com:1080'
-export SSH_SOCKS_SERVER='atrimblx:C\@l1f0rn!\@@proxy-chain.intel.com:1080' 
-export GIT_PROXY_COMMAND='~/bin/socks_connect'
-export all_proxy='socks5://proxy-chain.intel.com/'
+export HTTP_PROXY='http://atrimblx:Sl1ngs\&\@rr0ws@proxy-chain.intel.com:911'
+export HTTPS_PROXY='http://atrimblx:Sl1ngs\&\@rr0ws@proxy-chain.intel.com:912'
+#export ftp_proxy='atrimblx:Sl1ngs&\@rr0ws@proxy-chain.intel.com:911'
+#export socks_proxy='atrimblx:Sl1ngs&\@rr0ws@proxy-chain.intel.com:1080'
+#export SSH_SOCKS_SERVER='atrimblx:Sl1ngs&\@rr0ws@proxy-chain.intel.com:1080' 
+#export GIT_PROXY_COMMAND='~/bin/socks_connect'
+#export all_proxy='socks5://proxy-chain.intel.com/'
 export no_proxy=intel.com,.intel.com,localhost,127.0.0.1
 export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig'
 
