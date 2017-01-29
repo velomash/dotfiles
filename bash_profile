@@ -18,10 +18,15 @@ export EDITOR=/usr/local/bin/vim
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
 
-export HTTP_PROXY='http://proxy-chain.intel.com:911'
-export HTTPS_PROXY='http://proxy-chain.intel.com:912'
-export NO_PROXY=intel.com,.intel.com,localhost,127.0.0.1
-export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig'
+USING_VPN=$(ifconfig | grep -cs 'utun0')
+if [[ $USING_VPN == 1 ]]; then
+  export HTTP_PROXY='http://proxy-chain.intel.com:911'
+  export HTTPS_PROXY='http://proxy-chain.intel.com:912'
+  export FTP_PROXY='http://proxy-chain.intel.com:911'
+  export SOCKS_PROXY='http://proxy-us.intel.com:1080'
+  export SSH_SOCKS_SERVER='proxy-us.intel.com:1080'
+  export NO_PROXY=intel.com,.intel.com,localhost,127.0.0.1
+fi
 
 alias sshProto='ssh ad_atrimblx@aidxp.intel.com'
 alias deployProto='rsync -avz /Users/atrimblx/Documents/aidxp/dist/ ad_atrimblx@aidxp.intel.com:/var/www/aidxp.intel.com/public_html/'
