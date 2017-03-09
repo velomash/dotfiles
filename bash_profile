@@ -19,7 +19,7 @@ export EDITOR=/usr/local/bin/vim
 export BLOCKSIZE=1k
 
 USING_VPN=$(ifconfig | grep -cs 'utun0')
-if [[ $USING_VPN == 1 ]]; then
+if [ $USING_VPN -eq 1 ]; then
   export HTTP_PROXY='http://proxy-chain.intel.com:911'
   export HTTPS_PROXY='http://proxy-chain.intel.com:912'
   export FTP_PROXY='http://proxy-chain.intel.com:911'

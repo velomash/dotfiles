@@ -7,25 +7,25 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'                " init vundle plugins
-Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plugin 'scrooloose/nerdtree'                 " find files by dir tree
-Plugin 'scrooloose/nerdcommenter'            " easy commenting
-Plugin 'scrooloose/syntastic'                " syntax checking
 Plugin 'Chiel92/vim-autoformat'              " format code
 Plugin 'Valloric/YouCompleteMe'              " code completion
-Plugin 'ternjs/tern_for_vim'                 " js hinting
+Plugin 'VundleVim/Vundle.vim'                " init vundle plugins
+Plugin 'chriskempson/base16-vim'             " color theme
+Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
+Plugin 'mattn/gist-vim'                      " quickly put code into a gist
+Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
+Plugin 'mileszs/ack.vim'                     " use ack to search a project
 Plugin 'mustache/vim-mustache-handlebars'    " syntax highlighting for templates
+Plugin 'mxw/vim-jsx'                         " syntax highlighting for react
+Plugin 'pangloss/vim-javascript'             " do js stuff
+Plugin 'scrooloose/nerdcommenter'            " easy commenting
+Plugin 'scrooloose/nerdtree'                 " find files by dir tree
+Plugin 'scrooloose/syntastic'                " syntax checking
+Plugin 'ternjs/tern_for_vim'                 " js hinting
+Plugin 'tpope/vim-fugitive'                  " git integration
+Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'vim-airline/vim-airline'             " status bar plugin
 Plugin 'vim-airline/vim-airline-themes'      " status bar themes
-Plugin 'tpope/vim-surround'                  " surround with tags
-Plugin 'tpope/vim-fugitive'                  " git integration
-Plugin 'chriskempson/base16-vim'             " color theme
-Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
-Plugin 'mattn/gist-vim'                      " quickly put code into a gist
-Plugin 'mileszs/ack.vim'                     " use ack to search a project
-Plugin 'pangloss/vim-javascript'             " do js stuff
-Plugin 'mxw/vim-jsx'                         " syntax highlighting for react
 
 call vundle#end()
 
@@ -35,8 +35,6 @@ let mapleader = ' '
 
 " theme
 syntax enable           " Enable code highlighting
-set t_Co=256            " in 256 color mode
-set background=dark
 colorscheme base16-ocean
 set guifont=Monaco:h14
 set guioptions-=r
@@ -87,9 +85,6 @@ inoremap <C-p> <F10>"+p<F10>
 vnoremap <leader>p <F10>"+p<F10>
 nnoremap <leader>p <F10>"+p<F10>
 
-" encryption
-"setlocal cm=blowfish2
-
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
 set directory=/var/tmp,/tmp
@@ -114,9 +109,6 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars', 'hbs': 'handle
 highlight clear SignColumn
 highlight SyntasticErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
 highlight SyntasticWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
-
-" vim-jsx options
-let g:jsx_ext_required = 0
 
 " YouCompleteMe options
 let g:ycm_seed_identifiers_with_syntax = 1
