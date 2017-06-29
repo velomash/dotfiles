@@ -19,13 +19,17 @@ export EDITOR=/usr/local/bin/vim
 export BLOCKSIZE=1k
 
 USING_VPN=$(ifconfig | grep -cs 'utun0')
-if [ $USING_VPN -eq 1 ]; then
-  export HTTP_PROXY='http://proxy-chain.intel.com:911'
-  export HTTPS_PROXY='http://proxy-chain.intel.com:912'
-  export FTP_PROXY='http://proxy-chain.intel.com:911'
-  export SOCKS_PROXY='http://proxy-us.intel.com:1080'
-  export SSH_SOCKS_SERVER='proxy-us.intel.com:1080'
-  export NO_PROXY=intel.com,.intel.com,localhost,127.0.0.1
+ATOFFICE=$(networksetup -getairportnetwork en0 | grep -cs 'RSN2OfficeWLAN')
+if [ $USING_VPN -eq 1 ] || [ $ATOFFICE -eq 1 ]; then
+  export http_proxy='http://proxy-chain.intel.com:911'
+  export https_proxy='http://proxy-chain.intel.com:912'
+  export git_proxy_command='~/bin/socks_connect'
+  export ftp_proxy='http://proxy-chain.intel.com:911'
+  export socks_proxy='http://proxy-us.intel.com:1080'
+  export ssh_socks_server='proxy-us.intel.com:1080'
+  export VAGRANT_HTTP_PROXY='http://proxy-chain.intel.com:911'
+  export VAGRANT_NO_PROXY='intel.com,.intel.com,localhost,127.0.0.1'
+  export no_proxy=intel.com,.intel.com,localhost,127.0.0.1,.dev,.local
 fi
 
 alias sshProto='ssh ad_atrimblx@aidxp.intel.com'
