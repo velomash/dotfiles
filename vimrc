@@ -9,6 +9,7 @@ Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
 Plugin 'mattn/gist-vim'                      " quickly put code into a gist
 Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
 Plugin 'mxw/vim-jsx'                         " syntax highlighting for react
+Plugin 'alampros/vim-styled-jsx'             " syntax highlighting for styled jsx
 Plugin 'pangloss/vim-javascript'             " do js stuff
 Plugin 'scrooloose/nerdcommenter'            " easy commenting
 Plugin 'scrooloose/nerdtree'                 " find files by dir tree
@@ -17,6 +18,7 @@ Plugin 'ternjs/tern_for_vim'                 " js hinting
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'vim-airline/vim-airline'             " status bar plugin
+Plugin 'mustache/vim-mustache-handlebars'    " syntax highlighting for handlebars
 Plugin 'vim-airline/vim-airline-themes'      " status bar themes
 Plugin 'Valloric/YouCompleteMe'              " code completion
 Plugin 'VundleVim/Vundle.vim'                " init vundle plugins

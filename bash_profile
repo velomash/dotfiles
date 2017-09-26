@@ -18,15 +18,12 @@ export EDITOR=/usr/local/bin/vim
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
 
-USING_VPN=$(ifconfig | grep -cs 'utun0')
-ATOFFICE=$(networksetup -getairportnetwork en0 | grep -cs 'RSN2OfficeWLAN')
-if [ $USING_VPN -eq 1 ] || [ $ATOFFICE -eq 1 ]; then
+ON_INTEL_VPN=$(cat /etc/resolv.conf | grep -cs 'intel.com')
+if [ $ON_INTEL_VPN -eq 1 ]; then
   export http_proxy='http://proxy-chain.intel.com:911'
   export https_proxy='http://proxy-chain.intel.com:912'
-  export git_proxy_command='~/bin/socks_connect'
   export ftp_proxy='http://proxy-chain.intel.com:911'
   export socks_proxy='http://proxy-us.intel.com:1080'
-  export ssh_socks_server='proxy-us.intel.com:1080'
   export VAGRANT_HTTP_PROXY='http://proxy-chain.intel.com:911'
   export VAGRANT_NO_PROXY='intel.com,.intel.com,localhost,127.0.0.1'
   export no_proxy=intel.com,.intel.com,localhost,127.0.0.1,.dev,.local
