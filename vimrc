@@ -18,7 +18,6 @@ Plugin 'ternjs/tern_for_vim'                 " js hinting
 Plugin 'tpope/vim-fugitive'                  " git integration
 Plugin 'tpope/vim-surround'                  " surround with tags
 Plugin 'vim-airline/vim-airline'             " status bar plugin
-Plugin 'mustache/vim-mustache-handlebars'    " syntax highlighting for handlebars
 Plugin 'vim-airline/vim-airline-themes'      " status bar themes
 Plugin 'Valloric/YouCompleteMe'              " code completion
 Plugin 'VundleVim/Vundle.vim'                " init vundle plugins
