@@ -1,27 +1,29 @@
-" Vundle setup & plugins
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'chriskempson/base16-vim'             " color theme
-Plugin 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plugin 'mattn/gist-vim'                      " quickly put code into a gist
-Plugin 'mattn/webapi-vim'                    " quickly put code into a gist
-Plugin 'mxw/vim-jsx'                         " syntax highlighting for react
-Plugin 'alampros/vim-styled-jsx'             " syntax highlighting for styled jsx
-Plugin 'prettier/vim-prettier'               " code formatting
-Plugin 'pangloss/vim-javascript'             " do js stuff
-Plugin 'scrooloose/nerdcommenter'            " easy commenting
-Plugin 'scrooloose/nerdtree'                 " find files by dir tree
-Plugin 'scrooloose/syntastic'                " syntax checking
-Plugin 'leafgarland/typescript-vim'          " Typescript completion
-Plugin 'lifepillar/vim-mucomplete'           " Simple autocomplete
-Plugin 'tpope/vim-fugitive'                  " git integration
-Plugin 'tpope/vim-surround'                  " surround with tags
-Plugin 'vim-airline/vim-airline'             " status bar plugin
-Plugin 'vim-airline/vim-airline-themes'      " status bar themes
-Plugin 'VundleVim/Vundle.vim'                " init vundle plugins
-call vundle#end()
+" vim-plug as the plugin manager
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'VundleVim/Vundle.vim'                " init vundle plugins
+Plug 'alampros/vim-styled-jsx'             " syntax highlighting for styled jsx
+Plug 'chriskempson/base16-vim'             " color theme
+Plug 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
+Plug 'leafgarland/typescript-vim'          " Typescript completion
+Plug 'mattn/gist-vim'                      " quickly put code into a gist
+Plug 'mattn/webapi-vim'                    " quickly put code into a gist
+Plug 'mxw/vim-jsx'                         " syntax highlighting for react
+Plug 'pangloss/vim-javascript'             " do js stuff
+Plug 'prettier/vim-prettier'               " code formatting
+Plug 'scrooloose/nerdcommenter'            " easy commenting
+Plug 'scrooloose/nerdtree'                 " find files by dir tree
+Plug 'tpope/vim-fugitive'                  " git integration
+Plug 'tpope/vim-surround'                  " surround with tags
+Plug 'vim-airline/vim-airline'             " status bar plugin
+Plug 'vim-airline/vim-airline-themes'      " status bar themes
+Plug 'w0rp/ale'                            " syntax checking
+call plug#end()
 
 " map leader to spacebar (best thing ever)
 let mapleader = ' '
@@ -52,12 +54,6 @@ set incsearch
 set gdefault
 set visualbell
 
-" LESS / CSS Highlighting
-augroup VimCSS3Syntax
-    autocmd!
-    autocmd FileType css setlocal iskeyword+=-
-augroup END
-
 " characters and movement
 filetype plugin indent on
 set expandtab
@@ -67,6 +63,12 @@ set autoindent
 set smartindent
 set backspace=indent,eol,start
 set title
+
+" split windows
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
 
 " map clipboard copy commands
 set pastetoggle=<F10>
@@ -89,19 +91,11 @@ set statusline+=%*
 let g:airline_theme = 'hybridline'
 let g:airline_powerline_fonts = 1
 
-" Syntastic options
-let g:syntastic_auto_loc_list = 2 " 1 will open the loc when there are errors
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-noremap <leader>e :Errors<CR>
-let g:syntastic_html_tidy_blocklevel_tags = []
-let g:syntastic_html_tidy_ignore_errors = []
-let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars', 'hbs': 'handlebars' }
-" better colors for the sign column
-highlight clear SignColumn
-highlight SyntasticErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
-highlight SyntasticWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
+" LESS / CSS Highlighting
+augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+augroup END
 
 " JSX highlighting in regular .js files
 let g:jsx_ext_required = 0
@@ -128,9 +122,10 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 " NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
 
-" split windows
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
-
+" ALE options
+noremap <leader>d :ALEGoToDefinition<CR>
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_fixers = { 'javascript': ['eslint'] }
+highlight clear SignColumn
+highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
+highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
