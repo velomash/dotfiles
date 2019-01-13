@@ -61,22 +61,23 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 
 # git shortcuts
-alias s='git status'
 alias a='git add -Av'
 alias ac='git commit -av'
+alias acm='git commit -av -m'
+alias b='git branch -a --sort=committerdate'
 alias c='git commit -v'
 alias cm='git commit -v -m'
-alias acm='git commit -av -m'
-alias l='git log'
-alias d='git diff'
-alias push='git push'
-alias pull='git pull'
-alias b='git branch -a'
-alias db='git branch -D'
 alias co='git checkout'
 alias cob='git checkout -b'
-alias reset='git reset --hard'
+alias d='git diff'
+alias db='git branch -D'
+alias fetch='git fetch'
 alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
+alias l='git log'
+alias pull='git pull'
+alias push='git push'
+alias reset='git reset --hard'
+alias s='git status'
 
 # npm shortcuts
 alias linked='ls -l node_modules/ | grep ^l'
@@ -266,3 +267,5 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
