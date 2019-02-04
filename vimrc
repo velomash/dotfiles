@@ -5,19 +5,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plug 'alampros/vim-styled-jsx'             " syntax highlighting for styled jsx
 Plug 'chriskempson/base16-vim'             " color theme
 Plug 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plug 'leafgarland/typescript-vim'          " Typescript completion
+Plug 'ervandew/supertab'                   " Allow tabs in completion menu
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
 Plug 'pangloss/vim-javascript'             " do js stuff
 Plug 'prettier/vim-prettier'               " code formatting
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
@@ -30,9 +28,11 @@ let mapleader = ' '
 
 " theme
 syntax enable           " Enable code highlighting
-colorscheme base16-oceanicnext
 set guifont=Monaco:h14
 set guioptions-=r
+set background=dark
+set termguicolors
+colorscheme base16-material-darker
 
 " Change the color of the divider bar between splits
 highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
@@ -73,17 +73,6 @@ nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 
-" map clipboard copy commands
-set clipboard=unnamed
-set pastetoggle=<F10>
-vnoremap <leader>y "+y
-nnoremap <leader>y "+yy
-vnoremap <leader>c "+d
-nnoremap <leader>c "+dd
-inoremap <C-p> <F10>"+p<F10>
-vnoremap <leader>p <F10>"+p<F10>
-nnoremap <leader>p <F10>"+p<F10>
-
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
 set directory=/var/tmp,/tmp
@@ -123,9 +112,14 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 noremap <leader>t :NERDTreeToggle<CR>
 
 " ALE options
+noremap <leader>r :ALEFindReferences<CR>
 noremap <leader>d :ALEGoToDefinition<CR>
+let b:ale_set_balloons = 1
+let g:ale_completion_enabled = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:ale_lint_on_text_changed = 'normal'
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:LanguageClient_serverCommands = { 'javascript': ['/usr/local/bin/javascript-typescript-stdio'] }
+
 highlight clear SignColumn
 highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
 highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE

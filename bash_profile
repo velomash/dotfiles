@@ -77,6 +77,7 @@ alias l='git log'
 alias pull='git pull'
 alias push='git push'
 alias reset='git reset --hard'
+alias merge='git mergetool'
 alias s='git status'
 
 # npm shortcuts
