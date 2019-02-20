@@ -7,7 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'                   " Upgrade vim's omnicomplete
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
@@ -38,18 +38,6 @@ set number
 set numberwidth=2
 set laststatus=2
 
-" Change the color of the divider bar between splits
-highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
-highlight PmenuSel ctermfg=233 ctermbg=69 guifg=#4A4A4A guibg=#F3D480
-highlight VertSplit ctermbg=NONE
-highlight VertSplit ctermfg=blue
-
-" customize vimdiff colors
-highlight DiffAdd cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
-highlight DiffDelete cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
-highlight DiffChange cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
-highlight DiffText cterm=NONE ctermfg=bg ctermbg=White gui=NONE guifg=bg guibg=White
-
 " search stuff
 set incsearch
 set gdefault
@@ -76,11 +64,9 @@ set backupdir=/var/tmp,/tmp
 set directory=/var/tmp,/tmp
 
 " Airline / Status line options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
@@ -116,6 +102,7 @@ let g:ale_completion_enabled = 1
 set completeopt=longest,menuone
 let g:ale_lint_on_text_changed = 'normal'
 let g:LanguageClient_serverCommands = { 'javascript': ['/usr/local/bin/javascript-typescript-stdio'] }
-highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
-highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
-highlight clear SignColumn
+let g:SuperTabDefaultCompletionType = "<c-n>"
+"highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
+"highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
+"highlight clear SignColumn
