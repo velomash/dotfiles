@@ -5,9 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'chriskempson/base16-vim'             " color theme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
-Plug 'ervandew/supertab'                   " Allow tabs in completion menu
+Plug 'ervandew/supertab'
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
@@ -19,7 +19,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
-Plug 'vim-airline/vim-airline-themes'      " status bar themes
 Plug 'w0rp/ale'                            " syntax checking
 call plug#end()
 
@@ -30,9 +29,14 @@ let mapleader = ' '
 syntax enable           " Enable code highlighting
 set guifont=Monaco:h14
 set guioptions-=r
-set background=dark
 set termguicolors
-colorscheme base16-material-darker
+set background=dark
+colorscheme onehalfdark
+
+" line Numbers
+set number
+set numberwidth=2
+set laststatus=2
 
 " Change the color of the divider bar between splits
 highlight Pmenu ctermfg=233 ctermbg=103 guifg=#4A4A4A guibg=#F3D480
@@ -45,12 +49,6 @@ highlight DiffAdd cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blu
 highlight DiffDelete cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
 highlight DiffChange cterm=NONE ctermfg=fg ctermbg=Blue gui=NONE guifg=fg guibg=Blue
 highlight DiffText cterm=NONE ctermfg=bg ctermbg=White gui=NONE guifg=bg guibg=White
-
-" line Numbers
-set number
-set numberwidth=2
-set laststatus=2
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " search stuff
 set incsearch
@@ -81,7 +79,7 @@ set directory=/var/tmp,/tmp
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:airline_theme = 'hybridline'
+let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 
 " LESS / CSS Highlighting
@@ -114,12 +112,10 @@ noremap <leader>t :NERDTreeToggle<CR>
 " ALE options
 noremap <leader>r :ALEFindReferences<CR>
 noremap <leader>d :ALEGoToDefinition<CR>
-let b:ale_set_balloons = 1
 let g:ale_completion_enabled = 1
-let g:SuperTabDefaultCompletionType = "<c-n>"
+set completeopt=longest,menuone
 let g:ale_lint_on_text_changed = 'normal'
 let g:LanguageClient_serverCommands = { 'javascript': ['/usr/local/bin/javascript-typescript-stdio'] }
-
-highlight clear SignColumn
 highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
 highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
+highlight clear SignColumn
