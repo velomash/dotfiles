@@ -5,9 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
-Plug 'ctrlpvim/ctrlp.vim'                  " find files with ctrl+p
 Plug 'ervandew/supertab'                   " Upgrade vim's omnicomplete
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
@@ -15,7 +15,9 @@ Plug 'pangloss/vim-javascript'             " do js stuff
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
+Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'tpope/vim-dispatch'                  " async command running
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
@@ -78,16 +80,27 @@ augroup END
 let g:jsx_ext_required = 0
 
 " vim-prettier options
-noremap <leader>f :PrettierAsync<CR>
+noremap <leader>p :PrettierAsync<CR>
 
-" Ctrl-P options
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " make ctrl-p ignore things in .gitignore
-noremap <leader>s :CtrlP<CR>
-noremap <leader>b :CtrlPBuffer<CR>
+" FZF options
+noremap <leader>f :Find<CR>
+noremap <leader>s :Files<CR>
+noremap <leader>b :Buffers<CR>
+" Default fzf layout
+" - down / up / left / right
+"let g:fzf_layout = { 'up': '~30%' }
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
+set grepprg=rg\ --vimgrep
 
 " NERDCommenter options
 let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' }, 'javascript': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
@@ -103,6 +116,3 @@ set completeopt=longest,menuone
 let g:ale_lint_on_text_changed = 'normal'
 let g:LanguageClient_serverCommands = { 'javascript': ['/usr/local/bin/javascript-typescript-stdio'] }
 let g:SuperTabDefaultCompletionType = "<c-n>"
-"highlight ALEErrorSign term=bold cterm=NONE ctermfg=red ctermbg=NONE gui=NONE guifg=red guibg=NONE
-"highlight ALEWarningSign term=bold cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=yellow guibg=NONE
-"highlight clear SignColumn

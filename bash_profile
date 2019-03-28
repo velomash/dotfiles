@@ -13,21 +13,19 @@ export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\$ "
 #   ------------------------------------------------------------
 export EDITOR=/usr/local/bin/vim
 
+#   Help GPG Keys work
+#   ------------------------------------------------------------
+export GPG_TTY=$(tty)
+
 #   Set default blocksize for ls, df, du
 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
 
-ON_INTEL_VPN=$(cat /etc/resolv.conf | grep -cs 'intel.com')
-if [ $ON_INTEL_VPN -eq 1 ]; then
-  export http_proxy='http://proxy-chain.intel.com:911'
-  export https_proxy='http://proxy-chain.intel.com:912'
-  export ftp_proxy='http://proxy-chain.intel.com:911'
-  export socks_proxy='http://proxy-us.intel.com:1080'
-  export VAGRANT_HTTP_PROXY='http://proxy-chain.intel.com:911'
-  export VAGRANT_NO_PROXY='intel.com,.intel.com,localhost,127.0.0.1'
-  export no_proxy=intel.com,.intel.com,localhost,127.0.0.1,.dev,.local
-fi
+#
+#   iTerm config
+#
+export TERM=xterm-256color-italic
 
 alias sshProto='ssh ad_atrimblx@aidxp.intel.com'
 alias deployProto='rsync -avz /Users/atrimblx/Documents/aidxp/dist/ ad_atrimblx@aidxp.intel.com:/var/www/aidxp.intel.com/public_html/'
@@ -155,9 +153,16 @@ ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the curr
 ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
 ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
 
-#   spotlight: Search for a file using MacOS Spotlight's metadata
-#   -----------------------------------------------------------
-spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
+
+#   ---------------------------
+#   FZF config for use with vim
+#   ---------------------------
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 
 #   ---------------------------
@@ -226,30 +231,9 @@ ii() {
 	echo
 }
 
-
-#   ---------------------------------------
-#   7.  SYSTEMS OPERATIONS & INFORMATION
-#   ---------------------------------------
-
-alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user
-
 #   cleanupDS:  Recursively delete .DS_Store files
 #   -------------------------------------------------------------------
 alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
-
-#   finderShowHidden:   Show hidden files in Finder
-#   finderHideHidden:   Hide hidden files in Finder
-#   -------------------------------------------------------------------
-alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
-alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
-
-#   cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu
-#   -----------------------------------------------------------------------------------
-alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-#    screensaverDesktop: Run a screensaver on the Desktop
-#   -----------------------------------------------------------------------------------
-alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
 #   ---------------------------------------
 #   8.  WEB DEVELOPMENT
@@ -262,11 +246,9 @@ alias herr='tail /var/log/httpd/error_log'              # herr:             Tail
 alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
 
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# opam configuration
+test -r /Users/adam.trimble/.opam/opam-init/init.sh && . /Users/adam.trimble/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
