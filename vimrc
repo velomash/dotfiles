@@ -11,6 +11,13 @@ Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'pangloss/vim-javascript'             " do js stuff
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
@@ -88,7 +95,7 @@ noremap <leader>s :Files<CR>
 noremap <leader>b :Buffers<CR>
 " Default fzf layout
 " - down / up / left / right
-"let g:fzf_layout = { 'up': '~30%' }
+let g:fzf_layout = { 'down': '~50%' }
 " --column: Show column number
 " --line-number: Show line number
 " --no-heading: Do not show file headings in results
@@ -107,6 +114,8 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 
 " NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
+
+let g:deoplete#enable_at_startup = 1
 
 " ALE options
 noremap <leader>r :ALEFindReferences<CR>
