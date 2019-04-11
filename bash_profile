@@ -1,7 +1,3 @@
-#   -------------------------------
-#   1.  ENVIRONMENT CONFIGURATION
-#   -------------------------------
-
 #   Change Prompt
 #   ------------------------------------------------------------
 #username@ComputerName:currentPath
@@ -27,13 +23,9 @@ export BLOCKSIZE=1k
 #
 export TERM=xterm-256color-italic
 
-alias sshProto='ssh ad_atrimblx@aidxp.intel.com'
-alias deployProto='rsync -avz /Users/atrimblx/Documents/aidxp/dist/ ad_atrimblx@aidxp.intel.com:/var/www/aidxp.intel.com/public_html/'
-
 #   -----------------------------
-#   2.  MAKE TERMINAL BETTER
+#   MAKE TERMINAL BETTER
 #   -----------------------------
-
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
@@ -97,30 +89,8 @@ mans () {
 #   -------------------------------
 #   3.  FILE AND FOLDER MANAGEMENT
 #   -------------------------------
-
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
-alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
-alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
-alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
-
-#   cdf:  'Cd's to frontmost window of MacOS Finder
-#   ------------------------------------------------------
-cdf () {
-	currFolderPath=$( /usr/bin/osascript <<EOT
-	tell application "Finder"
-	try
-	set currFolder to (folder of the front window as alias)
-	on error
-	set currFolder to (path to desktop folder as alias)
-end try
-POSIX path of currFolder
-end tell
-EOT
-)
-echo "cd to \"$currFolderPath\""
-cd "$currFolderPath"
-}
 
 #   extract:  Extract most know archives with one command
 #   ---------------------------------------------------------
@@ -145,16 +115,13 @@ extract () {
 	fi
 }
 
-
 #   ---------------------------
 #   4.  SEARCHING
 #   ---------------------------
-
 alias qfind="find . -name "                 # qfind:    Quickly search for file
 ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
 ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
 ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
-
 
 #   ---------------------------
 #   FZF config for use with vim
@@ -166,11 +133,6 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name end
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
-
-#   ---------------------------
-#   5.  PROCESS MANAGEMENT
-#   ---------------------------
-
 #   findPid: find out the pid of a specified process
 #   -----------------------------------------------------
 #       Note that the command name can be specified via a regex
@@ -178,79 +140,3 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 #       Without the 'sudo' it will only find processes of the current user
 #   -----------------------------------------------------
 findPid () { lsof -t -c "$@" ; }
-
-#   memHogsTop, memHogsPs:  Find memory hogs
-#   -----------------------------------------------------
-alias memHogsTop='top -l 1 -o rsize | head -20'
-alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
-
-#   cpuHogs:  Find CPU hogs
-#   -----------------------------------------------------
-alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
-
-#   topForever:  Continual 'top' listing (every 10 seconds)
-#   -----------------------------------------------------
-alias topForever='top -l 9999999 -s 10 -o cpu'
-
-#   ttop:  Recommended 'top' invocation to minimize resources
-#   ------------------------------------------------------------
-#       Taken from this macosxhints article
-#       http://www.macosxhints.com/article.php?story=20060816123853639
-#   ------------------------------------------------------------
-alias ttop="top -R -F -s 10 -o rsize"
-
-#   my_ps: List processes owned by my user:
-#   ------------------------------------------------------------
-my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
-
-
-#   ---------------------------
-#   6.  NETWORKING
-#   ---------------------------
-
-alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
-alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
-alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
-
-#   ii:  display useful host related informaton
-#   -------------------------------------------------------------------
-ii() {
-	echo -e "\nYou are logged on ${RED}$HOST"
-	echo -e "\nAdditionnal information:$NC " ; uname -a
-	echo -e "\n${RED}Users logged on:$NC " ; w -h
-	echo -e "\n${RED}Current date :$NC " ; date
-	echo -e "\n${RED}Machine stats :$NC " ; uptime
-	echo -e "\n${RED}Current network location :$NC " ; scselect
-	echo -e "\n${RED}Public facing IP Address :$NC " ;myip
-	#echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
-	echo
-}
-
-#   cleanupDS:  Recursively delete .DS_Store files
-#   -------------------------------------------------------------------
-alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
-
-#   ---------------------------------------
-#   8.  WEB DEVELOPMENT
-#   ---------------------------------------
-
-alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf
-alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache
-alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
-alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
-alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
-httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# opam configuration
-test -r /Users/adam.trimble/.opam/opam-init/init.sh && . /Users/adam.trimble/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

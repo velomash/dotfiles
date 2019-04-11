@@ -7,12 +7,10 @@
 
 echo "Installing command line preferences..."
 
-echo "linking bash_rc, vimrc, and tern-config"
+echo "linking bash_rc and vimrc to your home directory"
 ln -sf $PWD/bash_profile ~/.bash_profile
 ln -sf $PWD/vimrc ~/.vimrc
 ln -sf $PWD/tern-config ~/.tern-config
 
 echo "installing vim plugins"
 vim +PlugInstall
-
-
