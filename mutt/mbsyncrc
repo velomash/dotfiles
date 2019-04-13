@@ -1,0 +1,64 @@
+IMAPAccount personal
+Host imap.gmail.com
+User adam.trimble@gmail.com
+PassCmd "security find-internet-password -s 'imap.gmail.com' -a 'adam.trimble@gmail.com' -w"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/cert.pem
+
+IMAPStore personal-remote
+Account personal
+
+MaildirStore personal-local
+Path ~/Mail/adam.trimble-gmail.com/
+Inbox ~/Mail/adam.trimble-gmail.com/INBOX
+
+Channel personal-inbox
+Master :personal-remote:
+Slave :personal-local:INBOX
+Create Both
+Expunge Both
+SyncState *
+
+Channel personal-archive
+Master :personal-remote:"[Gmail]/Archive"
+Slave :personal-local:archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel personal-drafts
+Master :personal-remote:"[Gmail]/Drafts"
+Slave :personal-local:drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel personal-sent
+Master :personal-remote:"[Gmail]/Sent"
+Slave :personal-local:sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel personal-trash
+Master :personal-remote:"[Gmail]/Trash"
+Slave :personal-local:trash
+Create Both
+Expunge Both
+SyncState *
+
+Channel personal-junk
+Master :personal-remote:"[Gmail]/Spam"
+Slave :personal-local:junk
+Create Both
+Expunge Both
+SyncState *
+
+Group personal
+Channel personal-inbox
+Channel personal-archive
+Channel personal-drafts
+Channel personal-sent
+Channel personal-trash
+Channel personal-junk
