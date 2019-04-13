@@ -13,11 +13,6 @@ export EDITOR=/usr/local/bin/vim
 #   ------------------------------------------------------------
 export GPG_TTY=$(tty)
 
-#   Link Homebrew repos
-#   ------------------------------------------------------------
-echo 'export PATH="/usr/local/sbin:$PATH"'
-
-
 #   Set default blocksize for ls, df, du
 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
 #   ------------------------------------------------------------
