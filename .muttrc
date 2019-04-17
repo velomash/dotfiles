@@ -1,5 +1,5 @@
 # Paths ----------------------------------------------
-set folder           = ~/Mail                # mailbox location
+set folder           = ~/.mail                # mailbox location
 set alias_file       = ~/.mutt/aliases       # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
@@ -7,6 +7,8 @@ set certificate_file = ~/.mutt/certificates  # where to store certs
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
 set tmpdir           = ~/.mutt/temp          # where to keep temp files
 set signature        = ~/.mutt/signature     # my signature file
+
+source ~./mutt/colors
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -27,7 +29,8 @@ set sidebar_divider_char   = ' │ '
 set sidebar_visible = yes
 set sidebar_short_path = yes
 set sidebar_width   = 32
-color sidebar_new color221 color233
+bind index,pager <space> noop
+bind index,pager <space>t sidebar-toggle-visible
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -38,8 +41,6 @@ ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these
 unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
-
-# Account Settings -----------------------------------
 
 # Default inbox.
 set spoolfile = "+adam.trimble-gmail.com/Inbox"
@@ -75,7 +76,6 @@ bind index G        last-entry
 
 bind index R        group-reply
 bind index <tab>    sync-mailbox
-bind index <space>  collapse-thread
 
 # Ctrl-R to mark all as read
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"

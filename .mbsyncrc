@@ -11,8 +11,8 @@ Account personal
 
 MaildirStore personal-local
 Subfolders Verbatim
-Path ~/Mail/adam.trimble-gmail.com/
-Inbox ~/Mail/adam.trimble-gmail.com/Inbox
+Path ~/.mail/adam.trimble-gmail.com/
+Inbox ~/.mail/adam.trimble-gmail.com/Inbox
 
 Channel personal
 Master :personal-remote:
