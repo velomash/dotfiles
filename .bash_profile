@@ -18,10 +18,7 @@ export GPG_TTY=$(tty)
 #   ------------------------------------------------------------
 export BLOCKSIZE=1k
 
-#
-#   iTerm config
-#
-export TERM=xterm-256color-italic
+export PATH=$PATH:/Users/adam.trimble/.asdf/installs/postgres/9.6.8/bin
 
 #   -----------------------------
 #   MAKE TERMINAL BETTER
@@ -140,3 +137,5 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 #       Without the 'sudo' it will only find processes of the current user
 #   -----------------------------------------------------
 findPid () { lsof -t -c "$@" ; }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
