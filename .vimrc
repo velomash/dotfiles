@@ -11,16 +11,11 @@ Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 Plug 'pangloss/vim-javascript'             " do js stuff
+Plug 'leafgarland/typescript-vim'          " typescript
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
+Plug 'keith/swift.vim'
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
