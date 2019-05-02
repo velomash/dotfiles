@@ -8,14 +8,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " Upgrade vim's omnicomplete
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
+Plug 'keith/swift.vim'
+Plug 'leafgarland/typescript-vim'          " typescript
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'mxw/vim-jsx'                         " syntax highlighting for react
 Plug 'pangloss/vim-javascript'             " do js stuff
-Plug 'leafgarland/typescript-vim'          " typescript
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'prettier/vim-prettier'               " code formatting
+Plug 'ryanolsonx/vim-lsp-javascript'
 Plug 'scrooloose/nerdcommenter'            " easy commenting
-Plug 'keith/swift.vim'
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
