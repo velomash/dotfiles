@@ -42,4 +42,5 @@ brew cleanup
 
 npm install -g prettier
 npm install -g ngrok
+npm install -g typescript
 npm install -g javascript-typescript-langserver
