@@ -115,13 +115,9 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 " NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
 
-let g:deoplete#enable_at_startup = 1
-
 " ALE options
-noremap <leader>r :ALEFindReferences<CR>
-noremap <leader>d :ALEGoToDefinition<CR>
-let g:ale_completion_enabled = 1
-set completeopt=longest,menuone
 let g:ale_lint_on_text_changed = 'normal'
-let g:LanguageClient_serverCommands = { 'javascript': ['/usr/local/bin/javascript-typescript-stdio'] }
-let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" Language Server (vim-lsp) options
+noremap <leader>r :LspReferences<CR>
+noremap <leader>d :LspDefinition<CR>

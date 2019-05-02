@@ -1,22 +1,22 @@
-IMAPAccount personal
+IMAPAccount goat
 Host imap.gmail.com
-User adam.trimble@gmail.com
-PassCmd "security find-internet-password -s 'imap.gmail.com' -a 'adam.trimble@gmail.com' -w"
+User adam.trimble@goat.com
+PassCmd "security find-internet-password -s 'imap.gmail.com' -a 'adam.trimble@goat.com' -w"
 AuthMechs LOGIN
 SSLType IMAPS
 CertificateFile /etc/ssl/cert.pem
 
-IMAPStore personal-remote
-Account personal
+IMAPStore goat-remote
+Account goat
 
-MaildirStore personal-local
+MaildirStore goat-local
 Subfolders Verbatim
-Path ~/.mail/adam.trimble-gmail.com/
-Inbox ~/.mail/adam.trimble-gmail.com/Inbox
+Path ~/.mail/adam.trimble-goat.com/
+Inbox ~/.mail/adam.trimble-goat.com/Inbox
 
-Channel personal
-Master :personal-remote:
-Slave :personal-local:
+Channel goat
+Master :goat-remote:
+Slave :goat-local:
 Patterns *
 Create Both
 SyncState *
