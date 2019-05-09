@@ -24,11 +24,10 @@ Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'tpope/vim-dispatch'                  " async command running
+Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
-Plug 'w0rp/ale'                            " syntax checking
 call plug#end()
 
 " map leader to spacebar (best thing ever)
@@ -90,30 +89,20 @@ let g:jsx_ext_required = 0
 noremap <leader>p :PrettierAsync<CR>
 
 " FZF options
-noremap <leader>f :Find<CR>
+let g:fzf_layout = { 'down': '~50%' } " - down / up / left / right
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
+set grepprg=rg\ --vimgrep
+noremap <leader>f :FindCurrentWord<CR>
 noremap <leader>s :Files<CR>
 noremap <leader>b :Buffers<CR>
-" Default fzf layout
-" - down / up / left / right
-let g:fzf_layout = { 'down': '~50%' }
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
-set grepprg=rg\ --vimgrep
 
 " NERDCommenter options
 let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' }, 'javascript': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
 " NERDTree options
 noremap <leader>t :NERDTreeToggle<CR>
+let g:NERDTreeWinSize = 50
 
 " ALE options
 let g:ale_lint_on_text_changed = 'normal'
