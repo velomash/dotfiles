@@ -36,6 +36,7 @@ brew install rename
 brew install svgo
 brew install the_silver_searcher
 brew install terminal-notifier
+brew install awscli
 
 # Remove outdated versions from the cellar
 brew cleanup
