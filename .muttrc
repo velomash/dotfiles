@@ -43,22 +43,22 @@ unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
 
 # Default inbox.
-set spoolfile = "+adam.trimble-gmail.com/Inbox"
+set spoolfile = "+adam.trimble-goat.com/Inbox"
 
 # Mailboxes to show in the sidebar.
-mailboxes +adam.trimble-gmail.com/Inbox \
-          +adam.trimble-gmail.com/[Gmail]/Drafts \
-          +adam.trimble-gmail.com/GOAT \
-          +adam.trimble-gmail.com/[Gmail]/Sent\ Mail \
-          +adam.trimble-gmail.com/[Gmail]/Important \
-          +adam.trimble-gmail.com/[Gmail]/Starred \
-          +adam.trimble-gmail.com/Tini\ Trimble \
-          +adam.trimble-gmail.com/[Gmail]/Trash \
+mailboxes +adam.trimble-goat.com/Inbox \
+          +adam.trimble-goat.com/[Gmail]/Drafts \
+          +adam.trimble-goat.com/[Gmail]/Sent\ Mail \
+          +adam.trimble-goat.com/[Gmail]/Important \
+          +adam.trimble-goat.com/[Gmail]/Starred \
+          +adam.trimble-goat.com/[Gmail]/Trash \
+          +adam.trimble-goat.com/[Gmail]/github-web-main \
+          +adam.trimble-goat.com/[Gmail]/github-sneakers \
 
 # Other special folders.
-set mbox      = "+adam.trimble-gmail.com/[Gmail]/All\ Mail"
-set postponed = "+adam.trimble-gmail.com/[Gmail]/Drafts"
-set trash     = "+adam.trimble-gmail.com/[Gmail]/Trash"
+set mbox      = "+adam.trimble-goat.com/[Gmail]/All\ Mail"
+set postponed = "+adam.trimble-goat.com/[Gmail]/Drafts"
+set trash     = "+adam.trimble-goat.com/[Gmail]/Trash"
 
 # Index View Options ---------------------------------
 set date_format = "%m/%d"
