@@ -5,17 +5,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'                   " Upgrade vim's omnicomplete
+Plug 'ervandew/supertab'                   " better tab completion
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'prettier/vim-prettier'               " code formatting
-Plug 'ryanolsonx/vim-lsp-javascript'
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
 Plug 'sheerun/vim-polyglot'                " syntax highlighting
@@ -25,7 +21,6 @@ Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
-Plug 'w0rp/ale'
 call plug#end()
 
 " map leader to spacebar (best thing ever)
@@ -72,7 +67,6 @@ set directory=/var/tmp,/tmp
 " Airline / Status line options
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
@@ -102,11 +96,20 @@ let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': 
 noremap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 50
 
-" ALE options
-let g:ale_lint_on_text_changed = 'normal'
-
-" Language Server (vim-lsp) options
-noremap <leader>r :LspReferences<CR>
-noremap <leader>d :LspDefinition<CR>
-let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
-set completeopt+=preview
+" Language Server (coc) options
+set hidden
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+noremap <leader>r <Plug>(coc-definition)
+noremap <leader>d <Plug>(coc-references)
+noremap <leader>e :<C-u>CocList diagnostics<cr>
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
