@@ -5,7 +5,7 @@ export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\$ "
 
 #   Set Default Editor
 #   ------------------------------------------------------------
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/local/bin/nvim
 
 #   Help GPG Keys work
 #   ------------------------------------------------------------
@@ -44,6 +44,7 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+alias v='nvim'
 
 # git shortcuts
 alias a='git add -Av'

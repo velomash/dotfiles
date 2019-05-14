@@ -2,18 +2,14 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " Upgrade vim's omnicomplete
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
-Plug 'keith/swift.vim'
-Plug 'leafgarland/typescript-vim'          " typescript
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
-Plug 'mxw/vim-jsx'                         " syntax highlighting for react
-Plug 'pangloss/vim-javascript'             " do js stuff
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -22,12 +18,14 @@ Plug 'prettier/vim-prettier'               " code formatting
 Plug 'ryanolsonx/vim-lsp-javascript'
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
+Plug 'sheerun/vim-polyglot'                " syntax highlighting
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
+Plug 'w0rp/ale'
 call plug#end()
 
 " map leader to spacebar (best thing ever)
@@ -110,3 +108,5 @@ let g:ale_lint_on_text_changed = 'normal'
 " Language Server (vim-lsp) options
 noremap <leader>r :LspReferences<CR>
 noremap <leader>d :LspDefinition<CR>
+let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+set completeopt+=preview
