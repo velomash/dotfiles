@@ -321,9 +321,15 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>628 544 918 423 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>869 432 650 452 0 0 1680 1027 </string>
+	<string>324 1079 1066 996 -139 1050 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>212 118 650 418 0 0 1680 1027 </string>
+	<string>77 16 954 979 0 0 1680 1050 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>87 1185 650 452 -139 1050 1920 1057 </string>
+	<key>NeverWarnAboutShortLivedSessions_0F81D436-B790-418F-A3F8-248ED775869F</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_0F81D436-B790-418F-A3F8-248ED775869F_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1010,7 +1016,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4C84D38B-830A-46FD-8831-BCA6B7E97946</string>
 	<key>NoSyncLastTipTime</key>
-	<real>578852999.70351398</real>
+	<real>579632944.74511898</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1026,6 +1032,13 @@
 		<string>0001</string>
 		<string>0002</string>
 		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -1077,7 +1090,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-06T19:55:46Z</date>
+	<date>2019-05-10T23:34:17Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
