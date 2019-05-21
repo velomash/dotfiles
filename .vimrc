@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " better tab completion
+Plug 'jiangmiao/auto-pairs'                " auto close brackets
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
@@ -28,7 +29,6 @@ let mapleader = ' '
 
 " theme
 syntax enable           " Enable code highlighting
-set guifont=Monaco:h14
 set guioptions-=r
 set termguicolors
 set background=dark
@@ -43,6 +43,7 @@ set laststatus=2
 set incsearch
 set gdefault
 set visualbell
+set nohlsearch
 
 " characters and movement
 filetype plugin indent on
@@ -74,9 +75,6 @@ augroup VimCSS3Syntax
     autocmd FileType css setlocal iskeyword+=-
 augroup END
 
-" JSX highlighting in regular .js files
-let g:jsx_ext_required = 0
-
 " vim-prettier options
 noremap <leader>p :PrettierAsync<CR>
 
@@ -97,13 +95,14 @@ noremap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 50
 
 " Language Server (coc) options
+set signcolumn=yes
 set hidden
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-noremap <leader>r <Plug>(coc-definition)
-noremap <leader>d <Plug>(coc-references)
+nmap <silent> <leader>d <Plug>(coc-definition)
 noremap <leader>e :<C-u>CocList diagnostics<cr>
+set completeopt=longest,menuone
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
