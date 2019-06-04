@@ -20,6 +20,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
+Plug 'tpope/vim-rhubarb'                   " github for fugitive
 Plug 'tpope/vim-surround'                  " surround with tags
 Plug 'vim-airline/vim-airline'             " status bar plugin
 call plug#end()
@@ -61,6 +62,13 @@ nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 
+" moving between buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+" search and replace under cursor
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
 set directory=/var/tmp,/tmp
@@ -68,6 +76,11 @@ set directory=/var/tmp,/tmp
 " Airline / Status line options
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_y=''
+let g:airline_skip_empty_sections = 1
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
