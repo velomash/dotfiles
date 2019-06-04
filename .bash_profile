@@ -72,6 +72,7 @@ alias s='git status'
 # npm shortcuts
 alias start='npm start'
 alias linked='ls -l node_modules/ | grep ^l'
+alias run='npm run | grep "^\s\s\w" | fzf | xargs npm run'
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
