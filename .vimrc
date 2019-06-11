@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " better tab completion
+Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
@@ -55,6 +56,7 @@ set autoindent
 set smartindent
 set backspace=indent,eol,start
 set title
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " split windows
 nnoremap <leader>j <C-W><C-J>
@@ -81,6 +83,9 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_section_y=''
 let g:airline_skip_empty_sections = 1
+
+" vim-test
+let test#strategy = 'neovim'
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
