@@ -84,8 +84,12 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_section_y=''
 let g:airline_skip_empty_sections = 1
 
+" vim-fugitive
+nnoremap <leader>g :Gstatus<CR>
+
 " vim-test
 let test#strategy = 'neovim'
+let test#neovim#term_position = "lefttop"
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
