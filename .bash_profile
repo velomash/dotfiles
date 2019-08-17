@@ -18,6 +18,16 @@ export BLOCKSIZE=1k
 
 export PATH=$PATH:/Users/adam.trimble/.asdf/installs/postgres/9.6.8/bin
 
+
+#   ------------------------------
+#   GET SECRETES FROM MAC KEYCHAIN
+#   ------------------------------
+get_pw () {
+  security find-generic-password -ga "$1" -w
+}
+export NPM_TOKEN="$(get_pw packagecloud.io)"
+
+
 #   -----------------------------
 #   MAKE TERMINAL BETTER
 #   -----------------------------

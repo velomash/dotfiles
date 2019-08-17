@@ -89,7 +89,7 @@ nnoremap <leader>g :Gstatus<CR>
 
 " vim-test
 let test#strategy = 'neovim'
-let test#neovim#term_position = "lefttop"
+let test#neovim#term_position = "vertical"
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
