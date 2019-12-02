@@ -29,8 +29,8 @@ set sidebar_divider_char   = ' │ '
 set sidebar_visible = yes
 set sidebar_short_path = yes
 set sidebar_width   = 32
-bind index,pager <space> noop
-bind index,pager <space>t sidebar-toggle-visible
+bind index <space> noop
+bind index <space>t sidebar-toggle-visible
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -48,12 +48,12 @@ set spoolfile = "+adam.trimble-goat.com/Inbox"
 # Mailboxes to show in the sidebar.
 mailboxes +adam.trimble-goat.com/Inbox \
           +adam.trimble-goat.com/[Gmail]/Drafts \
-          +adam.trimble-goat.com/[Gmail]/Sent\ Mail \
           +adam.trimble-goat.com/[Gmail]/Important \
+          +adam.trimble-goat.com/[Gmail]/Sent\ Mail \
           +adam.trimble-goat.com/[Gmail]/Starred \
           +adam.trimble-goat.com/[Gmail]/Trash \
-          +adam.trimble-goat.com/[Gmail]/github-web-main \
-          +adam.trimble-goat.com/[Gmail]/github-sneakers \
+          +adam.trimble-goat.com/github \
+          +adam.trimble-goat.com/jira \
 
 # Other special folders.
 set mbox      = "+adam.trimble-goat.com/[Gmail]/All\ Mail"
@@ -82,7 +82,7 @@ macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "ma
 
 # Sync email
 macro index O "<shell-escape>mbsync -a<enter>"
-macro index o "<shell-escape>mbsync personal:Inbox<enter>"
+macro index o "<shell-escape>mbsync goat<enter>"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
