@@ -58,11 +58,15 @@ set backspace=indent,eol,start
 set title
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-" split windows
+" split windows navigation
+nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
+tnoremap <leader>h <C-\><C-N><C-w>h
+tnoremap <leader>j <C-\><C-N><C-w>j
+tnoremap <leader>k <C-\><C-N><C-w>k
+tnoremap <leader>l <C-\><C-N><C-w>l
 
 " moving between buffers
 nnoremap <Tab> :bnext<CR>
@@ -90,6 +94,7 @@ nnoremap <leader>g :Gstatus<CR>
 " vim-test
 let test#strategy = 'neovim'
 let test#neovim#term_position = "vertical"
+let test#javascript#jest#options = '--watch'
 
 " LESS / CSS Highlighting
 augroup VimCSS3Syntax
@@ -113,7 +118,11 @@ noremap <leader>b :Buffers<CR>
 let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' }, 'javascript': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
 " NERDTree options
-noremap <leader>t :NERDTreeToggle<CR>
+noremap <leader>to :NERDTreeFind<CR>
+noremap <leader>tt :NERDTreeToggle<CR>
+noremap <leader>tc :NERDTreeClose<CR>
+noremap <leader>tf :NERDTreeFocus<CR>
+noremap <leader>tr :NERDTreeRefreshRoot<CR>
 let g:NERDTreeWinSize = 50
 
 " Language Server (coc) options
@@ -123,6 +132,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 nmap <silent> <leader>d <Plug>(coc-definition)
+nmap <silent> <leader>R <Plug>(coc-rename)
 noremap <leader>e :<C-u>CocList diagnostics<cr>
 set completeopt=longest,menuone
 " Use K to show documentation in preview window
