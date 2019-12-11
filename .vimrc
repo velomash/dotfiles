@@ -118,8 +118,8 @@ noremap <leader>b :Buffers<CR>
 let g:NERDCustomDelimiters = { 'less': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' }, 'javascript': { 'left': '// ', 'right': '', 'leftAlt': '/* ', 'rightAlt': ' */' } }
 
 " NERDTree options
+noremap <leader>t<leader> :NERDTreeToggle<CR>
 noremap <leader>to :NERDTreeFind<CR>
-noremap <leader>tt :NERDTreeToggle<CR>
 noremap <leader>tc :NERDTreeClose<CR>
 noremap <leader>tf :NERDTreeFocus<CR>
 noremap <leader>tr :NERDTreeRefreshRoot<CR>
