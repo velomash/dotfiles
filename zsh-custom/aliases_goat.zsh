@@ -1,0 +1,5 @@
+alias cms='cd /Users/adam.trimble/Documents/goat-web-cms; nvim'
+alias flight='cd /Users/adam.trimble/Documents/flightclub.com; nvim'
+alias goat='cd /Users/adam.trimble/Documents/web-main; nvim'
+alias goatstaging='cd /Users/adam.trimble/Documents/web-main; GOATENV_ENVOY_EGRESS=https://staging.goat.com npm start'
+alias sneakers='cd /Users/adam.trimble/Documents/sneakers; nvim'
