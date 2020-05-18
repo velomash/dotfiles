@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " better tab completion
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
+Plug 'jparise/vim-graphql'                 " graphql syntax
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
