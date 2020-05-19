@@ -6,18 +6,19 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'                   " better tab completion
+Plug 'ianks/vim-tsx'                       " Syntax highlighting and indenting for TSX
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
 Plug 'jparise/vim-graphql'                 " graphql syntax
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
+Plug 'leafgarland/typescript-vim'          " Syntax file and other settings for TypeScript
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
-Plug 'sheerun/vim-polyglot'                " syntax highlighting
 Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-dispatch'                  " async command line commands
@@ -58,6 +59,8 @@ set autoindent
 set smartindent
 set backspace=indent,eol,start
 set title
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " split windows navigation
