@@ -26,6 +26,7 @@ Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-rails'                     " editor support for ruby on rails
 Plug 'tpope/vim-rhubarb'                   " github for fugitive
 Plug 'tpope/vim-surround'                  " surround with tags
+"Plug 'velomash/notoire'                    " Zettelkasten for vim + markdown
 Plug 'vim-airline/vim-airline'             " status bar plugin
 call plug#end()
 
@@ -56,6 +57,7 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 set autoindent
+set scrolloff=12
 set smartindent
 set backspace=indent,eol,start
 set title
@@ -83,6 +85,11 @@ nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
 set directory=/var/tmp,/tmp
+
+" Markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.mdx set filetype=markdown
+autocmd FileType markdown setlocal spell spelllang=en_us
 
 " Airline / Status line options
 let g:airline_theme='onehalfdark'
@@ -130,12 +137,14 @@ noremap <leader>tf :NERDTreeFocus<CR>
 noremap <leader>tr :NERDTreeRefreshRoot<CR>
 let g:NERDTreeWinSize = 50
 
-" Language Server (coc) options
 set signcolumn=yes
 set hidden
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
+
+" Language Server (coc) options
+let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-jest', 'coc-json', 'coc-tslint', 'coc-tsserver']
 nmap <silent> <leader>d <Plug>(coc-definition)
 nmap <silent> <leader>R <Plug>(coc-rename)
 noremap <leader>e :<C-u>CocList diagnostics<cr>
