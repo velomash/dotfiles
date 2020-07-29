@@ -5,7 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 
 endif
 call plug#begin('~/.vim/plugged')
+Plug 'dkarter/bullets.vim'                 " bulleted list management
 Plug 'ervandew/supertab'                   " better tab completion
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'ianks/vim-tsx'                       " Syntax highlighting and indenting for TSX
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
@@ -26,7 +28,7 @@ Plug 'tpope/vim-fugitive'                  " git integration
 Plug 'tpope/vim-rails'                     " editor support for ruby on rails
 Plug 'tpope/vim-rhubarb'                   " github for fugitive
 Plug 'tpope/vim-surround'                  " surround with tags
-"Plug 'velomash/notoire'                    " Zettelkasten for vim + markdown
+Plug 'velomash/vim-zet'                    " Zettelkasten for vim + markdown
 Plug 'vim-airline/vim-airline'             " status bar plugin
 call plug#end()
 
@@ -136,6 +138,9 @@ noremap <leader>tc :NERDTreeClose<CR>
 noremap <leader>tf :NERDTreeFocus<CR>
 noremap <leader>tr :NERDTreeRefreshRoot<CR>
 let g:NERDTreeWinSize = 50
+
+" vim-zet options
+let g:zet_folder = "~/Documents/notes"
 
 set signcolumn=yes
 set hidden
