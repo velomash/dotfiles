@@ -5,19 +5,19 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'dkarter/bullets.vim'                 " bulleted list management
-Plug 'ervandew/supertab'                   " better tab completion
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'ianks/vim-tsx'                       " Syntax highlighting and indenting for TSX
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'ervandew/supertab'
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
 Plug 'jparise/vim-graphql'                 " graphql syntax
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
-Plug 'leafgarland/typescript-vim'          " Syntax file and other settings for TypeScript
+Plug 'leafgarland/typescript-vim'
 Plug 'mattn/gist-vim'                      " quickly put code into a gist
 Plug 'mattn/webapi-vim'                    " quickly put code into a gist
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
@@ -149,7 +149,7 @@ set updatetime=300
 set shortmess+=c
 
 " Language Server (coc) options
-let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-jest', 'coc-json', 'coc-tslint', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-jest', 'coc-json', 'coc-tsserver', 'coc-eslint']
 nmap <silent> <leader>d <Plug>(coc-definition)
 nmap <silent> <leader>R <Plug>(coc-rename)
 noremap <leader>e :<C-u>CocList diagnostics<cr>
