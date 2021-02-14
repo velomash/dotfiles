@@ -9,3 +9,9 @@ get_pw () {
   security find-generic-password -ga "$1" -w
 }
 export NPM_TOKEN="$(get_pw packagecloud.io)"
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
