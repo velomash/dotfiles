@@ -5,7 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'HerringtonDarkholme/yats'
 Plug 'ervandew/supertab'
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
@@ -61,11 +61,14 @@ set tabstop=2
 set autoindent
 set scrolloff=12
 set smartindent
+set cindent
 set backspace=indent,eol,start
 set title
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+let g:typescript_indent_disable = 1
 
 " split windows navigation
 nnoremap <leader>h <C-W><C-H>
