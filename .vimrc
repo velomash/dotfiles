@@ -21,7 +21,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
-Plug 'sonph/onehalf', {'rtp': 'vim/'}      " color theme
+Plug 'joshdick/onedark.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
@@ -40,7 +40,7 @@ syntax enable           " Enable code highlighting
 set guioptions-=r
 set termguicolors
 set background=dark
-colorscheme onehalfdark
+colorscheme onedark
 
 " line Numbers
 set number
@@ -97,7 +97,7 @@ autocmd BufNewFile,BufRead *.mdx set filetype=markdown
 autocmd FileType markdown setlocal spell spelllang=en_us
 
 " Airline / Status line options
-let g:airline_theme='onehalfdark'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
