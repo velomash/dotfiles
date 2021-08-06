@@ -149,5 +149,3 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 #       Without the 'sudo' it will only find processes of the current user
 #   -----------------------------------------------------
 findPid () { lsof -t -c "$@" ; }
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
