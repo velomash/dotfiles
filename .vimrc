@@ -7,8 +7,10 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'HerringtonDarkholme/yats'
 Plug 'ervandew/supertab'
+Plug 'github/copilot.vim'                  " ML enhanced completions
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
+Plug 'joshdick/onedark.vim'
 Plug 'jparise/vim-graphql'                 " graphql syntax
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                    " fuzzy finding with ag
@@ -21,7 +23,6 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier'               " code formatting
 Plug 'scrooloose/nerdcommenter'            " easy commenting
 Plug 'scrooloose/nerdtree'                 " find files by dir tree
-Plug 'joshdick/onedark.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-dispatch'                  " async command line commands
 Plug 'tpope/vim-fugitive'                  " git integration
@@ -86,6 +87,7 @@ nnoremap <S-Tab> :bprevious<CR>
 
 " search and replace under cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+vnoremap <Leader>s :sort u<CR>
 
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
@@ -106,7 +108,7 @@ let g:airline_section_y=''
 let g:airline_skip_empty_sections = 1
 
 " vim-fugitive
-nnoremap <leader>g :Gstatus<CR>
+nnoremap <leader>g :Git<CR>
 
 " vim-test
 let test#strategy = 'neovim'
@@ -128,7 +130,7 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
 set grepprg=rg\ --vimgrep
 noremap <leader>f :FindCurrentWord<CR>
-noremap <leader>s :Files<CR>
+nnoremap <leader>s :Files<CR>
 noremap <leader>b :Buffers<CR>
 
 " NERDCommenter options
