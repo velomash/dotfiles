@@ -144,7 +144,6 @@ print_success() {
 
 # finds all .dotfiles in this folder
 declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .mutt"
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -179,6 +178,32 @@ main() {
         fi
 
     done
+
+    # neovim config linking
+    nvimSourceConfig="$(pwd)/nvim" 
+    nvimTargetConfig="$HOME/.config/nvim" 
+
+    if [ -d "$nvimSourceConfig" ]; then
+
+        if [ -d "$nvimTargetConfig" ]; then
+            if [ "$(readlink "$nvimTargetConfig")" != "$nvimSourceConfig" ]; then
+
+                ask_for_confirmation "'$nvimTargetConfig' already exists, do you want to overwrite it?"
+                if answer_is_yes; then
+                    rm -rf "$nvimTargetConfig"
+                    execute "ln -fs $nvimSourceConfig $nvimTargetConfig" "$nvimTargetConfig → $nvimSourceConfig"
+                else
+                    print_error "$nvimTargetConfig → $nvimSourceConfig"
+                fi
+
+            else
+                print_success "$nvimTargetConfig → $nvimSourceConfig"
+            fi
+        else
+            execute "ln -fs $nvimSourceConfig $nvimTargetConfig" "$nvimTargetConfig → $nvimSourceConfig"
+        fi
+	    
+    fi
 
 }
 
