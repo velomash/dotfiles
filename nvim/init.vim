@@ -90,6 +90,7 @@ nnoremap <S-Tab> :bprevious<CR>
 
 " search and replace under cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+vnoremap <Leader>s :sort u<CR>
 
 " set one directory for .swp files
 set backupdir=/var/tmp,/tmp
@@ -110,7 +111,7 @@ let g:airline_section_y=''
 let g:airline_skip_empty_sections = 1
 
 " vim-fugitive
-nnoremap <leader>g :Gstatus<CR>
+nnoremap <leader>g :Git<CR>
 
 " vim-test
 let test#strategy = 'neovim'
