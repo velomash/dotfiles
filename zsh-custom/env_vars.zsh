@@ -5,10 +5,7 @@ get_pw () {
   security find-generic-password -ga "$1" -w
 }
 export NPM_TOKEN="$(get_pw packagecloud.io)"
-export TF_VAR_staging_db_username="$(get_pw gastro_staging_db_username)"
-export TF_VAR_staging_db_password="$(get_pw gastro_staging_db_password)"
-export TF_VAR_production_db_username="$(get_pw gastro_production_db_username)"
-export TF_VAR_production_db_password="$(get_pw gastro_production_db_password)"
+export GH_PACKAGES_TOKEN="$(get_pw GOAT_github)"
 
 #   ---------------------------
 #   FZF config for use with vim

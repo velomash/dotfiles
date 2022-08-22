@@ -145,6 +145,10 @@ print_success() {
 # finds all .dotfiles in this folder
 declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|')
 
+declare -a ZSH_CONFIG_TO_SYMLINK=$(find zsh-custom -type f -maxdepth 1 -name "*.zsh" | sed -e 's|zsh-custom/||')
+
+echo $ZSH_CONFIG_TO_SYMLINK
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -158,6 +162,31 @@ main() {
 
         sourceFile="$(pwd)/$i"
         targetFile="$HOME/$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
+
+        if [ -e "$targetFile" ]; then
+            if [ "$(readlink "$targetFile")" != "$sourceFile" ]; then
+
+                ask_for_confirmation "'$targetFile' already exists, do you want to overwrite it?"
+                if answer_is_yes; then
+                    rm -rf "$targetFile"
+                    execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+                else
+                    print_error "$targetFile → $sourceFile"
+                fi
+
+            else
+                print_success "$targetFile → $sourceFile"
+            fi
+        else
+            execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+        fi
+
+    done
+
+    for i in ${ZSH_CONFIG_TO_SYMLINK[@]}; do
+
+        sourceFile="$(pwd)/zsh-custom/$i"
+        targetFile="$HOME/.oh-my-zsh/custom/$i"
 
         if [ -e "$targetFile" ]; then
             if [ "$(readlink "$targetFile")" != "$sourceFile" ]; then

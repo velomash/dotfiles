@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'HerringtonDarkholme/yats'
 Plug 'ervandew/supertab'
+Plug 'github/copilot.vim'
 Plug 'janko/vim-test'                      " granular testing
 Plug 'jiangmiao/auto-pairs'                " auto close brackets
 Plug 'jparise/vim-graphql'                 " graphql syntax
@@ -133,7 +134,7 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
 set grepprg=rg\ --vimgrep
 noremap <leader>f :FindCurrentWord<CR>
-noremap <leader>s :Files<CR>
+nnoremap <leader>s :Files<CR>
 noremap <leader>b :Buffers<CR>
 
 " NERDCommenter options
