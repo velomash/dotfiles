@@ -6,6 +6,7 @@ get_pw () {
 }
 export NPM_TOKEN="$(get_pw packagecloud.io)"
 export GH_PACKAGES_TOKEN="$(get_pw GOAT_github)"
+export HOMEBREW_GITHUB_API_TOKEN="$(get_pw GOAT_HOMEBREW)"
 
 #   ---------------------------
 #   FZF config for use with vim
