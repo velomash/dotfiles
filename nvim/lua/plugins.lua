@@ -14,24 +14,24 @@ packer.init({
 packer.startup(function()
   use 'wbthomason/packer.nvim' -- packer can manage itself
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	use 'github/copilot.vim'
-	use 'janko/vim-test'                      -- granular testing
-	use 'jiangmiao/auto-pairs'                -- auto close brackets
+  use 'github/copilot.vim'
+  use 'janko/vim-test'                      -- granular testing
+  use 'jiangmiao/auto-pairs'                -- auto close brackets
   use {'junegunn/fzf', run = './install --all'}
   use 'junegunn/fzf.vim'                    -- fuzzy finding with ag
-	use 'neovim/nvim-lspconfig'               -- language server
-	use 'nvim-lua/completion-nvim'
-	use 'anott03/nvim-lspinstall'
-	use {'prettier/vim-prettier', run = 'yarn install' }
-	use 'scrooloose/nerdcommenter'            -- easy commenting
-	use 'scrooloose/nerdtree'                 -- find files by dir tree
+  use 'neovim/nvim-lspconfig'               -- language server
+  use 'nvim-lua/completion-nvim'
+  use 'anott03/nvim-lspinstall'
+  use {'prettier/vim-prettier', run = 'yarn install' }
+  use 'scrooloose/nerdcommenter'            -- easy commenting
+  use 'scrooloose/nerdtree'                 -- find files by dir tree
   use({'monsonjeremy/onedark.nvim', branch = 'treesitter'})
-	use 'tpope/vim-dispatch'                  -- async command line commands
-	use 'tpope/vim-fugitive'                  -- git integration
-	use 'tpope/vim-rails'                     -- editor support for ruby on rails
-	use 'tpope/vim-rhubarb'                   -- github for fugitive
-	use 'tpope/vim-surround'                  -- surround with tags
-	use 'vim-airline/vim-airline'             -- status bar plugin
+  use 'tpope/vim-dispatch'                  -- async command line commands
+  use 'tpope/vim-fugitive'                  -- git integration
+  use 'tpope/vim-rails'                     -- editor support for ruby on rails
+  use 'tpope/vim-rhubarb'                   -- github for fugitive
+  use 'tpope/vim-surround'                  -- surround with tags
+  use 'vim-airline/vim-airline'             -- status bar plugin
 end)
 
 -- vim-test
