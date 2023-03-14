@@ -20,7 +20,9 @@ packer.startup(function()
   use {'junegunn/fzf', run = './install --all'}
   use 'junegunn/fzf.vim'                    -- fuzzy finding with ag
   use 'neovim/nvim-lspconfig'               -- language server
-  use 'nvim-lua/completion-nvim'
+  use ({'ms-jpq/coq_nvim', branch = 'coq'})  -- completion
+  use ({'ms-jpq/coq.artifacts', branch = 'artifacts'})  -- completion
+  use ({'ms-jpq/coq.thirdparty', branch = '3p'})  -- completion
   use 'anott03/nvim-lspinstall'
   use {'prettier/vim-prettier', run = 'yarn install' }
   use 'scrooloose/nerdcommenter'            -- easy commenting
@@ -32,6 +34,7 @@ packer.startup(function()
   use 'tpope/vim-rhubarb'                   -- github for fugitive
   use 'tpope/vim-surround'                  -- surround with tags
   use 'vim-airline/vim-airline'             -- status bar plugin
+  use 'vim-airline/vim-airline-themes'      -- status bar themes
 end)
 
 -- vim-test
@@ -55,25 +58,25 @@ vim.cmd([[
 ]])
 
 -- LSP Setup
+vim.cmd([[
+  let g:coq_settings = { 'auto_start': 'shut-up' }
+]])
 local lspconfig = require'lspconfig'
-local completion = require'completion'
-local function custom_on_attach(client)
-  print('Attaching to ' .. client.name)
-  completion.on_attach(client)
-end
-local default_config = {
-  on_attach = custom_on_attach,
-}
+local completion = require'coq'
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
-    virtual_text = false,
+    virtual_text = true,
     signs = true,
     update_in_insert = true,
   }
 )
+local signs = { Error = "❗️", Warn = "⚠️", Hint = "💡", Info = "💡" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 -- setup language servers here
-lspconfig.tsserver.setup{
-  on_attach = custom_on_attach,
+lspconfig.tsserver.setup(coq.lsp_ensure_capabilities({
   root_dir = require('lspconfig').util.root_pattern("package.json", "tsconfig.json", "jsconfig.json")
-}
+}))
