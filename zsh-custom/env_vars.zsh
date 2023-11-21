@@ -6,7 +6,6 @@ get_pw () {
 }
 export NPM_TOKEN="$(get_pw packagecloud.io)"
 export GH_PACKAGES_TOKEN="$(get_pw GOAT_github)"
-export HOMEBREW_GITHUB_API_TOKEN="$(get_pw GOAT_HOMEBREW)"
 
 #   ---------------------------
 #   FZF config for use with vim
@@ -17,3 +16,5 @@ export HOMEBREW_GITHUB_API_TOKEN="$(get_pw GOAT_HOMEBREW)"
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+
+export TF_VAR_staging_db_password="$(get_pw gastro_staging_db_password)"

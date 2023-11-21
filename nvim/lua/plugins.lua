@@ -28,6 +28,7 @@ packer.startup(function()
   use 'scrooloose/nerdcommenter'            -- easy commenting
   use 'scrooloose/nerdtree'                 -- find files by dir tree
   use({'monsonjeremy/onedark.nvim', branch = 'treesitter'})
+  use 'prisma/vim-prisma'                   -- syntax for prisma ORM
   use 'tpope/vim-dispatch'                  -- async command line commands
   use 'tpope/vim-fugitive'                  -- git integration
   use 'tpope/vim-rails'                     -- editor support for ruby on rails
