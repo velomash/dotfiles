@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["gen.nvim"] = {
+    loaded = true,
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/gen.nvim",
+    url = "https://github.com/David-Kunz/gen.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/nerdcommenter",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-prisma"] = {
+    loaded = true,
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-prisma",
+    url = "https://github.com/prisma/vim-prisma"
   },
   ["vim-rails"] = {
     loaded = true,
