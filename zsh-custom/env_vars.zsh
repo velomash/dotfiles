@@ -18,3 +18,5 @@ export GH_PACKAGES_TOKEN="$(get_pw GOAT_github)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 export TF_VAR_staging_db_password="$(get_pw gastro_staging_db_password)"
+
+export OPENAI_API_KEY=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
