@@ -19,6 +19,7 @@ packer.startup(function()
   use {'junegunn/fzf', run = './install --all'}
   use 'junegunn/fzf.vim'                    -- fuzzy finding with ag
   use 'neovim/nvim-lspconfig'               -- language server
+  use 'David-Kunz/gen.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -57,3 +58,10 @@ vim.cmd([[
   command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
   set grepprg=rg\ --vimgrep
 ]])
+
+require('gen').setup({
+  display_mode = "split",
+  model = "deepseek-coder:6.7b",
+  show_model = true,
+  show_prompt = true
+})

@@ -79,25 +79,25 @@ _G.packer_plugins = {
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  ["copilot.vim"] = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["coq.artifacts"] = {
+  ["cmp-cmdline"] = {
     loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/coq.artifacts",
-    url = "https://github.com/ms-jpq/coq.artifacts"
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
-  ["coq.thirdparty"] = {
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
-    url = "https://github.com/ms-jpq/coq.thirdparty"
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  coq_nvim = {
+  ["cmp-path"] = {
     loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/coq_nvim",
-    url = "https://github.com/ms-jpq/coq_nvim"
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   fzf = {
     loaded = true,
@@ -124,15 +124,15 @@ _G.packer_plugins = {
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/scrooloose/nerdtree"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
-    url = "https://github.com/anott03/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     loaded = true,
