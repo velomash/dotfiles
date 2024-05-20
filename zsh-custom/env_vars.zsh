@@ -5,7 +5,12 @@ get_pw () {
   security find-generic-password -ga "$1" -w
 }
 export NPM_TOKEN="$(get_pw packagecloud.io)"
+
+#   ------------------------------
+#   GOAT ENV VARS
+#   ------------------------------
 export GH_PACKAGES_TOKEN="$(get_pw GOAT_github)"
+export GOPRIVATE="github.com/goatapp"
 
 #   ---------------------------
 #   FZF config for use with vim

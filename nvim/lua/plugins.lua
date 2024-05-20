@@ -24,6 +24,7 @@ packer.startup(function()
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'fatih/vim-go'
   use 'hrsh7th/nvim-cmp'
   use {'prettier/vim-prettier', run = 'yarn install' }
   use 'scrooloose/nerdcommenter'            -- easy commenting
@@ -49,6 +50,16 @@ vim.cmd([[
 -- NERDTree options
 vim.cmd([[
   let g:NERDTreeWinSize = 50
+]])
+
+-- NERDCommenter options
+vim.cmd([[
+  let NERDSpaceDelims = 1
+]])
+
+-- GoLang options
+vim.cmd([[
+  set runtimepath+=$GOROOT/misc/vim
 ]])
 
 -- FZF options
