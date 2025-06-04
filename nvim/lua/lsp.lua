@@ -17,15 +17,20 @@ function ReverseTabCompletion (fallback)
   end
 end
 
-function SpaceCompletion (fallback)
+function ReturnCompletion (fallback)
   if cmp.visible() then
-    cmp.mapping.confirm({ select = true }) -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
   else
     fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
   end
 end
 
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+    end,
+  },
   window = {
     -- completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -35,12 +40,11 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<Tab>'] = TabCompletion,
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<CR>'] = ReturnCompletion,
     ['<S-Tab>'] = ReverseTabCompletion,
-    ['<Space>'] = LeaderCompletion
+    ['<Tab>'] = TabCompletion,
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -89,5 +93,19 @@ lspconfig.tsserver.setup{
 }
 lspconfig.gopls.setup{
   capabilities = capabilities,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
 }
 

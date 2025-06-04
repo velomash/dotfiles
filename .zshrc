@@ -146,3 +146,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Created by `pipx` on 2025-02-25 01:10:22
+export PATH="$PATH:/Users/adam.trimble/.local/bin"
+
+# Added by Windsurf
+export PATH="/Users/adam.trimble/.codeium/windsurf/bin:$PATH"
+alias claude="/Users/adam.trimble/.claude/local/claude"
