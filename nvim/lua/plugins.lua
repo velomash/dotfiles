@@ -88,14 +88,18 @@ vim.cmd([[
   set runtimepath+=$GOROOT/misc/vim
   
   " Disable vim-go LSP features to avoid conflicts with gopls
-  let g:go_def_mapping_enabled = 1
+  let g:go_def_mapping_enabled = 0
   let g:go_code_completion_enabled = 0
-  let g:go_gopls_enabled = 1
+  let g:go_gopls_enabled = 0
   
   " Use LSP for these features instead of vim-go
   let g:go_def_mode = 'gopls'
   let g:go_info_mode = 'gopls'
   let g:go_referrers_mode = 'gopls'
+
+  " Disable vim-go's default mappings that conflict with LSP
+  let g:go_doc_keywordprg_enabled = 0
+  let g:go_textobj_enabled = 0
   
   " Keep vim-go features that complement LSP
   let g:go_fmt_autosave = 1
@@ -123,8 +127,7 @@ vim.cmd([[
 local ts_status, treesitter = pcall(require, "nvim-treesitter.configs")
 if ts_status then
   treesitter.setup({
-    ensure_installed = { "lua", "markdown", "markdown_inline", "yaml" },
+    ensure_installed = { "lua", "markdown", "markdown_inline", "yaml", "go" },
     highlight = { enable = true },
   })
 end
-
