@@ -12,25 +12,21 @@ packer.init({
 
 --- startup and add configure plugins
 packer.startup(function()
-  use 'wbthomason/packer.nvim' -- packer can manage itself
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'fatih/vim-go'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/vim-vsnip'
   use 'janko/vim-test'                      -- granular testing
   use 'jiangmiao/auto-pairs'                -- auto close brackets
-  use {'junegunn/fzf', run = './install --all'}
   use 'junegunn/fzf.vim'                    -- fuzzy finding with ag
   use 'neovim/nvim-lspconfig'               -- language server
-  use 'David-Kunz/gen.nvim'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'fatih/vim-go'
-  use 'hrsh7th/nvim-cmp'
-  use {'prettier/vim-prettier', run = 'yarn install' }
+  use 'nvim-neotest/neotest'
+  use 'prisma/vim-prisma'                   -- syntax for prisma ORM
   use 'scrooloose/nerdcommenter'            -- easy commenting
   use 'scrooloose/nerdtree'                 -- find files by dir tree
-  use({'monsonjeremy/onedark.nvim', branch = 'treesitter'})
-  use 'prisma/vim-prisma'                   -- syntax for prisma ORM
   use 'tpope/vim-dispatch'                  -- async command line commands
   use 'tpope/vim-fugitive'                  -- git integration
   use 'tpope/vim-rails'                     -- editor support for ruby on rails
@@ -38,6 +34,36 @@ packer.startup(function()
   use 'tpope/vim-surround'                  -- surround with tags
   use 'vim-airline/vim-airline'             -- status bar plugin
   use 'vim-airline/vim-airline-themes'      -- status bar themes
+  use 'wbthomason/packer.nvim' -- packer can manage itself
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'junegunn/fzf', run = './install --all'}
+  use { 'prettier/vim-prettier', run = 'yarn install' }
+  use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter'})
+  use({ 'olimorris/codecompanion.nvim',
+    config = function()
+      require("codecompanion").setup({
+        strategies = {
+          chat = { adapter = "anthropic" },
+          inline = { adapter = "anthropic" },
+          cmd = { adapter = "anthropic" },
+        },
+        opts = { log_level = "DEBUG", },
+        adapters = {
+          anthropic = function()
+            return require("codecompanion.adapters").extend("anthropic", {
+              env = {
+                api_key = os.getenv("ANTHROPIC_API_KEY"),
+              },
+            })
+          end,
+        }
+      })
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    }
+  })
 end)
 
 -- vim-test
@@ -60,6 +86,29 @@ vim.cmd([[
 -- GoLang options
 vim.cmd([[
   set runtimepath+=$GOROOT/misc/vim
+  
+  " Disable vim-go LSP features to avoid conflicts with gopls
+  let g:go_def_mapping_enabled = 1
+  let g:go_code_completion_enabled = 0
+  let g:go_gopls_enabled = 1
+  
+  " Use LSP for these features instead of vim-go
+  let g:go_def_mode = 'gopls'
+  let g:go_info_mode = 'gopls'
+  let g:go_referrers_mode = 'gopls'
+  
+  " Keep vim-go features that complement LSP
+  let g:go_fmt_autosave = 1
+  let g:go_imports_autosave = 1
+  let g:go_mod_fmt_autosave = 1
+  let g:go_highlight_types = 1
+  let g:go_highlight_fields = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_function_calls = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_extra_types = 1
+  let g:go_highlight_build_constraints = 1
+  let g:go_highlight_generate_tags = 1
 ]])
 
 -- FZF options
@@ -70,9 +119,12 @@ vim.cmd([[
   set grepprg=rg\ --vimgrep
 ]])
 
-require('gen').setup({
-  display_mode = "split",
-  model = "deepseek-coder:6.7b",
-  show_model = true,
-  show_prompt = true
-})
+-- Setup Tree-sitter
+local ts_status, treesitter = pcall(require, "nvim-treesitter.configs")
+if ts_status then
+  treesitter.setup({
+    ensure_installed = { "lua", "markdown", "markdown_inline", "yaml" },
+    highlight = { enable = true },
+  })
+end
+
