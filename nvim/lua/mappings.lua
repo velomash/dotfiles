@@ -42,16 +42,29 @@ map("n", "<Leader>f", ":FindCurrentWord<CR>")
 map("n", "<Leader>s", ":Files<CR>")
 map("n", "<Leader>b", ":Buffers<CR>")
 
--- LSP Bindings
-map('n', '<Leader>d', ':lua vim.lsp.buf.definition()<CR>')
-map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
-map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
-map('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
-map('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
-map('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
-map('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
-map('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-map('n', '<leader>af', ':lua vim.lsp.buf.code_action()<CR>')
-map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
-map('n', '<leader>e', ':lua vim.diagnostic.open_float()<CR>')
+-- LSP Bindings - These will be set up properly in the on_attach function
+-- But we'll also set global fallbacks in case on_attach doesn't work
+map('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+map('n', 'gw', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
+map('n', 'gW', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
+map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+map('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+map('n', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+map('n', '<leader>af', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+map('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+
+-- Diagnostic navigation
+map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+map('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
+
+-- CodeCompanion mappings for better Claude integration
+map("n", "<leader>cc", ":CodeCompanion<CR>", { desc = "Open Claude chat" })
+map("v", "<leader>ca", ":CodeCompanionActions<CR>", { desc = "Claude actions on selection" })
+map("n", "<leader>ct", ":CodeCompanionToggle<CR>", { desc = "Toggle Claude chat" })
+map("n", "<leader>cq", ":CodeCompanionCmd ", { desc = "Quick Claude command" })

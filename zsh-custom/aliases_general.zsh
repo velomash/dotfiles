@@ -6,3 +6,4 @@ alias v='nvim'
 
 alias gastro='cd /Users/adam.trimble/Documents/gastro-web; nvim'
 alias kitchen='cd /Users/adam.trimble/Documents/kitchen; nvim'
+alias dotfiles='cd /Users/adam.trimble/Documents/dotfiles; nvim'
