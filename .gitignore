@@ -18,6 +18,7 @@ claude/shell-snapshots
 claude/statsig
 claude/todos
 claude/local
+claude/history.jsonl
 
 dist
 build
