@@ -26,3 +26,5 @@ export GOPRIVATE="github.com/goatapp/*"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 export TF_VAR_staging_db_password="$(get_pw gastro_staging_db_password)"
+
+export LOCALSTACK_AUTH_TOKEN="ls-lONI8713-Ruqi-6716-JaMO-CeJAQidI357b"

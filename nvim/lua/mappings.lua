@@ -64,7 +64,15 @@ map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 map('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
 
 -- CodeCompanion mappings for better Claude integration
-map("n", "<leader>cc", ":CodeCompanion<CR>", { desc = "Open Claude chat" })
-map("v", "<leader>ca", ":CodeCompanionActions<CR>", { desc = "Claude actions on selection" })
-map("n", "<leader>ct", ":CodeCompanionToggle<CR>", { desc = "Toggle Claude chat" })
-map("n", "<leader>cq", ":CodeCompanionCmd ", { desc = "Quick Claude command" })
+map("n", "<leader>ai", ":CodeCompanion<CR>", { desc = "Open Claude chat" })
+map("v", "<leader>aa", ":CodeCompanionActions<CR>", { desc = "Claude actions on selection" })
+map("n", "<leader>ac", ":CodeCompanionToggle<CR>", { desc = "Toggle Claude chat" })
+map("n", "<leader>aq", ":CodeCompanionCmd ", { desc = "Quick Claude command" })
+
+-- copy current filepath
+function insertFullPath()
+  local filepath = vim.fn.expand('%')
+  vim.fn.setreg('+', filepath) -- write to clippoard
+end
+
+vim.keymap.set('n', '<leader>cp', insertFullPath, { noremap = true, silent = true })
