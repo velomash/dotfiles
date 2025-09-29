@@ -69,10 +69,25 @@ map("v", "<leader>aa", ":CodeCompanionActions<CR>", { desc = "Claude actions on 
 map("n", "<leader>ac", ":CodeCompanionToggle<CR>", { desc = "Toggle Claude chat" })
 map("n", "<leader>aq", ":CodeCompanionCmd ", { desc = "Quick Claude command" })
 
--- copy current filepath
+-- copy current filepath with optional line numbers
 function insertFullPath()
   local filepath = vim.fn.expand('%')
-  vim.fn.setreg('+', filepath) -- write to clippoard
+  local mode = vim.fn.mode()
+
+  -- Check if we're in visual mode or have a visual selection
+  if mode == 'v' or mode == 'V' or mode == '\22' then -- \22 is visual block mode
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+
+    if start_line == end_line then
+      filepath = filepath .. ':' .. start_line
+    else
+      filepath = filepath .. ':' .. start_line .. '-' .. end_line
+    end
+  end
+
+  vim.fn.setreg('+', filepath) -- write to clipboard
 end
 
 vim.keymap.set('n', '<leader>cp', insertFullPath, { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>cp', insertFullPath, { noremap = true, silent = true })
