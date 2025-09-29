@@ -148,3 +148,15 @@ lspconfig.ts_ls.setup{
     },
   },
 }
+
+-- Ruby LSP setup
+lspconfig.ruby_lsp.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = { "ruby" },
+  root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
+  init_options = {
+    formatter = "standard",
+    linters = { "standard" },
+  },
+}
