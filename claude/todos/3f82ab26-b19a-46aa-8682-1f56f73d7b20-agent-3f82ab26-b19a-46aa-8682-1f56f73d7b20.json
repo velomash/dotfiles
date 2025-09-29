@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Analyze current force_sync_all_stores test coverage",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check if key generation changes require additional tests",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Verify test mocks match updated implementation",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

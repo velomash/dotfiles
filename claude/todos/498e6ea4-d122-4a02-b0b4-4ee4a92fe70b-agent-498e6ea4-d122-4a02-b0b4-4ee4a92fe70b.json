@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Analyze all .ts files in /lib directory to understand SharedStack structure",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Identify certificate verification issues with images.gastro.wiki",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Verify SharedStack deployment dependencies and configuration",
+    "status": "completed",
+    "id": "3"
+  }
+]

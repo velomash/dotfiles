@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Investigate bundle install authentication error for rubygems.pkg.github.com",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Configure GitHub authentication for bundle install",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

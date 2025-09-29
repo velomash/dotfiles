@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Fix failing tests in internal/handlers/platformevents package",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix failing tests in internal/handlers/tasks package",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

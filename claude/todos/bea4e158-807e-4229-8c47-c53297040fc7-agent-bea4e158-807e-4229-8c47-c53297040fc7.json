@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Restore multi-tenancy guard logic using table name",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Add configMatches function for tenant filtering",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Extract repository name from table name",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  }
+]

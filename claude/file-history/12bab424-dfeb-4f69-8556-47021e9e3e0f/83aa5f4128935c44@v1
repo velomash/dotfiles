@@ -1,0 +1,51 @@
+class PrivateApi::GatewayController < ActionController::Base
+  include ExceptionHandler # should be first
+  include DelayTouching
+  include Pundit::Authorization
+  include PaperTrailContext # NOTE: PaperTrail.request.whodunnit is set in ServiceMesh::GrpcGateway#handle_request
+
+  # disable PerimeterX scoring, assuming that upstream clients will handle it
+  skip_before_action :px_verify_request, raise: false
+  protect_from_forgery with: :null_session, prepend: true
+
+  # requests made to this endpoint should have a payload like:
+  # {
+  #   method: "/proto_package.MyService/FooRpc",
+  #   payload: "{\"foo\": 123}",
+  # }
+  def grpc
+    resp = gateway.handle_request(
+      method: params[:method],
+      payload: params[:payload],
+      headers: request.headers
+    )
+
+    render json: resp
+  end
+
+  private
+
+  def gateway
+    @gateway ||= ServiceMesh::GrpcGateway.new(
+      services: [
+        HealthService.new,
+        Sell::AnalyticsService.new,
+        PartnerManagement::ProductsService.new,
+        PartnerManagement::OrdersService.new,
+        OrderReservationService.new,
+        ContestAwardsService.new,
+        GrpcSizeConversionService.new, # TODO remove; replaced by external service
+        Fc::LocationsService.new,
+        Fc::ReservationsService.new,
+        FulfillmentVerification::AssessmentsService.new,
+        FulfillmentVerification::SkusService.new,
+        GrpcPromoCodesService.new,
+        GrpcProductTemplatesService.new,
+        AuctionOrderService.new,
+        PlatformEvents::EventRunnerService.new,
+        AdminCampaignsService.new,
+        AdminFlashSaleService.new
+      ]
+    )
+  end
+end

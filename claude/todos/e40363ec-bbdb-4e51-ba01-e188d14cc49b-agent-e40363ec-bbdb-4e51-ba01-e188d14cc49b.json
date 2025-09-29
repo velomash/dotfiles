@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Lambda is not in VPC - needs VPC configuration",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Lambda missing PHOTO_UPLOAD_BUCKET_NAME environment variable",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Need to add S3 VPC endpoint for Lambda",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Need Lambda security group for VPC communication",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Need to allow Lambda to call API service on port 5000",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  }
+]

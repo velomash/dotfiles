@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Install S3 dependencies (@aws-sdk/client-s3 and @aws-sdk/s3-request-presigner)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update environment validation to include S3 bucket variables",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create media module directory structure",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Create media.service.ts with S3 and database operations",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Create media.dto.ts with validation classes",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Create media.controller.ts with upload endpoints",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Create media.routes.ts with route definitions",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Add profile picture endpoints to profile routes",
+    "status": "completed",
+    "priority": "high",
+    "id": "8"
+  },
+  {
+    "content": "Wire up media routes in main app",
+    "status": "completed",
+    "priority": "medium",
+    "id": "9"
+  }
+]

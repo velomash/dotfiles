@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Find the Profile component causing setState in render",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Identify the problematic setState call",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix the setState during render issue",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

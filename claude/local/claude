@@ -1,0 +1,2 @@
+#!/bin/bash
+exec "/Users/adam.trimble/.claude/local/node_modules/.bin/claude" "$@"

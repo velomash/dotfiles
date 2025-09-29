@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Analyze the HandleAvailabilityUpdatedEvent function for performance bottlenecks",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Identify Redis connection pooling and transaction optimization opportunities",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Examine the Redis key structure and potential hotspots",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Provide recommendations for improving the availability event processing",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]

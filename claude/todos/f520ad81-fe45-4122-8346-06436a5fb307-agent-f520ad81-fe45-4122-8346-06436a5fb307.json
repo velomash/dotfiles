@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Create GitHub Actions workflow directory",
+    "status": "completed",
+    "priority": "medium",
+    "id": "1"
+  },
+  {
+    "content": "Create workflow to generate SVG from Mermaid file on changes",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

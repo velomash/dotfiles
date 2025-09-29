@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Check current database stack subnet configuration",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update database stack to use at least 2 AZs for subnet group",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Investigate staging web stack autoscaling oscillation issue",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix CDK autoscaling configuration to prevent oscillation",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

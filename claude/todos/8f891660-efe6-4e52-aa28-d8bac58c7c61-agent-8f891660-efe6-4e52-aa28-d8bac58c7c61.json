@@ -1,0 +1,8 @@
+[
+  {
+    "content": "Add call to updateStore in updateRecord function for store records",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Check current branch and create new branch if needed",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Check for uncommitted changes and handle them",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Commit changes with proper message format",
+    "status": "in_progress",
+    "id": "3"
+  },
+  {
+    "content": "Push branch to remote",
+    "status": "pending",
+    "id": "4"
+  },
+  {
+    "content": "Create PR using gh pr create",
+    "status": "pending",
+    "id": "5"
+  }
+]

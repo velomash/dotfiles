@@ -1,0 +1,8 @@
+[
+  {
+    "content": "Analyze the 10 recent cancelled products to identify the root cause",
+    "status": "completed",
+    "priority": "high",
+    "id": "analyze_recent_products"
+  }
+]

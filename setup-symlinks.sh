@@ -209,8 +209,8 @@ main() {
     done
 
     # neovim config linking
-    nvimSourceConfig="$(pwd)/nvim" 
-    nvimTargetConfig="$HOME/.config/nvim" 
+    nvimSourceConfig="$(pwd)/nvim"
+    nvimTargetConfig="$HOME/.config/nvim"
 
     if [ -d "$nvimSourceConfig" ]; then
 
@@ -231,7 +231,33 @@ main() {
         else
             execute "ln -fs $nvimSourceConfig $nvimTargetConfig" "$nvimTargetConfig → $nvimSourceConfig"
         fi
-	    
+
+    fi
+
+    # claude config linking
+    claudeSourceConfig="$(pwd)/claude"
+    claudeTargetConfig="$HOME/.claude"
+
+    if [ -d "$claudeSourceConfig" ]; then
+
+        if [ -d "$claudeTargetConfig" ]; then
+            if [ "$(readlink "$claudeTargetConfig")" != "$claudeSourceConfig" ]; then
+
+                ask_for_confirmation "'$claudeTargetConfig' already exists, do you want to overwrite it?"
+                if answer_is_yes; then
+                    rm -rf "$claudeTargetConfig"
+                    execute "ln -fs $claudeSourceConfig $claudeTargetConfig" "$claudeTargetConfig → $claudeSourceConfig"
+                else
+                    print_error "$claudeTargetConfig → $claudeSourceConfig"
+                fi
+
+            else
+                print_success "$claudeTargetConfig → $claudeSourceConfig"
+            fi
+        else
+            execute "ln -fs $claudeSourceConfig $claudeTargetConfig" "$claudeTargetConfig → $claudeSourceConfig"
+        fi
+
     fi
 
 }

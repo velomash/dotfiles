@@ -1,0 +1,8 @@
+[
+  {
+    "content": "Update tests to use testSuite struct fields instead of expecting multiple returns from createTask",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  }
+]

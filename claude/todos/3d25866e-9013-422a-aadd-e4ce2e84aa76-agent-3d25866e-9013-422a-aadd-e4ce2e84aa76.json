@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Update GetProfilePictureUploadUrlDto to remove fileType",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Test the updated DTO",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  }
+]

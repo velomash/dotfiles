@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Review status default change for safety",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Analyze error handling implementation",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Check index name changes for consistency",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Review SDK abstraction implementation",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Identify improvement opportunities",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

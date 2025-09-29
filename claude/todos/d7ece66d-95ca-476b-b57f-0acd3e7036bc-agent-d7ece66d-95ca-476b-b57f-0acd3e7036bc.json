@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Check current CDK state and list deployed stacks",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Examine NetworkStack exports and StagingWebStack dependencies",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Compare CDK template with actual CloudFormation state",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix CDK version mismatch between CLI and library",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Deploy NetworkStack to resolve rollback state",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Deploy StagingWebStack successfully",
+    "status": "pending",
+    "priority": "high",
+    "id": "6"
+  }
+]

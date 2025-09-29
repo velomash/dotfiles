@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Check git status and review changes",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create commit with proper message",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Push branch to remote",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Create PR with template",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]

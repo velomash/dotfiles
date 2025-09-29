@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Examine the diff-check.sh script to understand what it's checking",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check if build.sh script exists and understand what it does",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Compare current generated files with expected versions",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Run build.sh to regenerate files if needed",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

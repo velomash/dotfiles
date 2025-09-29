@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Analyze codebase structure and locate alias-service.ts",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Understand current GI display logic and PT limit checking",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement GI hiding logic when below PT minimum threshold",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Update related spec tests",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Test the implementation",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

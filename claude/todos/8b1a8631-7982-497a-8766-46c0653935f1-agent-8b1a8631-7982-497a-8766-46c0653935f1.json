@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Fix EdgeStack - uncomment and enable images CloudFront distribution",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Fix EdgeStack - uncomment imagesOAC parameter and S3Origin setup",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Fix EdgeStack - add DNS A record for images.gastro.wiki",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Fix ApiStack - add grantRead for CloudFront private key secret",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Fix SharedStack - add explicit dependency between CustomResource and KeyGroup",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Fix Dockerfile version consistency in cloudFrontKeyGenerator",
+    "status": "completed",
+    "id": "6"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Examine CatalogPage component structure and current resellability logic",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Find where user's country code is available in the app",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Locate restricted_to_country_codes field in data types/interfaces",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Implement logic to compare user country with restricted_to_country_codes",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Update CatalogPage to show 'Currently unavailable for resale' when restricted",
+    "status": "completed",
+    "id": "5"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Examine current dynamo.go implementation using dynago",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Review example implementation in analytics/internal/repositories/availabilities/dynamo.go",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Refactor dynamo.go to use AWS DynamoDB SDKs with best practices",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Test the refactored implementation",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

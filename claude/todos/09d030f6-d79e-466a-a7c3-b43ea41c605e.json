@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Review current changes in the PR branch",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Identify any issues with the GlobalIndicatorPriceUpdatedEvent removal",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix any identified issues",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Verify tests are correct and updated appropriately",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]

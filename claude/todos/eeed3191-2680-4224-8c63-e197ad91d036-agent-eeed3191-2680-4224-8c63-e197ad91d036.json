@@ -1,0 +1,8 @@
+[
+  {
+    "content": "Fix MARKET_DATA_UPDATED_AT to use individual priceUpdate.UpdatedAt timestamp instead of event-level timestamp",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  }
+]

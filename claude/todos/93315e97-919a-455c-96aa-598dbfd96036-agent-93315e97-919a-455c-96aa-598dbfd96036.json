@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Run linting to identify issues",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Fix all linting issues",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Verify fixes with lint check",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Wait for GitHub checks to pass",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Merge PR with gh pr merge",
+    "status": "completed",
+    "id": "5"
+  }
+]

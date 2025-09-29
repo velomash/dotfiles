@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Analyze the failing test files to understand the race condition patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix backfill test file by removing testify suite and t.Parallel() calls",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix force_sync_all_stores test file by removing testify suite and t.Parallel() calls",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Run tests to verify race conditions are resolved",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  }
+]

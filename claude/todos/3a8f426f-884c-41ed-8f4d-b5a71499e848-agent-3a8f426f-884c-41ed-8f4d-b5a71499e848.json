@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Analyze current RTK Query caching configuration and identify stale data issues",
+    "status": "completed",
+    "priority": "high",
+    "id": "review-rtk-cache"
+  },
+  {
+    "content": "Review how availability data is used in table components",
+    "status": "completed",
+    "priority": "high",
+    "id": "review-availability-usage"
+  },
+  {
+    "content": "Examine server-side caching behavior for availability endpoints",
+    "status": "completed",
+    "priority": "medium",
+    "id": "check-server-cache"
+  },
+  {
+    "content": "Provide specific recommendations for fixing the caching behavior",
+    "status": "completed",
+    "priority": "high",
+    "id": "provide-recommendations"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Examine current DNS records in EdgeStack to understand the structure",
+    "status": "in_progress",
+    "id": "1"
+  },
+  {
+    "content": "Add CNAME validation records for SSL certificate validation",
+    "status": "pending",
+    "id": "2"
+  },
+  {
+    "content": "Run typecheck to ensure changes are valid",
+    "status": "pending",
+    "id": "3"
+  }
+]

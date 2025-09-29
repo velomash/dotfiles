@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Check current environment configuration for magic link redirects",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Set up local development URL configuration for magic links",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Test magic link flow on both web and native platforms",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "3"
+  }
+]

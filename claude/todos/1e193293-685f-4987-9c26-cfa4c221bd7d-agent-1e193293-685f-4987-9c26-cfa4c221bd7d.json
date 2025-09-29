@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Run tests to ensure they pass",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Run linting to check code quality",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run build to ensure compilation succeeds",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix test failures in backfill, force_sync_all_stores, and update_stores_user_id",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Fix store dynamo test unmarshal error",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Fix backfill test JSON unmarshal error for Target enum",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Fix store dynamo delete test mock expectations",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  }
+]

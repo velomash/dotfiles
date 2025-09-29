@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Investigate current High Demand column implementation in listings tables",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Find where apparel vs sneaker logic is handled",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Locate High Demand pricing display logic",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix HD column to show dash for apparel listings",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Test fix across Active, Consign folders, Search listings, Bulk Listing, Change price",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

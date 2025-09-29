@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Clean up the dynamo.go changes to make them more elegant",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Add test cases for put notifications",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run tests to ensure they pass",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

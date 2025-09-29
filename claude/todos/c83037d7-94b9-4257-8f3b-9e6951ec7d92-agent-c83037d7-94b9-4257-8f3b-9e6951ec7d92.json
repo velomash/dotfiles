@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Explore existing codebase structure and patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check existing individual store page structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create mock data based on StoreCompact proto message",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Create the stores list page UI at profile/integrations",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Add authentication check and redirects",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

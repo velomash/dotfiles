@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Investigate potential CI-specific test failure causes",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check for timing/async issues in the test",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Look for environment-specific differences",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Check test setup and mocking consistency",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

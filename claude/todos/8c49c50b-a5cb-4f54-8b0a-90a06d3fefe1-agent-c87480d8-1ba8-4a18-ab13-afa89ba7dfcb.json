@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Analyze TestNewShopifySyncInteractor tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Analyze TestShopifyInteractor_RequestForceSyncData tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze TestBuildIntegrationListing tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Analyze TestContainsRequiredScopesPerSyncRule tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Analyze TestContainsRequiredScopesPerPriceRule tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Analyze TestShopify_GetBulkOperationJsonLChunksIterator tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Analyze TestShopify_NewProductIterator tests for unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Compile final report with specific tests and unused mocks",
+    "status": "completed",
+    "priority": "high",
+    "id": "8"
+  }
+]

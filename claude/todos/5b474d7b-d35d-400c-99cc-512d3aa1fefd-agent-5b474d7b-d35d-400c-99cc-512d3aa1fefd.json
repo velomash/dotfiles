@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Add t.Parallel() to all test functions",
+    "status": "completed",
+    "priority": "high",
+    "id": "add_parallel_execution"
+  },
+  {
+    "content": "Create helper functions for common mock setups",
+    "status": "completed",
+    "priority": "high",
+    "id": "create_test_helpers"
+  },
+  {
+    "content": "Convert validation tests to table-driven approach",
+    "status": "completed",
+    "priority": "high",
+    "id": "consolidate_validation_tests"
+  },
+  {
+    "content": "Define constants for test data",
+    "status": "completed",
+    "priority": "medium",
+    "id": "extract_test_constants"
+  },
+  {
+    "content": "Reduce verbose mock expectations",
+    "status": "completed",
+    "priority": "medium",
+    "id": "simplify_mock_expectations"
+  },
+  {
+    "content": "Break down complex test scenarios",
+    "status": "completed",
+    "priority": "high",
+    "id": "refactor_test_structure"
+  }
+]

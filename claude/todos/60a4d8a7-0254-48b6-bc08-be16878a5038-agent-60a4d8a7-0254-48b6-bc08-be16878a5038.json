@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Update pt-creation-flow.mmd to reflect Catalog Team uses Resale Guide for Auth + Resale Flags, with Auth team only for alias requests and borderline cases",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update flow to show validation rules auto-activate majority of PTs with image id and matching flags, rest go through manual CSV activation",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Update RetouchedImages flow to show Catalog Team → Retouching Team → Photo Team workflow",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Update README.md if necessary to reflect these process changes",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "content": "Update lambda to use HeadObjectCommand for metadata retrieval",
+    "status": "in_progress",
+    "activeForm": "Updating lambda to use HeadObjectCommand for metadata retrieval"
+  }
+]

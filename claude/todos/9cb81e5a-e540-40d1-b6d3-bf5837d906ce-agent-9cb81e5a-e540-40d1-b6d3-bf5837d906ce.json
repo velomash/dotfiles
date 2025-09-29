@@ -1,0 +1,52 @@
+[
+  {
+    "content": "Extend Redux slice - Add pastPlans state fields",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Add past selectors - selectPastVisibleDates, selectPastDayPlanMeals",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Add past thunk - loadPreviousPage",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Modify Plan.tsx - Add isPastPlan logic for button behavior",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Modify Meal.tsx - Hide form when all plans are past",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Modify DayPlanList.tsx - Smart selector usage based on pastPlans",
+    "status": "completed",
+    "id": "6"
+  },
+  {
+    "content": "Modify DayPlan.tsx - Smart selector usage based on pastPlans",
+    "status": "completed",
+    "id": "7"
+  },
+  {
+    "content": "Create what-you-ate.tsx - Past SSR data initialization",
+    "status": "completed",
+    "id": "8"
+  },
+  {
+    "content": "Update backend - Past plan approval bypass",
+    "status": "completed",
+    "id": "9"
+  },
+  {
+    "content": "Add navigation - Link to new page",
+    "status": "completed",
+    "id": "10"
+  }
+]

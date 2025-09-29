@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Temporarily remove Lambda function from ApiStack to break circular dependency",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Build and deploy ApiStack without Lambda function",
+    "status": "in_progress",
+    "id": "2"
+  },
+  {
+    "content": "Deploy SharedStack to remove old Lambda function",
+    "status": "pending",
+    "id": "3"
+  },
+  {
+    "content": "Re-add Lambda function to ApiStack",
+    "status": "pending",
+    "id": "4"
+  },
+  {
+    "content": "Deploy all remaining stacks",
+    "status": "pending",
+    "id": "5"
+  }
+]

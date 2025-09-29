@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Examine current api-stack configuration to understand existing structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Identify the S3 buckets (PHOTO_UPLOAD_BUCKET_NAME and PHOTO_BUCKET_NAME) in the codebase",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Add environment variables to ECS task definitions in api-stack",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add IAM permissions for ECS tasks to read/write to the S3 buckets",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Run typecheck to ensure changes are valid",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

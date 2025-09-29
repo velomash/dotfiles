@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Create DynamoDB key generation utilities (keys.go)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Add status mapping utilities for legacy format",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Update record struct to match legacy DynamoDB table structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix storeToRecord() function to use correct key generation",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Update repository implementation methods (get, Search, ListByStatus)",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Update Config struct and NewRepo constructor for AWS SDK v2",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Completely rewrite tests using AWS SDK v2 patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Remove dynago dependencies and update imports",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  },
+  {
+    "content": "Test integration and run full test suite",
+    "status": "completed",
+    "priority": "medium",
+    "id": "9"
+  }
+]

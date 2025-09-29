@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Examine current tabs layout structure and authentication setup",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check existing auth provider and login page implementation",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement protected routes logic in _layout.tsx",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Test the redirect functionality",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Find and examine the NetworkStack configuration",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix ALB subnet configuration to support single AZ or add second AZ",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "2"
+  }
+]

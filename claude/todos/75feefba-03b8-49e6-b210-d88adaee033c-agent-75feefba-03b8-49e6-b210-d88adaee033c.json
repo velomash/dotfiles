@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Step 1: Deploy NetworkStack with imported hosted zone",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Step 2: Deploy EdgeStack to remove its hosted zone",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Step 3: Enable DNS records in NetworkStack",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Step 4: Final deployment of all stacks",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Verify migration completed successfully",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Troubleshoot SharedStack CloudFront key generation issue",
+    "status": "completed",
+    "id": "6"
+  }
+]

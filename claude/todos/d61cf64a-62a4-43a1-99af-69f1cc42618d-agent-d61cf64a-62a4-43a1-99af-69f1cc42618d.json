@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Check ALB listener rules to ensure internal/* routes are blocked",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check CloudFront configuration for internal/* route blocking",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Verify API service only accessible via service discovery internally",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "ALB exposes ALL paths (/*) - need to block internal/* explicitly",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "CloudFront allows all API paths - need internal/* blocking",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  }
+]

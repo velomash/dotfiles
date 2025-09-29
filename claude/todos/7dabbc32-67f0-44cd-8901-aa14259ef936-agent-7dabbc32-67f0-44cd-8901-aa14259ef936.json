@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Search for Adidas standardization logic in the codebase",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Find files that handle the .3 -> .0 and .7 -> .5 conversion",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Locate ADIDAS_NON_STANDARD_SIZES constants",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  }
+]

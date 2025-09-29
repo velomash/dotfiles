@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Enhance Market Data Changes Repository with bulk operations (SetBatch, GetAllBatch)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update Platform Events Handler to batch AvailabilityUpdatedEvent processing",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Optimize Market Data Processing Task with bulk operations",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Add configuration options for batching parameters",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Write comprehensive tests for new bulk operations",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

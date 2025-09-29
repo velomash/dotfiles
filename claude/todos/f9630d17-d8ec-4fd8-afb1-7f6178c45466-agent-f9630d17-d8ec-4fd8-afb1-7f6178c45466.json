@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create detailed implementation plan for manual key pair flow",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Design shell script for key generation and AWS upload",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Create bin/generate-cloudfront-keys.sh script",
+    "status": "in_progress",
+    "id": "3"
+  },
+  {
+    "content": "Plan SharedStack modifications to remove Lambda keygen",
+    "status": "pending",
+    "id": "4"
+  },
+  {
+    "content": "Plan EdgeStack modifications to enable images CloudFront",
+    "status": "pending",
+    "id": "5"
+  },
+  {
+    "content": "Define deployment workflow and documentation",
+    "status": "pending",
+    "id": "6"
+  }
+]

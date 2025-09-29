@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Install dependencies with npm i",
+    "status": "completed",
+    "activeForm": "Installing dependencies with npm i"
+  },
+  {
+    "content": "Copy .env.sample to .env",
+    "status": "completed",
+    "activeForm": "Copying .env.sample to .env"
+  },
+  {
+    "content": "Start PostgreSQL with docker-compose",
+    "status": "in_progress",
+    "activeForm": "Starting PostgreSQL with docker-compose"
+  },
+  {
+    "content": "Apply database migrations",
+    "status": "pending",
+    "activeForm": "Applying database migrations"
+  },
+  {
+    "content": "Start the server",
+    "status": "pending",
+    "activeForm": "Starting the server"
+  }
+]

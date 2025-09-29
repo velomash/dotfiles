@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Fix profile route handler - change updateProfile to updateProfilePicture",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Add IMAGES_DOMAIN environment variable to API stack",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Add explicit S3 bucket policy for CloudFront OAC access",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Review and enhance CloudFront CORS configuration",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Run CDK diff to verify changes",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Test compilation of all changes",
+    "status": "completed",
+    "id": "6"
+  }
+]

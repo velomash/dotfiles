@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Check existing Claude Code configuration",
+    "status": "in_progress",
+    "activeForm": "Checking existing Claude Code configuration"
+  },
+  {
+    "content": "Add mcp-obsidian to Claude Code config",
+    "status": "pending",
+    "activeForm": "Adding mcp-obsidian to Claude Code config"
+  },
+  {
+    "content": "Verify the configuration is valid",
+    "status": "pending",
+    "activeForm": "Verifying the configuration is valid"
+  }
+]

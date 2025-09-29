@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Investigate ProfileImagePicker web compatibility issues",
+    "status": "pending",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix AWS SDK browser compatibility or revert to presigned URLs",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Read buckets-to-delete.txt to get deletion list",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Execute S3 bucket deletions using AWS CLI",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Verify deletions completed successfully",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

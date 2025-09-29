@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Update PartnerInventory flow to include partner PT sheet filling process",
+    "status": "in_progress",
+    "id": "1"
+  },
+  {
+    "content": "Add AM/BD formatting step for one line per SKU conversion",
+    "status": "pending",
+    "id": "2"
+  },
+  {
+    "content": "Add SKU cleanup step for non-PT items",
+    "status": "pending",
+    "id": "3"
+  },
+  {
+    "content": "Add advance inventory addition capability",
+    "status": "pending",
+    "id": "4"
+  }
+]

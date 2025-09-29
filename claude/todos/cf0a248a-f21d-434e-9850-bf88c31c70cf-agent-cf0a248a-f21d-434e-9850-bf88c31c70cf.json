@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Examine the changes to nike.csv size chart file",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Find test files related to size charts functionality",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run relevant test suites for size chart functionality",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "3"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Add state to track passkey availability",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Extract passkey support check from attemptPasskeyAuth",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Update CHOOSE_LOGIN_METHOD to conditionally show passkey option",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add disabled styling for unavailable passkey option",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

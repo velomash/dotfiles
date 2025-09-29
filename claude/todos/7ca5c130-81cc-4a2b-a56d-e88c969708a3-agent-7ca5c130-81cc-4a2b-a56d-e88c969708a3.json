@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Add OAC (Origin Access Control) to CloudFront distribution",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Update S3 bucket policy to work with OAC",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Update CloudFront service to generate S3 presigned URLs",
+    "status": "completed",
+    "id": "3"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Find and examine the StagingWebStack configuration",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update ECS service to use request-based scaling with desiredCount 0",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run typecheck to validate changes",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "3"
+  }
+]
