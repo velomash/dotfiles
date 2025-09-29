@@ -11,7 +11,13 @@ coverage
 node_modules
 powerseller.sh
 junit.xml
+
 claude/projects
+claude/file-history
+claude/shell-snapshots
+claude/statsig
+claude/todos
+claude/local
 
 dist
 build
