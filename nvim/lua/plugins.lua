@@ -32,6 +32,8 @@ packer.startup(function()
   use 'tpope/vim-rails'                     -- editor support for ruby on rails
   use 'tpope/vim-rhubarb'                   -- github for fugitive
   use 'tpope/vim-surround'                  -- surround with tags
+  use 'mattn/vim-gist'                      -- gist integration
+  use 'mattn/webapi-vim'                    -- required dependency for vim-gist
   use 'vim-airline/vim-airline'             -- status bar plugin
   use 'vim-airline/vim-airline-themes'      -- status bar themes
   use 'wbthomason/packer.nvim' -- packer can manage itself
@@ -39,31 +41,6 @@ packer.startup(function()
   use { 'junegunn/fzf', run = './install --all'}
   use { 'prettier/vim-prettier', run = 'yarn install' }
   use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter'})
-  use({ 'olimorris/codecompanion.nvim',
-    config = function()
-      require("codecompanion").setup({
-        strategies = {
-          chat = { adapter = "anthropic" },
-          inline = { adapter = "anthropic" },
-          cmd = { adapter = "anthropic" },
-        },
-        opts = { log_level = "DEBUG", },
-        adapters = {
-          anthropic = function()
-            return require("codecompanion.adapters").extend("anthropic", {
-              env = {
-                api_key = os.getenv("ANTHROPIC_API_KEY"),
-              },
-            })
-          end,
-        }
-      })
-    end,
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    }
-  })
 end)
 
 -- vim-test
@@ -113,6 +90,11 @@ vim.cmd([[
   let g:go_highlight_extra_types = 1
   let g:go_highlight_build_constraints = 1
   let g:go_highlight_generate_tags = 1
+]])
+
+-- vim-gist options
+vim.cmd([[
+  let g:gist_token = $GITHUB_GIST_TOKEN
 ]])
 
 -- FZF options

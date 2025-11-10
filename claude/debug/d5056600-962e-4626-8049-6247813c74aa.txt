@@ -1,0 +1,458 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing all 6 messages (~0 tokens)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1759885191737-18yzp4.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/d5056600-962e-4626-8049-6247813c74aa-agent-d5056600-962e-4626-8049-6247813c74aa.json.tmp.88317.1759885191740
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/d5056600-962e-4626-8049-6247813c74aa-agent-d5056600-962e-4626-8049-6247813c74aa.json.tmp.88317.1759885191740 to /Users/adam.trimble/.claude/todos/d5056600-962e-4626-8049-6247813c74aa-agent-d5056600-962e-4626-8049-6247813c74aa.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/d5056600-962e-4626-8049-6247813c74aa-agent-d5056600-962e-4626-8049-6247813c74aa.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885191746
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33223 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885191746 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885191764
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33223 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885191764 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885191924
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33223 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885191924 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/sneakers/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Shell snapshot created successfully (201109 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885193110
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33223 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885193110 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885193146
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33115 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885193146 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885193147
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33115 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885193147 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885193156
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33220 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885193156 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Version 2.0.10 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885193801
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33509 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885193801 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for a5f5c516-8f9f-43f7-b789-56c324bdf84d, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885217333
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33689 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885217333 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Executing hooks for PreToolUse:Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Bash tool invoked with command: git diff
+[DEBUG] Bash tool description: Check recent changes in the PR
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Grep
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Executing hooks for PreToolUse:Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Read
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885235775
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33710 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885235775 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885235787
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33734 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885235787 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Making snapshot for message 9ba59836-b635-4b28-aee9-e48cc6606918
+[DEBUG] FileHistory: Added snapshot for 9ba59836-b635-4b28-aee9-e48cc6606918, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885281564
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33859 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885281564 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885285933
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33889 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885285933 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885285941
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 33921 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885285941 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Making snapshot for message ce36e2cd-aa0b-4958-b68c-b20deddc4b02
+[DEBUG] FileHistory: Added snapshot for ce36e2cd-aa0b-4958-b68c-b20deddc4b02, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885331066
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 34061 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885331066 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Executing hooks for PreToolUse:Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Grep
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Executing hooks for PreToolUse:Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[ERROR] MaxFileReadTokenExceededError: MaxFileReadTokenExceededError: File content (51483 tokens) exceeds maximum allowed tokens (25000). Please use offset and limit parameters to read specific portions of the file, or use the GrepTool to search for specific content.
+    at i$G (/$bunfs/root/claude:1688:407)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Executing hooks for PreToolUse:Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Grep
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Executing hooks for PreToolUse:Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Grep
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Executing hooks for PreToolUse:Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Executing hooks for PostToolUse:Read
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Executing hooks for PreToolUse:Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] FileHistory: Tracked file modification for /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb
+[DEBUG] Writing to temp file: /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885378458
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 163698 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885378458 to /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb
+[DEBUG] File /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb written atomically
+[DEBUG] Executing hooks for PostToolUse:Edit
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Version 2.0.10 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Executing hooks for PreToolUse:Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Writing to temp file: /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885390572
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 163790 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885390572 to /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb
+[DEBUG] File /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb written atomically
+[DEBUG] Executing hooks for PostToolUse:Edit
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Version 2.0.10 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Executing hooks for PreToolUse:Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Writing to temp file: /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885401031
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 163811 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb.tmp.88317.1759885401031 to /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb
+[DEBUG] File /Users/adam.trimble/Documents/sneakers/spec/requests/private_api/v1/one_sell/users_controller_request_spec.rb written atomically
+[DEBUG] Executing hooks for PostToolUse:Edit
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Version 2.0.10 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885405728
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 34089 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885405728 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759885405736
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 34124 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759885405736 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Version 2.0.10 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1759885191737-18yzp4.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.88317.1759888641377
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 34548 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.88317.1759888641377 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

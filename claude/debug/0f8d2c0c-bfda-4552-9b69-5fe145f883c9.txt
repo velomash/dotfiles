@@ -1,0 +1,149 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'projectSettings': ["mcp__atlassian","mcp__bugsnag"]
+[DEBUG] Applying permission update: Adding 7 allow rule(s) to destination 'localSettings': ["Bash(find:*)","Bash(go test:*)","Bash(git add:*)","Bash(rg:*)","Bash(make test:*)","Bash(go mod:*)","Bash(go:*)"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848391874
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 156079 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848391874 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing all 5 messages (~0 tokens)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Running AWS credential export command
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] AWS credentials retrieved from awsCredentialExport
+[DEBUG] Clearing AWS credential provider cache
+[DEBUG] Failed to clear AWS credential cache (this is expected if no credentials are configured)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761848393653-vf5a9m.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/0f8d2c0c-bfda-4552-9b69-5fe145f883c9-agent-0f8d2c0c-bfda-4552-9b69-5fe145f883c9.json.tmp.90983.1761848393655
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/0f8d2c0c-bfda-4552-9b69-5fe145f883c9-agent-0f8d2c0c-bfda-4552-9b69-5fe145f883c9.json.tmp.90983.1761848393655 to /Users/adam.trimble/.claude/todos/0f8d2c0c-bfda-4552-9b69-5fe145f883c9-agent-0f8d2c0c-bfda-4552-9b69-5fe145f883c9.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/0f8d2c0c-bfda-4552-9b69-5fe145f883c9-agent-0f8d2c0c-bfda-4552-9b69-5fe145f883c9.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848393659
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155697 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848393659 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] MCP server "atlassian": Connection failed after 0ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848394407
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155697 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848394407 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848394433
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155589 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848394433 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848394436
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155589 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848394436 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848394448
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155697 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848394448 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] Shell snapshot created successfully (201116 bytes)
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] MCP server "atlassian": No token data found
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] MCP server "atlassian": Using redirect port: 62511
+[DEBUG] MCP server "atlassian": Fetched OAuth metadata with scope: NONE
+[DEBUG] MCP server "atlassian": Generated new OAuth state
+[DEBUG] MCP server "atlassian": Starting SDK auth
+[DEBUG] MCP server "atlassian": Server URL: https://mcp.atlassian.com/v1/sse
+[DEBUG] MCP server "atlassian": No client info found
+[DEBUG] MCP server "atlassian": Token expired without refresh token
+[DEBUG] MCP server "atlassian": Saving code verifier
+[DEBUG] MCP server "atlassian": Authorization URL: https://mcp.atlassian.com/v1/authorize?response_type=code&client_id=P62ULQROSTyP1B3H&code_challenge=GUIaaXmm4PJnCU9_6mr-TQ5WsSKXARJQkBG1jtv1S8k&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A62511%2Fcallback&state=qBeuZpJvZfiQ9wC-SPeYgpGPp7toi2iGk4YHDc2lmQk
+[DEBUG] MCP server "atlassian": Scopes in URL: NOT FOUND
+[DEBUG] MCP server "atlassian": No scopes available from URL or metadata
+[DEBUG] MCP server "atlassian": Redirecting to authorization URL
+[DEBUG] MCP server "atlassian": Authorization URL: https://mcp.atlassian.com/v1/authorize?response_type=code&client_id=P62ULQROSTyP1B3H&code_challenge=GUIaaXmm4PJnCU9_6mr-TQ5WsSKXARJQkBG1jtv1S8k&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A62511%2Fcallback&state=qBeuZpJvZfiQ9wC-SPeYgpGPp7toi2iGk4YHDc2lmQk
+[DEBUG] MCP server "atlassian": Opening authorization URL: https://mcp.atlassian.com/v1/authorize?response_type=code&client_id=P62ULQROSTyP1B3H&code_challenge=GUIaaXmm4PJnCU9_6mr-TQ5WsSKXARJQkBG1jtv1S8k&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A62511%2Fcallback&state=qBeuZpJvZfiQ9wC-SPeYgpGPp7toi2iGk4YHDc2lmQk
+[DEBUG] MCP server "atlassian": Initial auth result: REDIRECT
+[DEBUG] MCP server "atlassian": MCP OAuth server cleaned up
+[DEBUG] MCP server "atlassian": Connection failed after 1ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848655193
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155698 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848655193 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] MCP server "atlassian": Token expired without refresh token
+[DEBUG] FileHistory: Added snapshot for 26f6dae9-e595-4cda-9700-bb65f4478340, tracking 0 files
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] MCP server "atlassian": Token expired without refresh token
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] MCP server "atlassian": Connection failed after 0ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848681341
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 155699 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848681341 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] MCP server "atlassian": Token expired without refresh token
+[DEBUG] FileHistory: Making snapshot for message ba11f8d5-27bd-41ae-9388-dcc889e6f3ef
+[DEBUG] FileHistory: Added snapshot for ba11f8d5-27bd-41ae-9388-dcc889e6f3ef, tracking 0 files
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.29
+[DEBUG] Version 2.0.29 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.29
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761848393653-vf5a9m.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90983.1761848685184
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 156108 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90983.1761848685184 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

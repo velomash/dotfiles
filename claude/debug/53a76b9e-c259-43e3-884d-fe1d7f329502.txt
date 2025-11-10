@@ -1,0 +1,155 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761332951285-s0e7d3.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/53a76b9e-c259-43e3-884d-fe1d7f329502-agent-53a76b9e-c259-43e3-884d-fe1d7f329502.json.tmp.56630.1761332951293
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/53a76b9e-c259-43e3-884d-fe1d7f329502-agent-53a76b9e-c259-43e3-884d-fe1d7f329502.json.tmp.56630.1761332951293 to /Users/adam.trimble/.claude/todos/53a76b9e-c259-43e3-884d-fe1d7f329502-agent-53a76b9e-c259-43e3-884d-fe1d7f329502.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/53a76b9e-c259-43e3-884d-fe1d7f329502-agent-53a76b9e-c259-43e3-884d-fe1d7f329502.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332951305
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129036 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332951305 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332951313
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129036 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332951313 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332951501
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129036 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332951501 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/sneakers/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Shell snapshot created successfully (201109 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332952678
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129036 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332952678 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332952714
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 128931 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332952714 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332952716
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 128931 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332952716 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332952725
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129036 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332952725 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] FileHistory: Added snapshot for 16f0e337-bb36-427c-9fe6-ed42065672fd, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332954508
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129118 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332954508 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332954514
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129118 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332954514 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332970730
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129118 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332970730 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] FileHistory: Making snapshot for message 8772f940-1d13-4446-8ca2-f0cc3e049600
+[DEBUG] FileHistory: Added snapshot for 8772f940-1d13-4446-8ca2-f0cc3e049600, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332978122
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129118 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332978122 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] FileHistory: Making snapshot for message 31eb8b9c-c540-4217-b698-dd198db84fd5
+[DEBUG] FileHistory: Added snapshot for 31eb8b9c-c540-4217-b698-dd198db84fd5, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332982895
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129203 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332982895 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332982902
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129203 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332982902 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.26
+[DEBUG] Version 2.0.26 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.26
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761332951285-s0e7d3.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56630.1761332985897
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 129584 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56630.1761332985897 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

@@ -1,0 +1,120 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json...
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214836811
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98606 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214836811 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing last 3 of 85 messages (~101542 tokens)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760214836927-r3ptgj.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/2742a379-4537-4ec0-8989-e7b775c17898-agent-2742a379-4537-4ec0-8989-e7b775c17898.json.tmp.7088.1760214836928
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/2742a379-4537-4ec0-8989-e7b775c17898-agent-2742a379-4537-4ec0-8989-e7b775c17898.json.tmp.7088.1760214836928 to /Users/adam.trimble/.claude/todos/2742a379-4537-4ec0-8989-e7b775c17898-agent-2742a379-4537-4ec0-8989-e7b775c17898.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/2742a379-4537-4ec0-8989-e7b775c17898-agent-2742a379-4537-4ec0-8989-e7b775c17898.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/dotfiles/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214837896
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98606 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214837896 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214837920
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98498 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214837920 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214837922
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98498 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214837922 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214837931
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98606 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214837931 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for c1cae46f-d395-4782-bb4e-87243c3f27a0, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214840454
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 98687 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214840454 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[ERROR] Error streaming, falling back to non-streaming mode: 403 You don't have access to the model with the specified model ID.
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760214836927-r3ptgj.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.7088.1760214851392
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 99068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.7088.1760214851392 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

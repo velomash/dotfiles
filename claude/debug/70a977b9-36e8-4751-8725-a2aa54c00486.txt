@@ -1,0 +1,71 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/notes/.claude/settings.json, /Users/adam.trimble/Documents/notes/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 8 allow rule(s) to destination 'localSettings': ["Read(//Users/adam.trimble/**)","mcp__mcp-obsidian__obsidian_list_files_in_vault","mcp__mcp-obsidian__obsidian_get_file_contents","mcp__mcp-obsidian__obsidian_list_files_in_dir","mcp__mcp-obsidian__obsidian_batch_get_file_contents","mcp__mcp-obsidian__obsidian_complex_search","Bash(cd:*)","Bash(grep:*)"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761170769184-dd6iqx.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/70a977b9-36e8-4751-8725-a2aa54c00486-agent-70a977b9-36e8-4751-8725-a2aa54c00486.json.tmp.96563.1761170769185
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/70a977b9-36e8-4751-8725-a2aa54c00486-agent-70a977b9-36e8-4751-8725-a2aa54c00486.json.tmp.96563.1761170769185 to /Users/adam.trimble/.claude/todos/70a977b9-36e8-4751-8725-a2aa54c00486-agent-70a977b9-36e8-4751-8725-a2aa54c00486.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/70a977b9-36e8-4751-8725-a2aa54c00486-agent-70a977b9-36e8-4751-8725-a2aa54c00486.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170769407
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126536 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170769407 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/notes/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170770860
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126536 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170770860 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170770902
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126431 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170770902 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170770904
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126431 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170770904 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170770915
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126536 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170770915 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.25
+[DEBUG] Version 2.0.25 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.25
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761170769184-dd6iqx.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.96563.1761170772685
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 126916 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.96563.1761170772685 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

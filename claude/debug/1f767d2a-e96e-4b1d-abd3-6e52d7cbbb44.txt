@@ -1,0 +1,32 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing last 11 of 23 messages (~136617 tokens)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760981618125-4anht6.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44-agent-1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44.json.tmp.13235.1760981618126
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44-agent-1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44.json.tmp.13235.1760981618126 to /Users/adam.trimble/.claude/todos/1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44-agent-1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44-agent-1f767d2a-e96e-4b1d-abd3-6e52d7cbbb44.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.13235.1760981618176
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118871 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.13235.1760981618176 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/dotfiles/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.13235.1760981619473
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118871 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.13235.1760981619473 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

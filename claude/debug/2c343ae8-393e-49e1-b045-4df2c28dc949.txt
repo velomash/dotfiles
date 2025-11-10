@@ -1,0 +1,233 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing all 2 messages (~0 tokens)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760133153555-c7o9r5.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/2c343ae8-393e-49e1-b045-4df2c28dc949-agent-2c343ae8-393e-49e1-b045-4df2c28dc949.json.tmp.90238.1760133153557
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/2c343ae8-393e-49e1-b045-4df2c28dc949-agent-2c343ae8-393e-49e1-b045-4df2c28dc949.json.tmp.90238.1760133153557 to /Users/adam.trimble/.claude/todos/2c343ae8-393e-49e1-b045-4df2c28dc949-agent-2c343ae8-393e-49e1-b045-4df2c28dc949.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/2c343ae8-393e-49e1-b045-4df2c28dc949-agent-2c343ae8-393e-49e1-b045-4df2c28dc949.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133153575
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63642 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133153575 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133153646
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63642 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133153646 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133153788
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63642 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133153788 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Summarizing all 8 messages (~0 tokens)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133154936
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63642 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133154936 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133154974
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63534 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133154974 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133154976
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63534 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133154976 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133154985
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 63639 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133154985 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Summarizing all 8 messages (~0 tokens)
+[DEBUG] Summarizing last 4 of 93 messages (~141448 tokens)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for e263feba-0404-431b-9117-68039e12ff9a, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133330447
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 66729 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133330447 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133340770
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 66730 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133340770 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.90238.1760133340779
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 66730 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.90238.1760133340779 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[ERROR] Error: Error: Failed to fetch version from stable: AxiosError: timeout of 30000ms exceeded
+    at $gY (/$bunfs/root/claude:1729:800)
+    at processTicksAndRejections (native:7:39)
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981529125
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118382 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981529125 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981529127
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118382 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981529127 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981529139
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118490 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981529139 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.22
+[DEBUG] Version 2.0.22 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.22
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760981527909-vvvoa2.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981545960
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118871 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981545960 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

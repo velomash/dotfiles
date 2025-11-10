@@ -99,12 +99,6 @@ _G.packer_plugins = {
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["codecompanion.nvim"] = {
-    config = { "\27LJ\2\n«\1\0\0\b\0\v\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0005\3\t\0005\4\a\0006\5\4\0009\5\5\5'\a\6\0B\5\2\2=\5\b\4=\4\n\3D\0\3\0\benv\1\0\1\benv\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\14anthropic\vextend\27codecompanion.adapters\frequireÀ\2\1\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\n\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\3=\3\v\0025\3\f\0=\3\r\0025\3\15\0003\4\14\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\radapters\14anthropic\1\0\1\14anthropic\0\0\topts\1\0\1\14log_level\nDEBUG\15strategies\1\0\3\radapters\0\15strategies\0\topts\0\bcmd\1\0\1\fadapter\14anthropic\vinline\1\0\1\fadapter\14anthropic\tchat\1\0\3\bcmd\0\tchat\0\vinline\0\1\0\1\fadapter\14anthropic\nsetup\18codecompanion\frequire\0" },
-    loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/codecompanion.nvim",
-    url = "https://github.com/olimorris/codecompanion.nvim"
-  },
   fzf = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/fzf",
@@ -155,11 +149,6 @@ _G.packer_plugins = {
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
   ["vim-airline"] = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -179,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-gist"] = {
+    loaded = true,
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-gist",
+    url = "https://github.com/mattn/vim-gist"
   },
   ["vim-go"] = {
     loaded = true,
@@ -219,14 +213,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["webapi-vim"] = {
+    loaded = true,
+    path = "/Users/adam.trimble/.local/share/nvim/site/pack/packer/start/webapi-vim",
+    url = "https://github.com/mattn/webapi-vim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: codecompanion.nvim
-time([[Config for codecompanion.nvim]], true)
-try_loadstring("\27LJ\2\n«\1\0\0\b\0\v\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0005\3\t\0005\4\a\0006\5\4\0009\5\5\5'\a\6\0B\5\2\2=\5\b\4=\4\n\3D\0\3\0\benv\1\0\1\benv\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\14anthropic\vextend\27codecompanion.adapters\frequireÀ\2\1\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\n\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\3=\3\v\0025\3\f\0=\3\r\0025\3\15\0003\4\14\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\radapters\14anthropic\1\0\1\14anthropic\0\0\topts\1\0\1\14log_level\nDEBUG\15strategies\1\0\3\radapters\0\15strategies\0\topts\0\bcmd\1\0\1\fadapter\14anthropic\vinline\1\0\1\fadapter\14anthropic\tchat\1\0\3\bcmd\0\tchat\0\vinline\0\1\0\1\fadapter\14anthropic\nsetup\18codecompanion\frequire\0", "config", "codecompanion.nvim")
-time([[Config for codecompanion.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

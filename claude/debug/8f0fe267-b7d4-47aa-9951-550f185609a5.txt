@@ -1,0 +1,107 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 39 allow rule(s) to destination 'projectSettings': ["Bash(bundle:*)","Bash(rake:*)","Bash(rails:*)","Bash(rspec:*)","Bash(rubocop:*)","Bash(erblint:*)","Bash(brakeman:*)","Bash(overcommit:*)","Bash(docker-compose:*)","Bash(git:*)","Bash(rg:*)","Bash(grep:*)","Bash(find:*)","Bash(ls:*)","Bash(cat:*)","Bash(head:*)","Bash(tail:*)","Bash(wc:*)","Bash(which:*)","Bash(echo:*)","Bash(pwd:*)","Bash(ps:*)","Bash(kill:*)","Bash(lsof:*)","Bash(curl:*)","Bash(mkdir:*)","Bash(touch:*)","Bash(cp:*)","Bash(mv:*)","Bash(sort:*)","Bash(uniq:*)","Bash(cut:*)","Bash(awk:*)","Bash(sed:*)","Bash(jq:*)","Bash(tree:*)","mcp__atlassian__*","mcp__aws-knowledge__*","mcp__bugsnag__*"]
+[DEBUG] Applying permission update: Adding 15 deny rule(s) to destination 'projectSettings': ["Bash(rm:*)","Bash(sudo:*)","Bash(su:*)","Bash(ssh:*)","Bash(dd:*)","Bash(mount:*)","Bash(umount:*)","Bash(systemctl:*)","Bash(service:*)","Bash(eval:*)","Bash(exec:*)","Bash(source:*)","Bash(.:*)","Bash(env:*)","Bash(export:*)"]
+[DEBUG] Applying permission update: Adding 5 allow rule(s) to destination 'localSettings': ["Bash(grep:*)","Bash(gh pr view:*)","Read(//Users/adam.trimble/Documents/protos/**)","mcp__mcp-obsidian__obsidian_get_file_contents","mcp__mcp-obsidian__obsidian_patch_content"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392671772
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 108934 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392671772 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760392671923-t8fwng.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/8f0fe267-b7d4-47aa-9951-550f185609a5-agent-8f0fe267-b7d4-47aa-9951-550f185609a5.json.tmp.56396.1760392671925
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/8f0fe267-b7d4-47aa-9951-550f185609a5-agent-8f0fe267-b7d4-47aa-9951-550f185609a5.json.tmp.56396.1760392671925 to /Users/adam.trimble/.claude/todos/8f0fe267-b7d4-47aa-9951-550f185609a5-agent-8f0fe267-b7d4-47aa-9951-550f185609a5.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/8f0fe267-b7d4-47aa-9951-550f185609a5-agent-8f0fe267-b7d4-47aa-9951-550f185609a5.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/sneakers/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] MCP server "atlassian": Connection failed after 0ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] MCP server "aws-knowledge": Initializing HTTP transport to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "aws-knowledge": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "aws-knowledge": MTLS options: default
+[DEBUG] MCP server "aws-knowledge": HTTP transport options: {"url":"https://knowledge-mcp.global.api.aws","headers":{"User-Agent":"claude-code/2.0.10"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "aws-knowledge": HTTP transport created successfully
+[DEBUG] MCP server "aws-knowledge": Client created, setting up request handler
+[DEBUG] MCP server "aws-knowledge": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "aws-knowledge": Testing basic HTTP connectivity to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Parsed URL: host=knowledge-mcp.global.api.aws, port=default, protocol=https:
+[DEBUG] MCP server "bugsnag": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392672753
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 108934 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392672753 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392672780
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 108829 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392672780 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392672782
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 108829 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392672782 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392672795
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 108937 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392672795 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] Checking for native installer update to version 2.0.14
+[DEBUG] Version 2.0.14 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.14
+[DEBUG] Shell snapshot created successfully (201109 bytes)
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": Successfully connected to http server in 781ms
+[DEBUG] MCP server "aws-knowledge": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"AWSDocumentationMCPProdGateway","version":"1.0.0"}}
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760392671923-t8fwng.sh
+[DEBUG] MCP server "aws-knowledge": HTTP transport closed/disconnected, attempting automatic reconnection
+[ERROR] MCP server "aws-knowledge" Failed to fetch tools: MCP error -32000: Connection closed
+[DEBUG] MCP server "aws-knowledge": Initializing HTTP transport to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "aws-knowledge": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "aws-knowledge": MTLS options: default
+[DEBUG] MCP server "aws-knowledge": HTTP transport options: {"url":"https://knowledge-mcp.global.api.aws","headers":{"User-Agent":"claude-code/2.0.10"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "aws-knowledge": HTTP transport created successfully
+[DEBUG] MCP server "aws-knowledge": Client created, setting up request handler
+[DEBUG] MCP server "aws-knowledge": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "aws-knowledge": Testing basic HTTP connectivity to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Parsed URL: host=knowledge-mcp.global.api.aws, port=default, protocol=https:
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.56396.1760392673885
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 109317 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.56396.1760392673885 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

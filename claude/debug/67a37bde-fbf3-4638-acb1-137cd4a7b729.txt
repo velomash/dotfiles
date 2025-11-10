@@ -1,0 +1,106 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/notes/.claude/settings.json, /Users/adam.trimble/Documents/notes/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 8 allow rule(s) to destination 'localSettings': ["Read(//Users/adam.trimble/**)","mcp__mcp-obsidian__obsidian_list_files_in_vault","mcp__mcp-obsidian__obsidian_get_file_contents","mcp__mcp-obsidian__obsidian_list_files_in_dir","mcp__mcp-obsidian__obsidian_batch_get_file_contents","mcp__mcp-obsidian__obsidian_complex_search","Bash(cd:*)","Bash(grep:*)"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880124059
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31454 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880124059 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1759880124190-oyfkcx.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/67a37bde-fbf3-4638-acb1-137cd4a7b729-agent-67a37bde-fbf3-4638-acb1-137cd4a7b729.json.tmp.81250.1759880124191
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/67a37bde-fbf3-4638-acb1-137cd4a7b729-agent-67a37bde-fbf3-4638-acb1-137cd4a7b729.json.tmp.81250.1759880124191 to /Users/adam.trimble/.claude/todos/67a37bde-fbf3-4638-acb1-137cd4a7b729-agent-67a37bde-fbf3-4638-acb1-137cd4a7b729.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/67a37bde-fbf3-4638-acb1-137cd4a7b729-agent-67a37bde-fbf3-4638-acb1-137cd4a7b729.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/notes/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880127326
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31914 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880127326 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880127347
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31914 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880127347 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880127369
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31806 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880127369 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880127371
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31806 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880127371 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880127381
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31914 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880127381 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880157889
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 31963 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880157889 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880157906
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 32008 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880157906 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880157911
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 32046 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880157911 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1759880124190-oyfkcx.sh
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.81250.1759880160840
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 32466 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.81250.1759880160840 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

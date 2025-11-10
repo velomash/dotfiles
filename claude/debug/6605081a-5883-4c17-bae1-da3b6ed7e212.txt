@@ -1,0 +1,122 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] MCP server "atlassian": Connection failed after 0ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] MCP server "aws-knowledge": Initializing HTTP transport to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "aws-knowledge": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "aws-knowledge": MTLS options: default
+[DEBUG] MCP server "aws-knowledge": HTTP transport options: {"url":"https://knowledge-mcp.global.api.aws","headers":{"User-Agent":"claude-code/2.0.10"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "aws-knowledge": HTTP transport created successfully
+[DEBUG] MCP server "aws-knowledge": Client created, setting up request handler
+[DEBUG] MCP server "aws-knowledge": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "aws-knowledge": Testing basic HTTP connectivity to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Parsed URL: host=knowledge-mcp.global.api.aws, port=default, protocol=https:
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": Successfully connected to http server in 719ms
+[DEBUG] MCP server "aws-knowledge": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"AWSDocumentationMCPProdGateway","version":"1.0.0"}}
+[DEBUG] MCP server "bugsnag": Starting connection with timeout of 30000ms
+[ERROR] MCP server "bugsnag" Server stderr: Unable to connect to BugSnag APIs, the BugSnag tools will not work. Check your configured BugSnag auth token. ToolError: Request failed with status 401: {"errors":["Bad Credentials"]}
+    at CurrentUserAPI.requestArray (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client/api/base.js:137:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async CurrentUserAPI.listUserOrganizations (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client/api/CurrentUser.js:16:16)
+    at async BugsnagClient.getOrganization (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:131:30)
+    at async BugsnagClient.getProjects (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:148:25)
+    at async BugsnagClient.initialize (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:62:13)
+    at async main (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/index.js:37:9)
+[ERROR] MCP server "bugsnag" Server stderr: Unable to find your configured BugSnag project, the BugSnag tools will continue to work across all projects in your organization. Check your configured BugSnag project API key. ToolError: Request failed with status 401: {"errors":["Bad Credentials"]}
+    at CurrentUserAPI.requestArray (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client/api/base.js:137:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async CurrentUserAPI.listUserOrganizations (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client/api/CurrentUser.js:16:16)
+    at async BugsnagClient.getOrganization (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:131:30)
+    at async BugsnagClient.getProjects (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:148:25)
+    at async BugsnagClient.getCurrentProject (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:162:30)
+    at async BugsnagClient.initialize (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/bugsnag/client.js:70:17)
+    at async main (file:///Users/adam.trimble/.npm/_npx/fc7875ad64775bf4/node_modules/@smartbear/mcp/dist/index.js:37:9)
+[DEBUG] MCP server "bugsnag": Successfully connected to stdio server in 2359ms
+[DEBUG] MCP server "bugsnag": Connection established with capabilities: {"hasTools":true,"hasPrompts":true,"hasResources":true,"serverVersion":{"name":"SmartBear MCP Server","version":"0.9.0"}}
+[DEBUG] MCP server "circleci": Starting connection with timeout of 30000ms
+[ERROR] MCP server "circleci" Server stderr: Starting CircleCI MCP server in stdio mode...
+[DEBUG] MCP server "circleci": Successfully connected to stdio server in 1082ms
+[DEBUG] MCP server "circleci": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":true,"serverVersion":{"name":"mcp-server-circleci","version":"1.0.0"}}
+[DEBUG] MCP server "dunk": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "dunk": Successfully connected to stdio server in 635ms
+[DEBUG] MCP server "dunk": Connection established with capabilities: {"hasTools":true,"hasPrompts":true,"hasResources":true,"serverVersion":{"name":"dunk-mcp","version":"1.0.0"}}
+[DEBUG] MCP server "github": Initializing HTTP transport to https://api.githubcopilot.com/mcp
+[DEBUG] MCP server "github": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "github": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "github": MTLS options: default
+[DEBUG] MCP server "github": HTTP transport options: {"url":"https://api.githubcopilot.com/mcp","headers":{"User-Agent":"claude-code/2.0.10","Authorization":"Bearer ${GITHUB_TOKEN}"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "github": HTTP transport created successfully
+[DEBUG] MCP server "github": Client created, setting up request handler
+[DEBUG] MCP server "github": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "github": Testing basic HTTP connectivity to https://api.githubcopilot.com/mcp
+[DEBUG] MCP server "github": Parsed URL: host=api.githubcopilot.com, port=default, protocol=https:
+[DEBUG] MCP server "github": No token data found
+[DEBUG] MCP server "github": HTTP Connection failed after 330ms: Error POSTing to endpoint (HTTP 400): bad request: Authorization header is badly formatted
+ (code: none, errno: none)
+[ERROR] MCP server "github" Error: Error POSTing to endpoint (HTTP 400): bad request: Authorization header is badly formatted
+[DEBUG] MCP server "github": Connection failed after 331ms: Error POSTing to endpoint (HTTP 400): bad request: Authorization header is badly formatted
+[ERROR] MCP server "github" Connection failed: Error POSTing to endpoint (HTTP 400): bad request: Authorization header is badly formatted
+[DEBUG] MCP server "honeycomb": Initializing HTTP transport to https://mcp.honeycomb.io/mcp
+[DEBUG] MCP server "honeycomb": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "honeycomb": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "honeycomb": MTLS options: default
+[DEBUG] MCP server "honeycomb": HTTP transport options: {"url":"https://mcp.honeycomb.io/mcp","headers":{"User-Agent":"claude-code/2.0.10"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "honeycomb": HTTP transport created successfully
+[DEBUG] MCP server "honeycomb": Client created, setting up request handler
+[DEBUG] MCP server "honeycomb": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "honeycomb": Testing basic HTTP connectivity to https://mcp.honeycomb.io/mcp
+[DEBUG] MCP server "honeycomb": Parsed URL: host=mcp.honeycomb.io, port=default, protocol=https:
+[DEBUG] MCP server "honeycomb": Token expired without refresh token
+[DEBUG] MCP server "honeycomb": Found client info
+[DEBUG] MCP server "honeycomb": Token expired without refresh token
+[DEBUG] MCP server "honeycomb": Generated new OAuth state
+[DEBUG] MCP server "honeycomb": Saving code verifier
+[DEBUG] MCP server "honeycomb": Authorization URL: https://ui.honeycomb.io/oauth/authorize?response_type=code&client_id=hcaoc_01k70n8yaa0kkw6taar11yrf5m&code_challenge=G4zfz94y15kMnkr10rdiIqJbxdG3KfMG4UjHUiAmM8I&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A3118%2Fcallback&state=RT804CaaPL8uSNuiogRPwN2cRhWmQ8u5XzIV6j-Sijc&resource=https%3A%2F%2Fmcp.honeycomb.io%2Fmcp
+[DEBUG] MCP server "honeycomb": Scopes in URL: NOT FOUND
+[DEBUG] MCP server "honeycomb": No scopes available from URL or metadata
+[DEBUG] MCP server "honeycomb": Redirection handling is disabled, skipping redirect
+[DEBUG] MCP server "honeycomb": HTTP Connection failed after 1029ms: Unauthorized (code: none, errno: none)
+[ERROR] MCP server "honeycomb" Error: Unauthorized
+[DEBUG] MCP server "honeycomb": Authentication required for HTTP server
+[DEBUG] MCP server "slack": Starting connection with timeout of 30000ms
+[ERROR] MCP server "slack" Server stderr: flag provided but not defined: -env
+Usage of /Users/adam.trimble/.npm/_npx/2f12aed4e6049c73/node_modules/slack-mcp-server-darwin-arm64/bin/slack-mcp-server-darwin-arm64:
+[ERROR] MCP server "slack" Server stderr: -rod string
+    	Set the default value of options used by rod.
+  -t string
+    	Transport type (stdio, sse or http) (default "stdio")
+  -transport string
+    	Transport type (stdio, sse or http) (default "stdio")
+[ERROR] MCP server "slack" Server stderr: node:child_process:921
+    throw err;
+    ^
+
+Error: Command failed: /Users/adam.trimble/.npm/_npx/2f12aed4e6049c73/node_modules/slack-mcp-server-darwin-arm64/bin/slack-mcp-server-darwin-arm64 --transport stdio --env
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:882:11)
+    at Object.execFileSync (node:child_process:918:15)
+    at Object.<anonymous> (/Users/adam.trimble/.npm/_npx/2f12aed4e6049c73/node_modules/slack-mcp-server/bin/index.js:61:14)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Object..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  status: 2,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 60617,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v22.13.0
+[DEBUG] MCP server "slack": Connection failed after 779ms: MCP error -32000: Connection closed
+[ERROR] MCP server "slack" Connection failed: MCP error -32000: Connection closed
+[DEBUG] MCP server "mcp-obsidian": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "mcp-obsidian": Successfully connected to undefined server in 536ms
+[DEBUG] MCP server "mcp-obsidian": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"mcp-obsidian","version":"1.19.0"}}

@@ -1,0 +1,150 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/policy/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/policy/.claude/settings.local.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing all 9 messages (~18290 tokens)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761587703156-quyy5e.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/108a2f94-2671-4a69-8281-9e9412a10213-agent-108a2f94-2671-4a69-8281-9e9412a10213.json.tmp.25714.1761587703158
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/108a2f94-2671-4a69-8281-9e9412a10213-agent-108a2f94-2671-4a69-8281-9e9412a10213.json.tmp.25714.1761587703158 to /Users/adam.trimble/.claude/todos/108a2f94-2671-4a69-8281-9e9412a10213-agent-108a2f94-2671-4a69-8281-9e9412a10213.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/108a2f94-2671-4a69-8281-9e9412a10213-agent-108a2f94-2671-4a69-8281-9e9412a10213.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587703172
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133361 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587703172 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587703179
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133361 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587703179 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587703382
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133361 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587703382 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/go-services/sell/policy/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Shell snapshot created successfully (201116 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587704681
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133361 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587704681 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587704724
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133253 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587704724 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587704726
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133253 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587704726 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: native, using native: true
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=false
+[DEBUG] Skipping plugin installations - ENABLE_PLUGINS not set
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587704736
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133358 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587704736 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for e391a6b2-e8d9-4c79-9c4f-91cf09858172, tracking 0 files
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587710494
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133641 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587710494 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Bash tool invoked with command: git log af5883c739..master --oneline -- .
+[DEBUG] Bash tool description: List commits from af5883c739 to master for current folder
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Slash commands included in SlashCommand tool: /create-pr
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587717911
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133641 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587717911 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.25714.1761587717921
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 133641 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.25714.1761587717921 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27
+[DEBUG] Checking for native installer update to version 2.0.27
+[DEBUG] Version 2.0.27 already installed, updating symlink
+[DEBUG] Successfully updated to version 2.0.27

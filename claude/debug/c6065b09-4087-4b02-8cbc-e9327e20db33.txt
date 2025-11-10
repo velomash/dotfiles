@@ -1,0 +1,46 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/.claude/settings.json...
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.37407.1762140476622
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 258864 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.37407.1762140476622 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1762140476735-b7h7fi.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/c6065b09-4087-4b02-8cbc-e9327e20db33-agent-c6065b09-4087-4b02-8cbc-e9327e20db33.json.tmp.37407.1762140476737
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/c6065b09-4087-4b02-8cbc-e9327e20db33-agent-c6065b09-4087-4b02-8cbc-e9327e20db33.json.tmp.37407.1762140476737 to /Users/adam.trimble/.claude/todos/c6065b09-4087-4b02-8cbc-e9327e20db33-agent-c6065b09-4087-4b02-8cbc-e9327e20db33.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/c6065b09-4087-4b02-8cbc-e9327e20db33-agent-c6065b09-4087-4b02-8cbc-e9327e20db33.json written atomically
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Shell snapshot created successfully (201146 bytes)
+[DEBUG] rg error (signal=undefined, code=ABORT_ERR, stderr: rg: /Users/adam.trimble/Library/Caches/com.apple.ap.adprivacyd: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Pictures/Photos Library.photoslibrary: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Pictures/Photo Booth Library: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Sharing: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/HomeKit: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Messages: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Caches/com.apple.homed: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Calendars: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Caches/FamilyCircle: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Caches/com.apple.containermanagerd: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/DuetExpertCenter: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/AppleMediaServices: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Trial: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Mail: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/com.apple.aiml.instrumentation: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/ContainerManager: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Autosave Information: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Daemon Containers: Operation not permitted (os error 1)
+rg: /Users/adam.trimble/Library/Assistant/SiriVocabulary: Operation not permitted (os error 1)
+), 167389 results
+[DEBUG] Cleaned up session snapshot: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1762140476735-b7h7fi.sh

@@ -1,5 +1,4 @@
 local cmp = require'cmp'
-local lspconfig = require'lspconfig'
 
 -- Enhanced capabilities for better LSP support
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -77,12 +76,12 @@ cmp.setup({
 })
 
 -- Enhanced gopls setup
-lspconfig.gopls.setup{
-  capabilities = capabilities,
-  on_attach = on_attach,
+vim.lsp.config.gopls = {
   cmd = { "gopls", "serve" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+  root_markers = { "go.work", "go.mod", ".git" },
+  capabilities = capabilities,
+  on_attach = on_attach,
   settings = {
     gopls = {
       completeUnimported = true,
@@ -115,14 +114,15 @@ lspconfig.gopls.setup{
     },
   },
 }
+vim.lsp.enable('gopls')
 
 -- TypeScript setup (updated to use ts_ls instead of deprecated tsserver)
-lspconfig.ts_ls.setup{
+vim.lsp.config.ts_ls = {
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+  root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-  cmd = { "typescript-language-server", "--stdio" },
-  root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
   settings = {
     typescript = {
       inlayHints = {
@@ -148,15 +148,18 @@ lspconfig.ts_ls.setup{
     },
   },
 }
+vim.lsp.enable('ts_ls')
 
 -- Ruby LSP setup
-lspconfig.ruby_lsp.setup{
+vim.lsp.config.ruby_lsp = {
+  cmd = { "ruby-lsp" },
+  filetypes = { "ruby" },
+  root_markers = { "Gemfile", ".git" },
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "ruby" },
-  root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
   init_options = {
     formatter = "standard",
     linters = { "standard" },
   },
 }
+vim.lsp.enable('ruby_lsp')

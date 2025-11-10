@@ -1,0 +1,40 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'projectSettings': ["mcp__atlassian","mcp__bugsnag"]
+[DEBUG] Applying permission update: Adding 7 allow rule(s) to destination 'localSettings': ["Bash(find:*)","Bash(go test:*)","Bash(git add:*)","Bash(rg:*)","Bash(make test:*)","Bash(go mod:*)","Bash(go:*)"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981527737
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118490 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981527737 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760981527909-vvvoa2.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/5072e6fa-51f4-42aa-a55b-e4c068b36510-agent-5072e6fa-51f4-42aa-a55b-e4c068b36510.json.tmp.12168.1760981527911
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/5072e6fa-51f4-42aa-a55b-e4c068b36510-agent-5072e6fa-51f4-42aa-a55b-e4c068b36510.json.tmp.12168.1760981527911 to /Users/adam.trimble/.claude/todos/5072e6fa-51f4-42aa-a55b-e4c068b36510-agent-5072e6fa-51f4-42aa-a55b-e4c068b36510.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/5072e6fa-51f4-42aa-a55b-e4c068b36510-agent-5072e6fa-51f4-42aa-a55b-e4c068b36510.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/go-services/sell/integrations-listings/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.12168.1760981529067
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 118490 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.12168.1760981529067 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:resume
+[DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute

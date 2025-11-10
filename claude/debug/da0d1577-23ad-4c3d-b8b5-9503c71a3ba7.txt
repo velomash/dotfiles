@@ -1,0 +1,56 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 39 allow rule(s) to destination 'projectSettings': ["Bash(bundle:*)","Bash(rake:*)","Bash(rails:*)","Bash(rspec:*)","Bash(rubocop:*)","Bash(erblint:*)","Bash(brakeman:*)","Bash(overcommit:*)","Bash(docker-compose:*)","Bash(git:*)","Bash(rg:*)","Bash(grep:*)","Bash(find:*)","Bash(ls:*)","Bash(cat:*)","Bash(head:*)","Bash(tail:*)","Bash(wc:*)","Bash(which:*)","Bash(echo:*)","Bash(pwd:*)","Bash(ps:*)","Bash(kill:*)","Bash(lsof:*)","Bash(curl:*)","Bash(mkdir:*)","Bash(touch:*)","Bash(cp:*)","Bash(mv:*)","Bash(sort:*)","Bash(uniq:*)","Bash(cut:*)","Bash(awk:*)","Bash(sed:*)","Bash(jq:*)","Bash(tree:*)","mcp__atlassian__*","mcp__aws-knowledge__*","mcp__bugsnag__*"]
+[DEBUG] Applying permission update: Adding 15 deny rule(s) to destination 'projectSettings': ["Bash(rm:*)","Bash(sudo:*)","Bash(su:*)","Bash(ssh:*)","Bash(dd:*)","Bash(mount:*)","Bash(umount:*)","Bash(systemctl:*)","Bash(service:*)","Bash(eval:*)","Bash(exec:*)","Bash(source:*)","Bash(.:*)","Bash(env:*)","Bash(export:*)"]
+[DEBUG] Applying permission update: Adding 5 allow rule(s) to destination 'localSettings': ["Bash(grep:*)","Bash(gh pr view:*)","Read(//Users/adam.trimble/Documents/protos/**)","mcp__mcp-obsidian__obsidian_get_file_contents","mcp__mcp-obsidian__obsidian_patch_content"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.27294.1760657191283
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 113644 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.27294.1760657191283 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Summarizing last 13 of 16 messages (~147430 tokens)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1760657191451-hkrp6u.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/da0d1577-23ad-4c3d-b8b5-9503c71a3ba7-agent-da0d1577-23ad-4c3d-b8b5-9503c71a3ba7.json.tmp.27294.1760657191452
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/da0d1577-23ad-4c3d-b8b5-9503c71a3ba7-agent-da0d1577-23ad-4c3d-b8b5-9503c71a3ba7.json.tmp.27294.1760657191452 to /Users/adam.trimble/.claude/todos/da0d1577-23ad-4c3d-b8b5-9503c71a3ba7-agent-da0d1577-23ad-4c3d-b8b5-9503c71a3ba7.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/da0d1577-23ad-4c3d-b8b5-9503c71a3ba7-agent-da0d1577-23ad-4c3d-b8b5-9503c71a3ba7.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/sneakers/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] MCP server "atlassian": Connection failed after 1ms: SSE MCP servers are currently not supported in native builds.
+[ERROR] MCP server "atlassian" Connection failed: SSE MCP servers are currently not supported in native builds.
+[DEBUG] MCP server "aws-knowledge": Initializing HTTP transport to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Node version: v24.3.0, Platform: darwin
+[DEBUG] MCP server "aws-knowledge": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "aws-knowledge": MTLS options: default
+[DEBUG] MCP server "aws-knowledge": HTTP transport options: {"url":"https://knowledge-mcp.global.api.aws","headers":{"User-Agent":"claude-code/2.0.10"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "aws-knowledge": HTTP transport created successfully
+[DEBUG] MCP server "aws-knowledge": Client created, setting up request handler
+[DEBUG] MCP server "aws-knowledge": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "aws-knowledge": Testing basic HTTP connectivity to https://knowledge-mcp.global.api.aws
+[DEBUG] MCP server "aws-knowledge": Parsed URL: host=knowledge-mcp.global.api.aws, port=default, protocol=https:
+[DEBUG] MCP server "bugsnag": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.27294.1760657192461
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 113644 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.27294.1760657192461 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] Shell snapshot created successfully (201109 bytes)
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": No token data found
+[DEBUG] MCP server "aws-knowledge": Successfully connected to http server in 921ms
+[DEBUG] MCP server "aws-knowledge": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"AWSDocumentationMCPProdGateway","version":"1.0.0"}}
+[DEBUG] MCP server "aws-knowledge": No token data found

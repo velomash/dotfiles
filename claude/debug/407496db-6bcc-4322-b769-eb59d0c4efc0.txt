@@ -1,0 +1,7 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.json, /Users/adam.trimble/Documents/sneakers/.claude/settings.local.json...
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.58587.1761333103897
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 130791 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.58587.1761333103897 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically

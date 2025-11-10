@@ -1,0 +1,52 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json...
+[DEBUG] Summarizing all 2 messages (~0 tokens)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1759880217463-s2mwcj.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/5098ac2f-f314-403e-bf54-b6403f81c348-agent-5098ac2f-f314-403e-bf54-b6403f81c348.json.tmp.82432.1759880217465
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/5098ac2f-f314-403e-bf54-b6403f81c348-agent-5098ac2f-f314-403e-bf54-b6403f81c348.json.tmp.82432.1759880217465 to /Users/adam.trimble/.claude/todos/5098ac2f-f314-403e-bf54-b6403f81c348-agent-5098ac2f-f314-403e-bf54-b6403f81c348.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/5098ac2f-f314-403e-bf54-b6403f81c348-agent-5098ac2f-f314-403e-bf54-b6403f81c348.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.82432.1759880217470
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 32132 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.82432.1759880217470 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Install: Starting installation process (force=false, target=undefined)
+[DEBUG] Install: Calling installLatest(force=true, target=undefined, forceReinstall=false)
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Checking for native installer update to version 2.0.10
+[DEBUG] Downloading native installer version 2.0.10
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/dotfiles/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Shell snapshot created successfully (201099 bytes)
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Successfully updated to version 2.0.10
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.82432.1759880223800
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 32173 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.82432.1759880223800 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Native installer: Set installMethod to "native" and disabled legacy auto-updater for protection
+[DEBUG] Install: installLatest returned version=2.0.10, wasUpdated=true, lockFailed=false
+[DEBUG] Install: Setup launcher completed with 0 messages
+[DEBUG] Install: Cleaning up npm installations after successful install
+[DEBUG] Removed global npm installation of @anthropic-ai/claude-code
+[DEBUG] Cleaned up 1 npm installation(s)
+[DEBUG] Install: Shell PATH already configured

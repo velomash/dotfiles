@@ -1,0 +1,39 @@
+[DEBUG] Watching for changes in setting files /Users/adam.trimble/.claude/settings.json, /Users/adam.trimble/Documents/go-services/sell/policy/.claude/settings.json...
+[DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'projectSettings': ["mcp__atlassian","mcp__bugsnag"]
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.41182.1761012253137
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 119788 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.41182.1761012253137 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Fetching AWS caller identity for credential export command
+[DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+[DEBUG] Looking for shell config file: /Users/adam.trimble/.zshrc
+[DEBUG] Snapshots directory: /Users/adam.trimble/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /Users/adam.trimble/.claude/shell-snapshots/snapshot-zsh-1761012253282-vvapa9.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude/todos/000b7a3b-d346-4340-840f-c652f66c4d4e-agent-000b7a3b-d346-4340-840f-c652f66c4d4e.json.tmp.41182.1761012253288
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /Users/adam.trimble/.claude/todos/000b7a3b-d346-4340-840f-c652f66c4d4e-agent-000b7a3b-d346-4340-840f-c652f66c4d4e.json.tmp.41182.1761012253288 to /Users/adam.trimble/.claude/todos/000b7a3b-d346-4340-840f-c652f66c4d4e-agent-000b7a3b-d346-4340-840f-c652f66c4d4e.json
+[DEBUG] File /Users/adam.trimble/.claude/todos/000b7a3b-d346-4340-840f-c652f66c4d4e-agent-000b7a3b-d346-4340-840f-c652f66c4d4e.json written atomically
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.41182.1761012253292
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 119407 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.41182.1761012253292 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
+[DEBUG] Fetched AWS caller identity, skipping AWS credential export command
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.0.10/claude)
+[DEBUG] Loading skills from directories: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/adam.trimble/.claude/skills, project=/Users/adam.trimble/Documents/go-services/sell/policy/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Writing to temp file: /Users/adam.trimble/.claude.json.tmp.41182.1761012254266
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 119407 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /Users/adam.trimble/.claude.json.tmp.41182.1761012254266 to /Users/adam.trimble/.claude.json
+[DEBUG] File /Users/adam.trimble/.claude.json written atomically
