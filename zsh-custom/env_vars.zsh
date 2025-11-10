@@ -7,6 +7,7 @@ get_pw () {
 export NPM_TOKEN="$(get_pw packagecloud.io)"
 export ALIAS_API_TOKEN="$(get_pw alias_api_key)"
 export ALIAS_API_TOKEN_STAGING="$(get_pw alias_api_key_staging)"
+export GITHUB_GIST_TOKEN="$(get_pw github_gist_token)"
 
 #   ------------------------------
 #   GOAT ENV VARS

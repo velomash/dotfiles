@@ -46,6 +46,8 @@ Modern Lua-based configuration with:
 - **AI integration**: CodeCompanion with Anthropic API
 - **Key tools**: FZF, NERDTree, fugitive, vim-test
 
+**Installing Vim plugins**: Add `use 'author/plugin-name'` entries to `nvim/lua/plugins.lua` inside the `packer.startup(function()` block, then run `:PackerSync` in Neovim to install.
+
 ### Security
 API keys stored in macOS Keychain, accessed via `get_pw()` function in `env_vars.zsh`.
 
