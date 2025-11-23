@@ -12,13 +12,15 @@ node_modules
 powerseller.sh
 junit.xml
 
-claude/projects
+claude/.credentials.json
+claude/debug
 claude/file-history
+claude/history.jsonl
+claude/local
+claude/projects
 claude/shell-snapshots
 claude/statsig
 claude/todos
-claude/local
-claude/history.jsonl
 
 dist
 build
@@ -33,3 +35,4 @@ yarn-error.log
 
 translation-output.js
 
+zsh-startup.txt
