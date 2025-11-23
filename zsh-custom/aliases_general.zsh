@@ -1,9 +1,11 @@
-alias d='cd /Users/adam.trimble/Documents/dotfiles; nvim'
+alias d='cd $HOME/Documents/dotfiles; nvim'
 alias gb='git checkout $(git branch --sort=-committerdate | fzf)'
 alias gcm='git checkout main'
 alias gpr='gh pr checkout'
 alias v='nvim'
 
-alias gastro='cd /Users/adam.trimble/Documents/gastro; nvim'
-alias kitchen='cd /Users/adam.trimble/Documents/kitchen; nvim'
-alias dotfiles='cd /Users/adam.trimble/Documents/dotfiles; nvim'
+alias gastro='cd $HOME/Documents/gastro; nvim'
+alias kitchen='cd $HOME/Documents/kitchen; nvim'
+alias dotfiles='cd $HOME/Documents/dotfiles; nvim'
+
+alias claude='claude --dangerously-skip-permissions'

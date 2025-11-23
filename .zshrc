@@ -4,7 +4,11 @@ PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{249}%1~%f%b %# '
 
 #   Set Default Editor
 #   ------------------------------------------------------------
-export EDITOR=/opt/homebrew/bin/nvim
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export EDITOR=/opt/homebrew/bin/nvim
+else
+  export EDITOR=$(which nvim)
+fi
 
 #   Help GPG Keys work
 #   ------------------------------------------------------------
@@ -144,9 +148,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Created by `pipx` on 2025-02-25 01:10:22
-export PATH="$PATH:/Users/adam.trimble/.local/bin"
+#   Platform-specific Homebrew initialization
+#   ------------------------------------------------------------
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS - Apple Silicon or Intel
+  if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [[ -f /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+else
+  # Linux
+  if [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  fi
+fi
 
-# Added by Windsurf
-export PATH="/Users/adam.trimble/.codeium/windsurf/bin:$PATH"
-alias claude="/Users/adam.trimble/.claude/local/claude"
