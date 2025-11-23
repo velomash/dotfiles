@@ -1,5 +1,4 @@
 local cmp = require'cmp'
-local lspconfig = require'lspconfig'
 
 -- Enhanced capabilities for better LSP support
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -8,7 +7,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Add this function to check LSP attachment
 local function on_attach(client, bufnr)
   print("LSP attached: " .. client.name .. " to buffer " .. bufnr)
-  
+
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -76,13 +75,13 @@ cmp.setup({
   })
 })
 
--- Enhanced gopls setup
-lspconfig.gopls.setup{
-  capabilities = capabilities,
-  on_attach = on_attach,
+-- Configure gopls using new vim.lsp.config API
+vim.lsp.config.gopls = {
   cmd = { "gopls", "serve" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+  root_markers = { "go.work", "go.mod", ".git" },
+  capabilities = capabilities,
+  on_attach = on_attach,
   settings = {
     gopls = {
       completeUnimported = true,
@@ -116,13 +115,13 @@ lspconfig.gopls.setup{
   },
 }
 
--- TypeScript setup (updated to use ts_ls instead of deprecated tsserver)
-lspconfig.ts_ls.setup{
+-- Configure TypeScript LSP using new vim.lsp.config API
+vim.lsp.config.ts_ls = {
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+  root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-  cmd = { "typescript-language-server", "--stdio" },
-  root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
   settings = {
     typescript = {
       inlayHints = {
@@ -149,14 +148,18 @@ lspconfig.ts_ls.setup{
   },
 }
 
--- Ruby LSP setup
-lspconfig.ruby_lsp.setup{
+-- Configure Ruby LSP using new vim.lsp.config API
+vim.lsp.config.ruby_lsp = {
+  cmd = { "ruby-lsp" },
+  filetypes = { "ruby" },
+  root_markers = { "Gemfile", ".git" },
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "ruby" },
-  root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
   init_options = {
     formatter = "standard",
     linters = { "standard" },
   },
 }
+
+-- Enable LSP servers
+vim.lsp.enable({ 'gopls', 'ts_ls', 'ruby_lsp' })
