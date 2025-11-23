@@ -39,31 +39,6 @@ packer.startup(function()
   use { 'junegunn/fzf', run = './install --all'}
   use { 'prettier/vim-prettier', run = 'yarn install' }
   use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter'})
-  use({ 'olimorris/codecompanion.nvim',
-    config = function()
-      require("codecompanion").setup({
-        strategies = {
-          chat = { adapter = "anthropic" },
-          inline = { adapter = "anthropic" },
-          cmd = { adapter = "anthropic" },
-        },
-        opts = { log_level = "DEBUG", },
-        adapters = {
-          anthropic = function()
-            return require("codecompanion.adapters").extend("anthropic", {
-              env = {
-                api_key = os.getenv("ANTHROPIC_API_KEY"),
-              },
-            })
-          end,
-        }
-      })
-    end,
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    }
-  })
 end)
 
 -- vim-test
