@@ -1,6 +1,6 @@
 {
-  "awsCredentialExport": "/opt/homebrew/bin/bedrock-credential-dunk",
+  "awsCredentialExport": "$(brew --prefix)/bin/bedrock-credential-dunk -login",
   "env": {
-    "CLAUDE_CODE_USE_BEDROCK": "0"
+    "CLAUDE_CODE_USE_BEDROCK": "1"
   }
 }
