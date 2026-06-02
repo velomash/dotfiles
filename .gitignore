@@ -31,6 +31,7 @@ claude/teams
 claude/.last-cleanup
 claude/stats-cache.json
 claude/mcp-needs-auth-cache.json
+claude/mcp.json
 
 dist
 build
