@@ -7,6 +7,8 @@ get_pw () {
 export NPM_TOKEN="$(get_pw packagecloud.io)"
 export ALIAS_API_TOKEN="$(get_pw alias_api_key)"
 export ALIAS_API_TOKEN_STAGING="$(get_pw alias_api_key_staging)"
+export CLOUDFLARE_API_TOKEN="$(get_pw cloudflare_api_key)"
+export JIRA_API_KEY="$(get_pw jira_api_key)"
 export GITHUB_GIST_TOKEN="$(get_pw github_gist_token)"
 
 #   ------------------------------
