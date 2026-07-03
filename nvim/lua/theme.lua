@@ -84,5 +84,4 @@ vim.opt.statusline = table.concat({
   '%=',                     -- right-align separator
   '%y ',                    -- filetype
   ' %l/%L:%c ',             -- current line / total lines : column
-  ' %p%% ',                 -- percentage through file
 })
