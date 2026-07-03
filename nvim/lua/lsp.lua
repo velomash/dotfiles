@@ -4,10 +4,7 @@ local cmp = require'cmp'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Add this function to check LSP attachment
 local function on_attach(client, bufnr)
-  print("LSP attached: " .. client.name .. " to buffer " .. bufnr)
-
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -114,7 +111,6 @@ vim.lsp.config.gopls = {
     },
   },
 }
-vim.lsp.enable('gopls')
 
 -- TypeScript setup (updated to use ts_ls instead of deprecated tsserver)
 vim.lsp.config.ts_ls = {
@@ -148,7 +144,6 @@ vim.lsp.config.ts_ls = {
     },
   },
 }
-vim.lsp.enable('ts_ls')
 
 -- Configure Ruby LSP using new vim.lsp.config API
 vim.lsp.config.ruby_lsp = {
@@ -162,5 +157,16 @@ vim.lsp.config.ruby_lsp = {
   },
 }
 
--- Enable LSP servers
-vim.lsp.enable({ 'gopls', 'ts_ls', 'ruby_lsp' })
+-- Enable LSP servers, but only if their executable is actually installed.
+-- Enabling a server whose `cmd` binary is missing produces spawn errors on
+-- every matching file and wastes startup time, so guard on exepath().
+local servers = {
+  gopls  = 'gopls',
+  ts_ls  = 'typescript-language-server',
+  ruby_lsp = 'ruby-lsp',
+}
+for server, bin in pairs(servers) do
+  if vim.fn.executable(bin) == 1 then
+    vim.lsp.enable(server)
+  end
+end

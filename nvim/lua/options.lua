@@ -23,3 +23,10 @@ vim.opt.directory = '/var/tmp,/tmp'
 vim.opt.hidden = true
 vim.opt.cmdheight = 2
 vim.opt.updatetime = 300
+
+-- performance
+vim.opt.synmaxcol = 300          -- don't syntax-highlight past col 300 (long lines)
+vim.opt.lazyredraw = true        -- don't redraw mid-macro/mid-command
+vim.opt.redrawtime = 1500        -- give up highlighting pathological files sooner
+vim.opt.ttimeoutlen = 10         -- fast escape-key / terminal sequence handling
+vim.opt.timeoutlen = 500         -- mapping timeout
