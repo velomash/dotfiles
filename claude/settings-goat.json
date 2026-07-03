@@ -1,0 +1,39 @@
+{
+  "awsCredentialExport": "/opt/homebrew/bin/bedrock-credential-dunk -login",
+  "env": {
+    "ANTHROPIC_MODEL": "us.anthropic.claude-opus-4-8",
+    "AWS_REGION": "us-east-1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_USE_BEDROCK": "1"
+  },
+  "model": "us.anthropic.claude-opus-4-7",
+  "enabledPlugins": {
+    "feature-dev@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "obsidian@obsidian-skills": true,
+    "goat-plugins@goat-marketplace": true,
+    "goat-excalidraw@goat-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "obsidian-skills": {
+      "source": {
+        "source": "github",
+        "repo": "kepano/obsidian-skills"
+      }
+    },
+    "goat-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "goatapp/claude-plugins"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "thinking": {
+    "type": "adaptive"
+  },
+  "editorMode": "vim"
+}
