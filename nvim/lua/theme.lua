@@ -3,7 +3,6 @@ vim.cmd([[
   set guioptions-=r
   set termguicolors
   set background=dark
-  colorscheme onedark
 ]])
 
 -- vim-airline

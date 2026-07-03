@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "slack-mcp-server@latest",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "SLACK_MCP_XOXC_TOKEN": "xoxc-2045290082336-607430592068-6417688563605-551f841af1b05b70011ad2cb6aff52c2d6883d81cbd0d3ac4e9a8b7b09f2a7ac",
+        "SLACK_MCP_XOXD_TOKEN": "xoxd-NTkY%2FClLPpnLBeDSuBapd3hGml%2Fp46FtZc3RaUrriI3joTIgX%2FnbH7uYaIBfaUTciJIN5D2xn8n2QBi%2F1Dt66ETrBlTNwLB0tb%2BYhH4FQj7HytuvHblD6R62uFf8Gla80XgovVSWLjv4qygQEdKMj1OQK5thtG3GqVf00lzwzoInSaNdVfbgWbJDH9cCCvqxnS7Vsfl18R4%3D"
+      }
+    }
+  }
+}

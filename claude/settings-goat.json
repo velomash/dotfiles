@@ -1,10 +1,4 @@
 {
-<<<<<<< HEAD
-  "awsCredentialExport": "$(brew --prefix)/bin/bedrock-credential-dunk -login",
-  "env": {
-    "CLAUDE_CODE_USE_BEDROCK": "1"
-  }
-=======
   "awsCredentialExport": "/opt/homebrew/bin/bedrock-credential-dunk -login",
   "env": {
     "ANTHROPIC_MODEL": "us.anthropic.claude-opus-4-8",
@@ -42,5 +36,4 @@
     "type": "adaptive"
   },
   "editorMode": "vim"
->>>>>>> master
 }
