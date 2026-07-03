@@ -90,6 +90,19 @@ vim.opt.statusline = table.concat({
 -- Native tabline: list all listed buffers (like airline's tabline), highlight
 -- the active one. The default tabline only shows :tab pages, not buffers.
 -- ---------------------------------------------------------------------------
+
+-- Tabline colors: background matches the editor (Normal bg), non-current
+-- buffers in light gray, the current buffer in light blue.
+local function setup_tabline_highlights()
+  local normal = vim.api.nvim_get_hl(0, { name = 'Normal' })
+  local bg = normal and normal.bg or nil    -- nil => terminal default bg
+  vim.api.nvim_set_hl(0, 'TabLine',     { fg = '#828997', bg = bg })            -- non-current
+  vim.api.nvim_set_hl(0, 'TabLineSel',  { fg = '#61afef', bg = bg, bold = true }) -- current
+  vim.api.nvim_set_hl(0, 'TabLineFill', { bg = bg })                            -- empty area
+end
+setup_tabline_highlights()
+vim.api.nvim_create_autocmd('ColorScheme', { callback = setup_tabline_highlights })
+
 function _G.st_tabline()
   local cur = vim.api.nvim_get_current_buf()
   local parts = {}
