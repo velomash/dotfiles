@@ -108,6 +108,31 @@ print_error() {
     printf "\e[0;31m  [✖] $1 $2\e[0m\n"
 }
 
+symlink_path() {
+    # symlink a single file or directory, prompting before clobbering
+    # anything that isn't already the correct link
+    local sourceFile="$1"
+    local targetFile="$2"
+
+    if [ -e "$targetFile" ] || [ -L "$targetFile" ]; then
+        if [ "$(readlink "$targetFile")" != "$sourceFile" ]; then
+
+            ask_for_confirmation "'$targetFile' already exists, do you want to overwrite it?"
+            if answer_is_yes; then
+                rm -rf "$targetFile"
+                execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+            else
+                print_error "$targetFile → $sourceFile"
+            fi
+
+        else
+            print_success "$targetFile → $sourceFile"
+        fi
+    else
+        execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+    fi
+}
+
 print_info() {
     # Print output in purple
     printf "\n\e[0;35m $1\e[0m\n\n"
@@ -235,28 +260,37 @@ main() {
     fi
 
     # claude config linking
+    #
+    # ~/.claude stays a real directory owned by Claude Code (sessions, history,
+    # caches, etc.). We only symlink the specific settings we want in git into
+    # it, so machine-local runtime state never lands in this repo.
     claudeSourceConfig="$(pwd)/claude"
     claudeTargetConfig="$HOME/.claude"
 
     if [ -d "$claudeSourceConfig" ]; then
 
-        if [ -d "$claudeTargetConfig" ]; then
-            if [ "$(readlink "$claudeTargetConfig")" != "$claudeSourceConfig" ]; then
-
-                ask_for_confirmation "'$claudeTargetConfig' already exists, do you want to overwrite it?"
-                if answer_is_yes; then
-                    rm -rf "$claudeTargetConfig"
-                    execute "ln -fs $claudeSourceConfig $claudeTargetConfig" "$claudeTargetConfig → $claudeSourceConfig"
-                else
-                    print_error "$claudeTargetConfig → $claudeSourceConfig"
-                fi
-
-            else
-                print_success "$claudeTargetConfig → $claudeSourceConfig"
+        # ensure ~/.claude exists as a plain directory (not a symlink to the
+        # whole repo, which is the layout older versions of this script used)
+        if [ -L "$claudeTargetConfig" ]; then
+            ask_for_confirmation "'$claudeTargetConfig' is a symlink; replace it with a real directory?"
+            if answer_is_yes; then
+                rm -f "$claudeTargetConfig"
             fi
-        else
-            execute "ln -fs $claudeSourceConfig $claudeTargetConfig" "$claudeTargetConfig → $claudeSourceConfig"
         fi
+        mkd "$claudeTargetConfig"
+
+        # settings files + agent/command dirs we want synced
+        declare -a CLAUDE_FILES_TO_SYMLINK=(
+            "settings.json"
+            "settings-goat.json"
+            "settings-ggd.json"
+            "agents"
+            "commands"
+        )
+
+        for i in "${CLAUDE_FILES_TO_SYMLINK[@]}"; do
+            symlink_path "$claudeSourceConfig/$i" "$claudeTargetConfig/$i"
+        done
 
     fi
 
