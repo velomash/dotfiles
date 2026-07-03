@@ -1,10 +1,4 @@
 {
-<<<<<<< HEAD
-  "awsCredentialExport": "$(brew --prefix)/bin/bedrock-credential-dunk -login",
-  "env": {
-    "CLAUDE_CODE_USE_BEDROCK": "1"
-  }
-=======
   "awsCredentialExport": "/opt/homebrew/bin/bedrock-credential-dunk -login",
   "env": {
     "ANTHROPIC_MODEL": "us.anthropic.claude-opus-4-8",
@@ -12,7 +6,7 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_USE_BEDROCK": "1"
   },
-  "model": "us.anthropic.claude-opus-4-7",
+  "model": "us.anthropic.claude-opus-4-8",
   "enabledPlugins": {
     "feature-dev@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
@@ -38,9 +32,8 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
+  "editorMode": "vim",
   "thinking": {
     "type": "adaptive"
-  },
-  "editorMode": "vim"
->>>>>>> master
+  }
 }
