@@ -81,5 +81,8 @@ vim.opt.statusline = table.concat({
   ' %f',                    -- relative filename
   ' %m%r',                  -- [+] modified, [RO] readonly flags
   '%{v:lua.st_git()}',      -- git branch (cached)
-  '%=',                     -- right-align separator (right side intentionally empty)
+  '%=',                     -- right-align separator
+  '%y ',                    -- filetype
+  ' %l/%L:%c ',             -- current line / total lines : column
+  ' %p%% ',                 -- percentage through file
 })
