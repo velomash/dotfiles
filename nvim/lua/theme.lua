@@ -111,9 +111,8 @@ function _G.st_tabline()
       local name = vim.api.nvim_buf_get_name(buf)
       local label = name ~= '' and vim.fn.fnamemodify(name, ':t') or '[No Name]'
       if vim.bo[buf].modified then label = label .. ' +' end
-      -- %<n>T lets clicking a buffer switch to it; TabLineSel = active hl.
       local hl = (buf == cur) and '%#TabLineSel#' or '%#TabLine#'
-      parts[#parts + 1] = string.format('%s %d:%s ', hl, buf, label)
+      parts[#parts + 1] = string.format('%s %s ', hl, label)
     end
   end
   return table.concat(parts) .. '%#TabLineFill#'
