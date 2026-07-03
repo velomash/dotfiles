@@ -12,35 +12,53 @@ packer.init({
 
 --- startup and add configure plugins
 packer.startup(function()
-  use 'fatih/vim-go'
+  use 'wbthomason/packer.nvim'              -- packer can manage itself
+
+  -- completion (needed globally, loads with cmp on InsertEnter via nvim-cmp itself)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
-  use 'janko/vim-test'                      -- granular testing
-  use 'jiangmiao/auto-pairs'                -- auto close brackets
-  use 'junegunn/fzf.vim'                    -- fuzzy finding with ag
+
   use 'neovim/nvim-lspconfig'               -- language server
-  use 'nvim-neotest/neotest'
-  use 'prisma/vim-prisma'                   -- syntax for prisma ORM
+
+  -- editing helpers
+  use 'jiangmiao/auto-pairs'                -- auto close brackets
   use 'scrooloose/nerdcommenter'            -- easy commenting
-  use 'scrooloose/nerdtree'                 -- find files by dir tree
-  use 'tpope/vim-dispatch'                  -- async command line commands
-  use 'tpope/vim-fugitive'                  -- git integration
-  use 'tpope/vim-rails'                     -- editor support for ruby on rails
-  use 'tpope/vim-rhubarb'                   -- github for fugitive
   use 'tpope/vim-surround'                  -- surround with tags
-  use 'mattn/vim-gist'                      -- gist integration
-  use 'mattn/webapi-vim'                    -- required dependency for vim-gist
-  use 'vim-airline/vim-airline'             -- status bar plugin
-  use 'vim-airline/vim-airline-themes'      -- status bar themes
-  use 'wbthomason/packer.nvim' -- packer can manage itself
+
+  -- statusline (fast, native Lua)
+  use 'nvim-lualine/lualine.nvim'
+
+  -- git (lazy: only when a fugitive command / mapping is used)
+  use { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite' } }
+  use { 'tpope/vim-rhubarb', after = 'vim-fugitive' }
+
+  -- file tree (lazy: only when a NERDTree command is invoked)
+  use { 'scrooloose/nerdtree', cmd = { 'NERDTreeToggle', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeClose', 'NERDTreeRefreshRoot' } }
+
+  -- fuzzy finding (lazy: only when a command is invoked)
+  use { 'junegunn/fzf', run = './install --all' }
+  use { 'junegunn/fzf.vim', cmd = { 'Files', 'Buffers', 'Rg', 'Find', 'FindCurrentWord', 'GFiles' } }
+
+  -- testing (lazy: only when a test command runs)
+  use { 'janko/vim-test', cmd = { 'TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit' } }
+  use { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } }
+  use 'nvim-neotest/neotest'
+
+  -- language-specific (lazy by filetype)
+  use { 'fatih/vim-go', ft = { 'go', 'gomod', 'gowork' } }
+  use { 'prisma/vim-prisma', ft = { 'prisma' } }
+  use { 'tpope/vim-rails', ft = { 'ruby', 'eruby' } }
+  use { 'prettier/vim-prettier', run = 'yarn install', cmd = { 'Prettier', 'PrettierAsync' } }
+
+  -- gist (lazy: only when Gist command is used)
+  use { 'mattn/vim-gist', cmd = { 'Gist' }, requires = { { 'mattn/webapi-vim', opt = true } } }
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'junegunn/fzf', run = './install --all'}
-  use { 'prettier/vim-prettier', run = 'yarn install' }
-  use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter'})
+  use { 'monsonjeremy/onedark.nvim', branch = 'treesitter' }
 end)
 
 -- vim-test
@@ -82,14 +100,9 @@ vim.cmd([[
   let g:go_fmt_autosave = 1
   let g:go_imports_autosave = 1
   let g:go_mod_fmt_autosave = 1
-  let g:go_highlight_types = 1
-  let g:go_highlight_fields = 1
-  let g:go_highlight_functions = 1
-  let g:go_highlight_function_calls = 1
-  let g:go_highlight_operators = 1
-  let g:go_highlight_extra_types = 1
-  let g:go_highlight_build_constraints = 1
-  let g:go_highlight_generate_tags = 1
+
+  " Highlighting is handled by treesitter (fast); vim-go's regex-based
+  " g:go_highlight_* options are slow on large files, so leave them off.
 ]])
 
 -- vim-gist options
