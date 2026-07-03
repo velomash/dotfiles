@@ -29,9 +29,6 @@ packer.startup(function()
   use 'scrooloose/nerdcommenter'            -- easy commenting
   use 'tpope/vim-surround'                  -- surround with tags
 
-  -- statusline (fast, native Lua)
-  use 'nvim-lualine/lualine.nvim'
-
   -- git (lazy: only when a fugitive command / mapping is used)
   use { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite' } }
   use { 'tpope/vim-rhubarb', after = 'vim-fugitive' }
