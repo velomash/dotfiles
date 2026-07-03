@@ -151,15 +151,17 @@ vim.lsp.config.ts_ls = {
 vim.lsp.enable('ts_ls')
 
 -- Ruby LSP setup
+-- ruby-lsp is installed in RVM's @global gemset so it resolves on PATH in
+-- every project gemset. "auto" lets ruby-lsp detect the formatter/linter from
+-- each project's bundle (e.g. RuboCop for sneakers, Standard for others).
 vim.lsp.config.ruby_lsp = {
   cmd = { "ruby-lsp" },
-  filetypes = { "ruby" },
+  filetypes = { "ruby", "eruby" },
   root_markers = { "Gemfile", ".git" },
   capabilities = capabilities,
   on_attach = on_attach,
   init_options = {
-    formatter = "standard",
-    linters = { "standard" },
+    formatter = "auto",
   },
 }
 vim.lsp.enable('ruby_lsp')
