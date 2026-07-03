@@ -21,10 +21,11 @@ This is a personal macOS dotfiles repository using a symlink-based approach. Con
 ```
 
 ### Symlink Management
-The `setup-symlinks.sh` script handles three types of linking:
+The `setup-symlinks.sh` script handles these types of linking:
 - Hidden dotfiles (`.zshrc`, etc.) → `$HOME/`
 - Zsh custom configs → `$HOME/.oh-my-zsh/custom/`
 - Neovim config directory → `$HOME/.config/nvim/`
+- Claude settings → individual files linked *into* a real `$HOME/.claude/` directory (`settings.json`, `settings-goat.json`, `settings-ggd.json`, `agents/`, `commands/`). `~/.claude` itself stays a normal directory owned by Claude Code so its runtime state (sessions, history, caches) never lands in this repo.
 
 Safe to run multiple times; prompts before overwriting existing files.
 
