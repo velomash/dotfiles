@@ -114,8 +114,9 @@ vim.lsp.config.gopls = {
     },
   },
 }
+vim.lsp.enable('gopls')
 
--- Configure TypeScript LSP using new vim.lsp.config API
+-- TypeScript setup (updated to use ts_ls instead of deprecated tsserver)
 vim.lsp.config.ts_ls = {
   cmd = { "typescript-language-server", "--stdio" },
   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
@@ -147,6 +148,7 @@ vim.lsp.config.ts_ls = {
     },
   },
 }
+vim.lsp.enable('ts_ls')
 
 -- Configure Ruby LSP using new vim.lsp.config API
 vim.lsp.config.ruby_lsp = {
@@ -156,8 +158,7 @@ vim.lsp.config.ruby_lsp = {
   capabilities = capabilities,
   on_attach = on_attach,
   init_options = {
-    formatter = "standard",
-    linters = { "standard" },
+    formatter = "auto",
   },
 }
 

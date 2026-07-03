@@ -21,6 +21,21 @@ claude/projects
 claude/shell-snapshots
 claude/statsig
 claude/todos
+claude/local
+claude/history.jsonl
+claude/debug
+claude/backups
+claude/cache
+claude/paste-cache
+claude/plugins
+claude/sessions
+claude/skills
+claude/tasks
+claude/teams
+claude/.last-cleanup
+claude/stats-cache.json
+claude/mcp-needs-auth-cache.json
+claude/mcp.json
 
 dist
 build

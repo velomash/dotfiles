@@ -21,10 +21,11 @@ This is a personal macOS dotfiles repository using a symlink-based approach. Con
 ```
 
 ### Symlink Management
-The `setup-symlinks.sh` script handles three types of linking:
+The `setup-symlinks.sh` script handles these types of linking:
 - Hidden dotfiles (`.zshrc`, etc.) → `$HOME/`
 - Zsh custom configs → `$HOME/.oh-my-zsh/custom/`
 - Neovim config directory → `$HOME/.config/nvim/`
+- Claude settings → individual files linked *into* a real `$HOME/.claude/` directory (`settings.json`, `settings-goat.json`, `settings-ggd.json`, `agents/`, `commands/`). `~/.claude` itself stays a normal directory owned by Claude Code so its runtime state (sessions, history, caches) never lands in this repo.
 
 Safe to run multiple times; prompts before overwriting existing files.
 
@@ -45,6 +46,8 @@ Modern Lua-based configuration with:
 - **Completion**: nvim-cmp with buffer, path, and LSP sources
 - **AI integration**: CodeCompanion with Anthropic API
 - **Key tools**: FZF, NERDTree, fugitive, vim-test
+
+**Installing Vim plugins**: Add `use 'author/plugin-name'` entries to `nvim/lua/plugins.lua` inside the `packer.startup(function()` block, then run `:PackerSync` in Neovim to install.
 
 ### Security
 API keys stored in macOS Keychain, accessed via `get_pw()` function in `env_vars.zsh`.
