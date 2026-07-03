@@ -85,3 +85,24 @@ vim.opt.statusline = table.concat({
   '%y ',                    -- filetype
   ' %l/%L:%c ',             -- current line / total lines : column
 })
+
+-- ---------------------------------------------------------------------------
+-- Native tabline: list all listed buffers (like airline's tabline), highlight
+-- the active one. The default tabline only shows :tab pages, not buffers.
+-- ---------------------------------------------------------------------------
+function _G.st_tabline()
+  local cur = vim.api.nvim_get_current_buf()
+  local parts = {}
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.bo[buf].buflisted then
+      local name = vim.api.nvim_buf_get_name(buf)
+      local label = name ~= '' and vim.fn.fnamemodify(name, ':t') or '[No Name]'
+      if vim.bo[buf].modified then label = label .. ' +' end
+      -- %<n>T lets clicking a buffer switch to it; TabLineSel = active hl.
+      local hl = (buf == cur) and '%#TabLineSel#' or '%#TabLine#'
+      parts[#parts + 1] = string.format('%s %d:%s ', hl, buf, label)
+    end
+  end
+  return table.concat(parts) .. '%#TabLineFill#'
+end
+vim.opt.tabline = '%!v:lua.st_tabline()'
