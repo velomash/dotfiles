@@ -259,41 +259,6 @@ main() {
 
     fi
 
-    # claude config linking
-    #
-    # ~/.claude stays a real directory owned by Claude Code (sessions, history,
-    # caches, etc.). We only symlink the specific settings we want in git into
-    # it, so machine-local runtime state never lands in this repo.
-    claudeSourceConfig="$(pwd)/claude"
-    claudeTargetConfig="$HOME/.claude"
-
-    if [ -d "$claudeSourceConfig" ]; then
-
-        # ensure ~/.claude exists as a plain directory (not a symlink to the
-        # whole repo, which is the layout older versions of this script used)
-        if [ -L "$claudeTargetConfig" ]; then
-            ask_for_confirmation "'$claudeTargetConfig' is a symlink; replace it with a real directory?"
-            if answer_is_yes; then
-                rm -f "$claudeTargetConfig"
-            fi
-        fi
-        mkd "$claudeTargetConfig"
-
-        # settings files + agent/command dirs we want synced
-        declare -a CLAUDE_FILES_TO_SYMLINK=(
-            "settings.json"
-            "settings-goat.json"
-            "settings-ggd.json"
-            "agents"
-            "commands"
-        )
-
-        for i in "${CLAUDE_FILES_TO_SYMLINK[@]}"; do
-            symlink_path "$claudeSourceConfig/$i" "$claudeTargetConfig/$i"
-        done
-
-    fi
-
 }
 
 main
