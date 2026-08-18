@@ -30,7 +30,7 @@ packer.startup(function()
   use 'tpope/vim-surround'                  -- surround with tags
 
   -- git (lazy: only when a fugitive command / mapping is used)
-  use { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite' } }
+  use { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite', 'GBrowse' } }
   use { 'tpope/vim-rhubarb', after = 'vim-fugitive' }
 
   -- file tree (lazy: only when a NERDTree command is invoked)

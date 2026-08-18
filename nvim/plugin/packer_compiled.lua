@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1782726002/share/lua/5.1/?.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1782726002/share/lua/5.1/?/init.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1782726002/lib/luarocks/rocks-5.1/?.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1782726002/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1782726002/lib/lua/5.1/?.so"
+local package_path_str = "/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1783585446/share/lua/5.1/?.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1783585446/share/lua/5.1/?/init.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1783585446/lib/luarocks/rocks-5.1/?.lua;/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1783585446/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/adam.trimble@goat.com/.cache/nvim/packer_hererocks/2.1.1783585446/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -165,7 +165,7 @@ _G.packer_plugins = {
   },
   ["vim-fugitive"] = {
     after = { "vim-rhubarb" },
-    commands = { "Git", "G", "Gdiffsplit", "Gblame", "Gread", "Gwrite" },
+    commands = { "Git", "G", "Gdiffsplit", "Gblame", "Gread", "Gwrite", "GBrowse" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
@@ -248,89 +248,12 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'TestNearest', function(cmdargs)
-          require('packer.load')({'vim-test'}, { cmd = 'TestNearest', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Gist', function(cmdargs)
+          require('packer.load')({'vim-gist'}, { cmd = 'Gist', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TestNearest ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'TestFile', function(cmdargs)
-          require('packer.load')({'vim-test'}, { cmd = 'TestFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TestFile ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'TestSuite', function(cmdargs)
-          require('packer.load')({'vim-test'}, { cmd = 'TestSuite', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TestSuite ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'TestLast', function(cmdargs)
-          require('packer.load')({'vim-test'}, { cmd = 'TestLast', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TestLast ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'TestVisit', function(cmdargs)
-          require('packer.load')({'vim-test'}, { cmd = 'TestVisit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TestVisit ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Dispatch', function(cmdargs)
-          require('packer.load')({'vim-dispatch'}, { cmd = 'Dispatch', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Dispatch ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Make', function(cmdargs)
-          require('packer.load')({'vim-dispatch'}, { cmd = 'Make', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Make ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Focus', function(cmdargs)
-          require('packer.load')({'vim-dispatch'}, { cmd = 'Focus', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Focus ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Start', function(cmdargs)
-          require('packer.load')({'vim-dispatch'}, { cmd = 'Start', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Start ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Gblame', function(cmdargs)
-          require('packer.load')({'vim-fugitive'}, { cmd = 'Gblame', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Gblame ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Gread', function(cmdargs)
-          require('packer.load')({'vim-fugitive'}, { cmd = 'Gread', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Gread ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Gwrite', function(cmdargs)
-          require('packer.load')({'vim-fugitive'}, { cmd = 'Gwrite', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Gwrite ', 'cmdline')
+          require('packer.load')({'vim-gist'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Gist ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'G', function(cmdargs)
           require('packer.load')({'vim-fugitive'}, { cmd = 'G', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -338,13 +261,6 @@ pcall(vim.api.nvim_create_user_command, 'G', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('G ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Gdiffsplit', function(cmdargs)
-          require('packer.load')({'vim-fugitive'}, { cmd = 'Gdiffsplit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Gdiffsplit ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'NERDTreeToggle', function(cmdargs)
           require('packer.load')({'nerdtree'}, { cmd = 'NERDTreeToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -402,12 +318,12 @@ pcall(vim.api.nvim_create_user_command, 'Git', function(cmdargs)
           require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('Git ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Gist', function(cmdargs)
-          require('packer.load')({'vim-gist'}, { cmd = 'Gist', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Files', function(cmdargs)
+          require('packer.load')({'fzf.vim'}, { cmd = 'Files', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-gist'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Gist ', 'cmdline')
+          require('packer.load')({'fzf.vim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Files ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'Buffers', function(cmdargs)
           require('packer.load')({'fzf.vim'}, { cmd = 'Buffers', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -444,12 +360,103 @@ pcall(vim.api.nvim_create_user_command, 'GFiles', function(cmdargs)
           require('packer.load')({'fzf.vim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('GFiles ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'Files', function(cmdargs)
-          require('packer.load')({'fzf.vim'}, { cmd = 'Files', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'Gdiffsplit', function(cmdargs)
+          require('packer.load')({'vim-fugitive'}, { cmd = 'Gdiffsplit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'fzf.vim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Files ', 'cmdline')
+          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Gdiffsplit ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'TestNearest', function(cmdargs)
+          require('packer.load')({'vim-test'}, { cmd = 'TestNearest', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TestNearest ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'TestFile', function(cmdargs)
+          require('packer.load')({'vim-test'}, { cmd = 'TestFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TestFile ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'TestSuite', function(cmdargs)
+          require('packer.load')({'vim-test'}, { cmd = 'TestSuite', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TestSuite ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'TestLast', function(cmdargs)
+          require('packer.load')({'vim-test'}, { cmd = 'TestLast', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TestLast ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'TestVisit', function(cmdargs)
+          require('packer.load')({'vim-test'}, { cmd = 'TestVisit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-test'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TestVisit ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Gblame', function(cmdargs)
+          require('packer.load')({'vim-fugitive'}, { cmd = 'Gblame', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Gblame ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Dispatch', function(cmdargs)
+          require('packer.load')({'vim-dispatch'}, { cmd = 'Dispatch', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Dispatch ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Make', function(cmdargs)
+          require('packer.load')({'vim-dispatch'}, { cmd = 'Make', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Make ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Focus', function(cmdargs)
+          require('packer.load')({'vim-dispatch'}, { cmd = 'Focus', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Focus ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Start', function(cmdargs)
+          require('packer.load')({'vim-dispatch'}, { cmd = 'Start', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dispatch'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Start ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Gread', function(cmdargs)
+          require('packer.load')({'vim-fugitive'}, { cmd = 'Gread', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Gread ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Gwrite', function(cmdargs)
+          require('packer.load')({'vim-fugitive'}, { cmd = 'Gwrite', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Gwrite ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'GBrowse', function(cmdargs)
+          require('packer.load')({'vim-fugitive'}, { cmd = 'GBrowse', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-fugitive'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('GBrowse ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
@@ -457,21 +464,21 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType prisma ++once lua require("packer.load")({'vim-prisma'}, { ft = "prisma" }, _G.packer_plugins)]]
-vim.cmd [[au FileType ruby ++once lua require("packer.load")({'vim-rails'}, { ft = "ruby" }, _G.packer_plugins)]]
-vim.cmd [[au FileType eruby ++once lua require("packer.load")({'vim-rails'}, { ft = "eruby" }, _G.packer_plugins)]]
 vim.cmd [[au FileType gomod ++once lua require("packer.load")({'vim-go'}, { ft = "gomod" }, _G.packer_plugins)]]
 vim.cmd [[au FileType gowork ++once lua require("packer.load")({'vim-go'}, { ft = "gowork" }, _G.packer_plugins)]]
+vim.cmd [[au FileType prisma ++once lua require("packer.load")({'vim-prisma'}, { ft = "prisma" }, _G.packer_plugins)]]
+vim.cmd [[au FileType ruby ++once lua require("packer.load")({'vim-rails'}, { ft = "ruby" }, _G.packer_plugins)]]
 vim.cmd [[au FileType go ++once lua require("packer.load")({'vim-go'}, { ft = "go" }, _G.packer_plugins)]]
+vim.cmd [[au FileType eruby ++once lua require("packer.load")({'vim-rails'}, { ft = "eruby" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]], true)
-vim.cmd [[source /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]]
-time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]], false)
 time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]], true)
 vim.cmd [[source /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]]
 time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]], false)
+time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]], true)
+vim.cmd [[source /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]]
+time([[Sourcing ftdetect script at: /Users/adam.trimble@goat.com/.local/share/nvim/site/pack/packer/opt/vim-go/ftdetect/gofiletype.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
