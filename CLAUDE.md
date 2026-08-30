@@ -42,13 +42,14 @@ Safe to run multiple times; prompts before overwriting existing files.
 
 ### Editor (Neovim)
 Modern Lua-based configuration with:
-- **Plugin manager**: Packer.nvim (auto-installs on first run)
-- **LSP**: TypeScript (tsserver), Go (gopls)
+- **Plugin manager**: lazy.nvim (auto-installs on first run; `nvim/lazy-lock.json` pins versions)
+- **LSP**: TypeScript (ts_ls), Go (gopls), Ruby (ruby_lsp) via `vim.lsp.config` / `vim.lsp.enable`
 - **Completion**: nvim-cmp with buffer, path, and LSP sources
-- **AI integration**: CodeCompanion with Anthropic API
-- **Key tools**: FZF, NERDTree, fugitive, vim-test
+- **Syntax**: nvim-treesitter (`main` branch — needs the `tree-sitter` CLI, installed via `tree-sitter-cli` in `install-programs.sh`; parsers compile locally)
+- **Key tools**: FZF, NERDTree, fugitive, nvim-autopairs
+- **`:Gist`**: creates a GitHub gist via the `gh` CLI. `:Gist` = whole file, `:'<,'>Gist` = selection only, `:Gist!` = public. URL is copied to the `+` register.
 
-**Installing Vim plugins**: Add `use 'author/plugin-name'` entries to `nvim/lua/plugins.lua` inside the `packer.startup(function()` block, then run `:PackerSync` in Neovim to install.
+**Installing Vim plugins**: Add a spec (`'author/plugin-name'` or `{ 'author/plugin-name', ... }`) to the table passed to `require('lazy').setup({ ... })` in `nvim/lua/plugins.lua`, then run `:Lazy sync` in Neovim.
 
 ### Security
 API keys stored in macOS Keychain, accessed via `get_pw()` function in `env_vars.zsh`.
@@ -58,15 +59,10 @@ API keys stored in macOS Keychain, accessed via `get_pw()` function in `env_vars
 ### Neovim Plugin Management
 ```bash
 # From within Neovim
-:PackerInstall  # Install plugins
-:PackerUpdate   # Update plugins
-:PackerSync     # Clean and update
-```
-
-### Testing (via vim-test)
-```bash
-# JavaScript/TypeScript projects use Jest with --watch flag
-# Tests run in vertical split terminal within Neovim
+:Lazy           # Open the lazy.nvim UI
+:Lazy install   # Install missing plugins
+:Lazy update    # Update plugins
+:Lazy sync      # Install + update + clean, then write lazy-lock.json
 ```
 
 ### Git Workflow

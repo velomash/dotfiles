@@ -1,69 +1,88 @@
--- ensure that packer is installed
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-    vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-    vim.api.nvim_command 'packadd packer.nvim'
+-- Bootstrap lazy.nvim (auto-installs on first run)
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    'git', 'clone', '--filter=blob:none', '--branch=stable',
+    'https://github.com/folke/lazy.nvim.git', lazypath,
+  })
 end
-local packer = require'packer'
-local util = require'packer.util'
-packer.init({
-  package_root = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack')
-})
+vim.opt.rtp:prepend(lazypath)
 
---- startup and add configure plugins
-packer.startup(function()
-  use 'wbthomason/packer.nvim'              -- packer can manage itself
+require('lazy').setup({
+  -- completion
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/vim-vsnip',
+    },
+    -- cmp is configured in lua/lsp.lua (require'cmp' there triggers the load)
+  },
 
-  -- completion (needed globally, loads with cmp on InsertEnter via nvim-cmp itself)
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/vim-vsnip'
-
-  use 'neovim/nvim-lspconfig'               -- language server
+  'neovim/nvim-lspconfig',                    -- language server configs
 
   -- editing helpers
-  use 'jiangmiao/auto-pairs'                -- auto close brackets
-  use 'scrooloose/nerdcommenter'            -- easy commenting
-  use 'tpope/vim-surround'                  -- surround with tags
+  'scrooloose/nerdcommenter',                 -- easy commenting
+  {
+    'kylechui/nvim-surround',                 -- add/change/delete surrounding pairs (ys/ds/cs)
+    event = 'VeryLazy',
+    config = function() require('nvim-surround').setup({}) end,
+  },
+  {
+    'windwp/nvim-autopairs',                  -- auto close brackets (treesitter-aware)
+    event = 'InsertEnter',
+    config = function()
+      require('nvim-autopairs').setup({ check_ts = true })
+      -- insert ( after selecting a function/method from the cmp menu
+      local ok, cmp = pcall(require, 'cmp')
+      if ok then
+        cmp.event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
+      end
+    end,
+  },
 
   -- git (lazy: only when a fugitive command / mapping is used)
-  use { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite', 'GBrowse' } }
-  use { 'tpope/vim-rhubarb', after = 'vim-fugitive' }
+  { 'tpope/vim-fugitive', cmd = { 'Git', 'G', 'Gdiffsplit', 'Gblame', 'Gread', 'Gwrite', 'GBrowse' } },
+  { 'tpope/vim-rhubarb', dependencies = { 'tpope/vim-fugitive' } },
 
   -- file tree (lazy: only when a NERDTree command is invoked)
-  use { 'scrooloose/nerdtree', cmd = { 'NERDTreeToggle', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeClose', 'NERDTreeRefreshRoot' } }
+  { 'scrooloose/nerdtree', cmd = { 'NERDTreeToggle', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeClose', 'NERDTreeRefreshRoot' } },
 
   -- fuzzy finding (lazy: only when a command is invoked)
-  use { 'junegunn/fzf', run = './install --all' }
-  use { 'junegunn/fzf.vim', cmd = { 'Files', 'Buffers', 'Rg', 'Find', 'FindCurrentWord', 'GFiles' } }
-
-  -- testing (lazy: only when a test command runs)
-  use { 'janko/vim-test', cmd = { 'TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit' } }
-  use { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } }
-  use 'nvim-neotest/neotest'
+  { 'junegunn/fzf', build = './install --all' },
+  { 'junegunn/fzf.vim', cmd = { 'Files', 'Buffers', 'Rg', 'Find', 'FindCurrentWord', 'GFiles' } },
 
   -- language-specific (lazy by filetype)
-  use { 'fatih/vim-go', ft = { 'go', 'gomod', 'gowork' } }
-  use { 'prisma/vim-prisma', ft = { 'prisma' } }
-  use { 'tpope/vim-rails', ft = { 'ruby', 'eruby' } }
-  use { 'prettier/vim-prettier', run = 'yarn install', cmd = { 'Prettier', 'PrettierAsync' } }
+  { 'fatih/vim-go', ft = { 'go', 'gomod', 'gowork' } },
+  { 'prisma/vim-prisma', ft = { 'prisma' } },
+  { 'tpope/vim-rails', ft = { 'ruby', 'eruby' } },
+  { 'prettier/vim-prettier', build = 'yarn install', cmd = { 'Prettier', 'PrettierAsync' } },
 
-  -- gist (lazy: only when Gist command is used)
-  use { 'mattn/vim-gist', cmd = { 'Gist' }, requires = { { 'mattn/webapi-vim', opt = true } } }
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'main',                          -- new rewrite; old master API is EOL
+    lazy = false,                             -- does not support lazy-loading
+    build = ':TSUpdate',
+    config = function()
+      local ok, ts = pcall(require, 'nvim-treesitter')
+      if not ok then return end
+      ts.install({ 'lua', 'markdown', 'markdown_inline', 'yaml', 'go' })
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'lua', 'markdown', 'yaml', 'go' },
+        callback = function() pcall(vim.treesitter.start) end,
+      })
+    end,
+  },
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'monsonjeremy/onedark.nvim', branch = 'treesitter' }
-end)
-
--- vim-test
-vim.cmd([[
-  let test#strategy = 'neovim'
-  let test#neovim#term_position = "vertical"
-  let test#javascript#jest#options = '--watch'
-]])
+  { 'navarasu/onedark.nvim', lazy = false, priority = 1000 },  -- configured in lua/theme.lua
+}, {
+  -- lazy.nvim options
+  install = { colorscheme = { 'onedark' } },
+  change_detection = { notify = false },
+  rocks = { enabled = false },   -- no plugins here need luarocks; skip hererocks
+})
 
 -- NERDTree options
 vim.cmd([[
@@ -78,12 +97,12 @@ vim.cmd([[
 -- GoLang options
 vim.cmd([[
   set runtimepath+=$GOROOT/misc/vim
-  
+
   " Disable vim-go LSP features to avoid conflicts with gopls
   let g:go_def_mapping_enabled = 0
   let g:go_code_completion_enabled = 0
   let g:go_gopls_enabled = 0
-  
+
   " Use LSP for these features instead of vim-go
   let g:go_def_mode = 'gopls'
   let g:go_info_mode = 'gopls'
@@ -92,7 +111,7 @@ vim.cmd([[
   " Disable vim-go's default mappings that conflict with LSP
   let g:go_doc_keywordprg_enabled = 0
   let g:go_textobj_enabled = 0
-  
+
   " Keep vim-go features that complement LSP
   let g:go_fmt_autosave = 1
   let g:go_imports_autosave = 1
@@ -102,10 +121,48 @@ vim.cmd([[
   " g:go_highlight_* options are slow on large files, so leave them off.
 ]])
 
--- vim-gist options
-vim.cmd([[
-  let g:gist_token = $GITHUB_GIST_TOKEN
-]])
+-- :Gist — create a GitHub gist via the `gh` CLI (replaces mattn/vim-gist).
+--   :Gist              gist the whole current file (private)
+--   :'<,'>Gist         gist just the visually-selected lines
+--   :Gist!             make it public (works with or without a range)
+-- The resulting URL is printed and copied to the + register.
+local function create_gist(opts)
+  local public = opts.bang
+  local cmd = { 'gh', 'gist', 'create' }
+  if public then table.insert(cmd, '--public') end
+
+  local stdin = nil
+  local has_range = opts.range > 0
+  if has_range then
+    local lines = vim.api.nvim_buf_get_lines(0, opts.line1 - 1, opts.line2, false)
+    stdin = table.concat(lines, '\n')
+    local fname = vim.fn.expand('%:t')
+    if fname == '' then fname = 'snippet.txt' end
+    vim.list_extend(cmd, { '-f', fname, '-' })   -- '-' => read content from stdin
+  else
+    local path = vim.fn.expand('%:p')
+    if path == '' then
+      vim.notify('Gist: current buffer has no file; select lines and use :\'<,\'>Gist', vim.log.levels.ERROR)
+      return
+    end
+    table.insert(cmd, path)
+  end
+
+  local res = vim.system(cmd, { stdin = stdin, text = true }):wait()
+  if res.code ~= 0 then
+    vim.notify('Gist failed: ' .. vim.trim(res.stderr or ''), vim.log.levels.ERROR)
+    return
+  end
+  local url = vim.trim(res.stdout)
+  vim.fn.setreg('+', url)
+  vim.notify((public and 'Public gist: ' or 'Gist: ') .. url .. '  (copied)')
+end
+
+vim.api.nvim_create_user_command('Gist', create_gist, {
+  range = true,
+  bang = true,
+  desc = 'Create a GitHub gist via gh (range = selection only, ! = public)',
+})
 
 -- FZF options
 vim.cmd([[
@@ -114,12 +171,3 @@ vim.cmd([[
   command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
   set grepprg=rg\ --vimgrep
 ]])
-
--- Setup Tree-sitter
-local ts_status, treesitter = pcall(require, "nvim-treesitter.configs")
-if ts_status then
-  treesitter.setup({
-    ensure_installed = { "lua", "markdown", "markdown_inline", "yaml", "go" },
-    highlight = { enable = true },
-  })
-end

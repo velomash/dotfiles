@@ -5,11 +5,11 @@ vim.cmd([[
   set background=dark
 ]])
 
--- onedark colorscheme (must be loaded explicitly, not just installed)
+-- onedark colorscheme (navarasu/onedark.nvim; must be loaded explicitly)
 local ok_onedark, onedark = pcall(require, 'onedark')
 if ok_onedark then
-  onedark.setup()
-  vim.cmd('colorscheme onedark')
+  onedark.setup({ style = 'dark' })  -- dark | darker | cool | deep | warm | warmer
+  onedark.load()
 end
 
 -- Use Neovim's built-in tabline for buffer/tab indicators.

@@ -29,6 +29,8 @@ brew install ripgrep
 brew install ffmpeg --with-libvpx
 brew install fzf
 brew install git
+brew install gh                 # GitHub CLI (used by nvim :Gist)
+brew install tree-sitter-cli    # parser compiler for nvim-treesitter (main branch)
 brew install gnupg
 brew install imagemagick --with-webp
 brew install node # This installs `npm` too using the recommended installation method
