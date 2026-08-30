@@ -40,6 +40,12 @@ Safe to run multiple times; prompts before overwriting existing files.
   - `env_vars.zsh`: Environment variables with macOS Keychain integration
   - `path.zsh`: Custom PATH configurations
 
+### Version Management (asdf)
+- Installed via Homebrew (`brew install asdf` in `install-programs.sh`) — the 0.16+ Go rewrite, so no script is sourced.
+- `.zshrc` prepends `${ASDF_DATA_DIR:-$HOME/.asdf}/shims` to `PATH` after Homebrew's `shellenv`, so asdf-managed tools take precedence over Homebrew-installed ones.
+- Zsh completions load automatically from Homebrew's `site-functions` (the existing `compinit` block).
+- Per-project tool versions go in a `.tool-versions` file; install plugins with `asdf plugin add <tool>`.
+
 ### Editor (Neovim)
 Modern Lua-based configuration with:
 - **Plugin manager**: lazy.nvim (auto-installs on first run; `nvim/lazy-lock.json` pins versions)

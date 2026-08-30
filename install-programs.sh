@@ -39,6 +39,7 @@ brew install svgo
 brew install the_silver_searcher
 brew install terminal-notifier
 brew install awscli
+brew install asdf                # version manager (Go rewrite; shims wired up in .zshrc)
 
 # Remove outdated versions from the cellar
 brew cleanup

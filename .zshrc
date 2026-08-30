@@ -144,10 +144,6 @@ findPid () { lsof -t -c "$@" ; }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 #   Platform-specific Homebrew initialization
 #   ------------------------------------------------------------
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -162,4 +158,14 @@ else
   if [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi
+fi
+
+#   asdf version manager
+#   ------------------------------------------------------------
+#   asdf 0.16+ (Go rewrite) needs no script sourced — just the
+#   shims dir on PATH. Prepend it (after Homebrew's shellenv above)
+#   so asdf-managed tools take precedence over Homebrew ones.
+#   Completions load via Homebrew's site-functions FPATH (compinit above).
+if command -v asdf &>/dev/null; then
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fi
