@@ -7,8 +7,3 @@
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
-
-#   ---------------------------
-#   Common environment variables
-#   ---------------------------
-export LOCALSTACK_AUTH_TOKEN="ls-lONI8713-Ruqi-6716-JaMO-CeJAQidI357b"
