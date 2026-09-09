@@ -81,9 +81,20 @@ Extensive Git aliases available:
 - `cof` = git checkout $(git branch | fzf)  # Interactive branch selection
 
 ### FZF Integration
-- `Find` command: Search file contents with ripgrep
-- `FindCurrentWord`: Search for word under cursor
+- `<Leader>s` (`:Files`): fuzzy-find by filename
+- `<Leader>f` (`:LiveGrep`): fuzzy-find by file *contents*. Re-runs ripgrep on
+  every keystroke (via fzf.vim's `fzf#vim#grep2`, the engine behind its `:RG`),
+  so the whole tree stays searchable as the query changes. The query is seeded
+  from the visual selection, else the word under the cursor, else left empty for
+  a freeform search. Seeds are regex-escaped so they match literally; anything
+  typed afterwards is a smart-case regex. Logic lives in `nvim/lua/grep.lua`.
+- `Find` / `FindCurrentWord`: the older one-shot variants — ripgrep runs once and
+  fzf only fuzzy-filters that fixed result set.
 - Default command configured for file discovery with ripgrep
+
+These commands call fzf.vim's autoload functions directly, so they load the
+plugin via `require('lazy').load` first; fzf.vim is lazy-loaded by command name
+and their definitions in `plugins.lua` replace lazy.nvim's stubs.
 
 ## Work Environment Integration
 

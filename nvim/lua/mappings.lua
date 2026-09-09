@@ -38,7 +38,13 @@ map("n", "<Leader>tc", ":NERDTreeClose<CR>")
 map("n", "<Leader>tf", ":NERDTreeFocus<CR>")
 map("n", "<Leader>tr", ":NERDTreeRefreshRoot<CR>")
 
-map("n", "<Leader>f", ":FindCurrentWord<CR>")
+-- search file contents: seeded with the visual selection, else the word under
+-- the cursor, else freeform. Every keystroke re-runs ripgrep (see lua/grep.lua).
+vim.keymap.set("n", "<Leader>f", function() require("grep").cursor() end,
+  { noremap = true, silent = true, desc = "Live grep (word under cursor)" })
+vim.keymap.set("x", "<Leader>f", function() require("grep").visual() end,
+  { noremap = true, silent = true, desc = "Live grep (visual selection)" })
+
 map("n", "<Leader>s", ":Files<CR>")
 map("n", "<Leader>b", ":Buffers<CR>")
 

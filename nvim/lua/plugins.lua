@@ -52,7 +52,7 @@ require('lazy').setup({
 
   -- fuzzy finding (lazy: only when a command is invoked)
   { 'junegunn/fzf', build = './install --all' },
-  { 'junegunn/fzf.vim', cmd = { 'Files', 'Buffers', 'Rg', 'Find', 'FindCurrentWord', 'GFiles' } },
+  { 'junegunn/fzf.vim', cmd = { 'Files', 'Buffers', 'Rg', 'RG', 'Find', 'FindCurrentWord', 'LiveGrep', 'GFiles' } },
 
   -- language-specific (lazy by filetype)
   { 'fatih/vim-go', ft = { 'go', 'gomod', 'gowork' } },
@@ -167,7 +167,31 @@ vim.api.nvim_create_user_command('Gist', create_gist, {
 -- FZF options
 vim.cmd([[
   let g:fzf_layout = { 'down': '~50%' } " - down / up / left / right
-  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
-  command! -bang -nargs=* FindCurrentWord call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(expand('<cword>')), 1, <bang>0)
   set grepprg=rg\ --vimgrep
 ]])
+
+-- Content search commands. :Find and :FindCurrentWord run rg once and let fzf
+-- fuzzy-filter that fixed result set; :LiveGrep (<Leader>f) re-runs rg on every
+-- keystroke instead -- see lua/grep.lua.
+--
+-- These call fzf.vim's autoload functions directly rather than going through one
+-- of its own commands, so they have to load the plugin first: defining them here
+-- replaces the lazy-load stubs lazy.nvim generated from the `cmd` list above,
+-- which would otherwise leave them failing with E117 until something else
+-- (:Files, say) pulled fzf.vim in.
+local FIND_RG = 'rg --column --line-number --no-heading --fixed-strings ' ..
+  '--ignore-case --hidden --follow --color "always" '
+
+local function fzf_grep(query, fullscreen)
+  require('lazy').load({ plugins = { 'fzf.vim' } })
+  vim.fn['fzf#vim#grep'](FIND_RG .. vim.fn.shellescape(query), 1, fullscreen and 1 or 0)
+end
+
+vim.api.nvim_create_user_command('Find', function(o) fzf_grep(o.args, o.bang) end,
+  { nargs = '*', bang = true, desc = 'Search file contents with rg' })
+
+vim.api.nvim_create_user_command('FindCurrentWord', function(o) fzf_grep(vim.fn.expand('<cword>'), o.bang) end,
+  { bang = true, bar = true, desc = 'Search file contents for the word under the cursor' })
+
+vim.api.nvim_create_user_command('LiveGrep', function(o) require('grep').open(o.args) end,
+  { nargs = '*', desc = 'Interactive rg search, re-running rg as you type' })
