@@ -46,5 +46,6 @@ brew cleanup
 
 npm install -g prettier
 npm install -g ngrok
+# TypeScript 7+ is the Go-native rewrite; `tsc --lsp --stdio` is the language
+# server, so no separate langserver package is needed.
 npm install -g typescript
-npm install -g javascript-typescript-langserver

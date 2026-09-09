@@ -112,9 +112,11 @@ vim.lsp.config.gopls = {
   },
 }
 
--- TypeScript setup (updated to use ts_ls instead of deprecated tsserver)
+-- TypeScript setup. TypeScript 7+ is the Go-native rewrite and no longer ships
+-- lib/tsserver.js, so typescript-language-server cannot run against it. The
+-- native binary serves LSP itself via `tsc --lsp --stdio`.
 vim.lsp.config.ts_ls = {
-  cmd = { "typescript-language-server", "--stdio" },
+  cmd = { "tsc", "--lsp", "--stdio" },
   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
   root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
   capabilities = capabilities,
@@ -162,7 +164,7 @@ vim.lsp.config.ruby_lsp = {
 -- every matching file and wastes startup time, so guard on exepath().
 local servers = {
   gopls  = 'gopls',
-  ts_ls  = 'typescript-language-server',
+  ts_ls  = 'tsc',
   ruby_lsp = 'ruby-lsp',
 }
 for server, bin in pairs(servers) do
