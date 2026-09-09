@@ -12,7 +12,7 @@ alias notes='cd $HOME/Documents/notes; nvim'
 alias python=python3
 alias pip=pip3
 
-alias urclaude='claude --dangerously-skip-permissions'
+alias cl='claude --dangerously-skip-permissions'
 
 transcribe() {
   local input="$1"
